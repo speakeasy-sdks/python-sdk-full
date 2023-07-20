@@ -1,0 +1,9 @@
+# AuthorizationRequest
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `action`                                                                                  | [Optional[AuthorizationRequestAction]](../../models/shared/authorizationrequestaction.md) | :heavy_minus_sign:                                                                        | Type of authorization to run. Can be one of 'CAPTURE' , 'VOID'                            |
+| `amount`                                                                                  | *Optional[float]*                                                                         | :heavy_minus_sign:                                                                        | The amount if you are running a 'CAPTURE'                                                 |

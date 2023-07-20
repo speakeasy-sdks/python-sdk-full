@@ -1,0 +1,11 @@
+# EligiblePaylater
+
+
+## Fields
+
+| Field                                                             | Type                                                              | Required                                                          | Description                                                       | Example                                                           |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `eligibility`                                                     | *Optional[str]*                                                   | :heavy_minus_sign:                                                | N/A                                                               | true                                                              |
+| `entity_details`                                                  | [Optional[PaylaterEntity]](../../models/shared/paylaterentity.md) | :heavy_minus_sign:                                                | N/A                                                               |                                                                   |
+| `entity_type`                                                     | *Optional[str]*                                                   | :heavy_minus_sign:                                                | N/A                                                               | paylater                                                          |
+| `entity_value`                                                    | *Optional[str]*                                                   | :heavy_minus_sign:                                                | N/A                                                               | olapostpaid                                                       |

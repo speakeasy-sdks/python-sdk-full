@@ -1,0 +1,11 @@
+# EligibilityOfferRequest
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `eligibility_offers_request`                                                                 | [Optional[shared.EligibilityOffersRequest]](../../models/shared/eligibilityoffersrequest.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `x_api_version`                                                                              | *Optional[str]*                                                                              | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `x_client_id`                                                                                | *str*                                                                                        | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `x_client_secret`                                                                            | *str*                                                                                        | :heavy_check_mark:                                                                           | N/A                                                                                          |

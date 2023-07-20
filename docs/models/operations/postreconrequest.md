@@ -1,0 +1,11 @@
+# PostReconRequest
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `fetch_pg_recon_request`                                                           | [Optional[shared.FetchPGReconRequest]](../../models/shared/fetchpgreconrequest.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `x_api_version`                                                                    | *Optional[str]*                                                                    | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `x_client_id`                                                                      | *str*                                                                              | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `x_client_secret`                                                                  | *str*                                                                              | :heavy_check_mark:                                                                 | N/A                                                                                |

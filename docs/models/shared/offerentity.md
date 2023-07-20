@@ -1,0 +1,15 @@
+# OfferEntity
+
+OK
+
+
+## Fields
+
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           | Example                                                               |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `offer_details`                                                       | [Optional[OfferDetails]](../../models/shared/offerdetails.md)         | :heavy_minus_sign:                                                    | N/A                                                                   |                                                                       |
+| `offer_id`                                                            | *Optional[int]*                                                       | :heavy_minus_sign:                                                    | N/A                                                                   | d2b430fb-1afe-455a-af31-66d00377b29a                                  |
+| `offer_meta`                                                          | [Optional[OfferMeta]](../../models/shared/offermeta.md)               | :heavy_minus_sign:                                                    | N/A                                                                   |                                                                       |
+| `offer_status`                                                        | *Optional[str]*                                                       | :heavy_minus_sign:                                                    | N/A                                                                   | active                                                                |
+| `offer_tnc`                                                           | [Optional[OfferTnc]](../../models/shared/offertnc.md)                 | :heavy_minus_sign:                                                    | N/A                                                                   |                                                                       |
+| `offer_validations`                                                   | [Optional[OfferValidations]](../../models/shared/offervalidations.md) | :heavy_minus_sign:                                                    | N/A                                                                   |                                                                       |

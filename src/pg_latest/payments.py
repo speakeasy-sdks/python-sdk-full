@@ -20,7 +20,7 @@ class Payments:
         
         url = utils.generate_url(operations.GetPaymentbyIDRequest, base_url, '/orders/{order_id}/payments/{cf_payment_id}', request)
         headers = utils.get_headers(request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.client
@@ -58,7 +58,7 @@ class Payments:
         
         url = utils.generate_url(operations.GetPaymentsfororderRequest, base_url, '/orders/{order_id}/payments', request)
         headers = utils.get_headers(request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.client

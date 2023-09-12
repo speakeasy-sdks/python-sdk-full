@@ -11,7 +11,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class SettlementsEntity:
-    r"""OK"""
     cf_payment_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cf_payment_id'), 'exclude': lambda f: f is None }})
     cf_settlement_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cf_settlement_id'), 'exclude': lambda f: f is None }})
     entity: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('entity'), 'exclude': lambda f: f is None }})

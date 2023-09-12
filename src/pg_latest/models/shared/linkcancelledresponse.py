@@ -14,7 +14,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class LinkCancelledResponse:
-    r"""Payment Link cancelled"""
     cf_link_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cf_link_id'), 'exclude': lambda f: f is None }})
     customer_details: Optional[shared_linkcustomerdetailsentity.LinkCustomerDetailsEntity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customer_details'), 'exclude': lambda f: f is None }})
     link_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('link_amount'), 'exclude': lambda f: f is None }})

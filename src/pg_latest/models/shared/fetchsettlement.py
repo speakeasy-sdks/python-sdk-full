@@ -55,7 +55,6 @@ class FetchSettlementData:
 
 @dataclasses.dataclass
 class FetchSettlement:
-    r"""OK"""
     cursor: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cursor'), 'exclude': lambda f: f is None }})
     r"""Specify a value from where you want to fetch the settlement details in the API call."""
     data: Optional[list[FetchSettlementData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})

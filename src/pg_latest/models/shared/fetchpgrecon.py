@@ -113,7 +113,6 @@ class FetchPGReconData:
 
 @dataclasses.dataclass
 class FetchPGRecon:
-    r"""OK"""
     cursor: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cursor'), 'exclude': lambda f: f is None }})
     r"""Specifies from where the next set of settlement details should be fetched."""
     data: Optional[list[FetchPGReconData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})

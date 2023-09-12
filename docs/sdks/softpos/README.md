@@ -23,13 +23,13 @@ s = pg_latest.PGLatest()
 
 req = operations.CreateTerminalsRequest(
     create_terminal_request=shared.CreateTerminalRequest(
-        terminal_id='necessitatibus',
-        terminal_name='sint',
-        terminal_phone_no='officia',
+        terminal_id='quasi',
+        terminal_name='repudiandae',
+        terminal_phone_no='sint',
     ),
-    x_api_version='dolor',
-    x_client_id='debitis',
-    x_client_secret='a',
+    x_api_version='veritatis',
+    x_client_id='itaque',
+    x_client_secret='incidunt',
 )
 
 res = s.soft_pos.create_terminals(req)
@@ -63,10 +63,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetTerminalByMobileNumberRequest(
-    terminal_phone_no='dolorum',
-    x_api_version='in',
-    x_client_id='in',
-    x_client_secret='illum',
+    terminal_phone_no='enim',
+    x_api_version='consequatur',
+    x_client_id='est',
+    x_client_secret='quibusdam',
 )
 
 res = s.soft_pos.get_terminal_by_mobile_number(req)

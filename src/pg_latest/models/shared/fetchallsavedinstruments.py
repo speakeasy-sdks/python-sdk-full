@@ -22,7 +22,6 @@ class FetchAllSavedInstrumentsInstrumentType(str, Enum):
 
 @dataclasses.dataclass
 class FetchAllSavedInstruments:
-    r"""OK"""
     afa_reference: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('afa_reference'), 'exclude': lambda f: f is None }})
     r"""cf_payment_id of the successful transaction done while saving instrument"""
     created_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'exclude': lambda f: f is None }})

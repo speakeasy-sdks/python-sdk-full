@@ -11,7 +11,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class TerminalResponse:
-    r"""Terminal created"""
     added_on: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('added_on'), 'exclude': lambda f: f is None }})
     cf_terminal_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cf_terminal_id'), 'exclude': lambda f: f is None }})
     last_updated_on: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_updated_on'), 'exclude': lambda f: f is None }})

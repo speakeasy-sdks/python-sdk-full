@@ -22,55 +22,42 @@ s = pg_latest.PGLatest()
 req = operations.CreateOrderRequest(
     create_order_backend_request=shared.CreateOrderBackendRequest(
         customer_details=shared.CustomerDetails(
-            customer_bank_account_number='sapiente',
-            customer_bank_code='quo',
-            customer_bank_ifsc='odit',
-            customer_email='at',
-            customer_id='at',
-            customer_phone='maiores',
+            customer_bank_account_number='ipsam',
+            customer_bank_code='repellendus',
+            customer_bank_ifsc='sapiente',
+            customer_email='quo',
+            customer_id='odit',
+            customer_phone='at',
         ),
         order_amount=10.15,
         order_currency='INR',
         order_expiry_time='2021-07-29T00:00:00Z',
-        order_id='molestiae',
+        order_id='at',
         order_meta=shared.OrderMeta(
-            notify_url='quod',
-            payment_methods='quod',
-            return_url='esse',
+            notify_url='maiores',
+            payment_methods='molestiae',
+            return_url='quod',
         ),
         order_note='Test order',
         order_splits=[
             shared.VendorSplit(
-                amount=7805.29,
-                percentage=6788.8,
-                vendor_id='dicta',
-            ),
-            shared.VendorSplit(
-                amount=7206.33,
-                percentage=6399.21,
-                vendor_id='occaecati',
-            ),
-            shared.VendorSplit(
-                amount=1433.53,
-                percentage=5373.73,
-                vendor_id='hic',
+                amount=8009.11,
+                percentage=4614.79,
+                vendor_id='totam',
             ),
         ],
         order_tags={
-            "totam": 'beatae',
-            "commodi": 'molestiae',
-            "modi": 'qui',
-            "impedit": 'cum',
+            "porro": 'dolorum',
         },
         terminal=shared.TerminalDetails(
-            terminal_id='esse',
-            terminal_phone_no='ipsum',
-            terminal_type='excepturi',
+            terminal_id='dicta',
+            terminal_phone_no='nam',
+            terminal_type='officia',
         ),
     ),
-    x_api_version='aspernatur',
-    x_client_id='perferendis',
-    x_client_secret='ad',
+    x_api_version='occaecati',
+    x_client_id='fugit',
+    x_client_secret='deleniti',
 )
 
 res = s.orders.create_order(req)
@@ -104,10 +91,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetOrderRequest(
-    order_id='natus',
-    x_api_version='sed',
-    x_client_id='iste',
-    x_client_secret='dolor',
+    order_id='hic',
+    x_api_version='optio',
+    x_client_id='totam',
+    x_client_secret='beatae',
 )
 
 res = s.orders.get_order(req)
@@ -143,23 +130,16 @@ s = pg_latest.PGLatest()
 req = operations.OrderPayRequest(
     order_pay_request=shared.OrderPayRequest(
         offer_id='faa6cc05-d1e2-401c-b0cf-0c9db3ff0f0b',
-        payment_method=shared.CardEMIPaymentMethod(
-            emi=shared.CardEMI(
-                card_alias='laboriosam',
-                card_bank_name=shared.CardEMICardBankName.AMEX,
-                card_cvv='saepe',
-                card_expiry_mm='fuga',
-                card_expiry_yy='in',
-                card_holder_name='corporis',
-                card_number='iste',
-                channel='iure',
-                emi_tenure=902349,
+        payment_method=shared.NetBankingPaymentMethod(
+            netbanking=shared.Netbanking(
+                channel='molestiae',
+                netbanking_bank_code=264555,
             ),
         ),
         payment_session_id='session__CvcEmNKDkmERQrxnx39ibhJ3Ii034pjc8ZVxf3qcgEXCWlgDDlHRgz2XYZCqpajDQSXMMtCusPgOIxYP2LZx0-05p39gC2Vgmq1RAj--gcn',
         save_instrument=False,
     ),
-    x_api_version='quidem',
+    x_api_version='qui',
 )
 
 res = s.orders.order_pay(req)
@@ -194,13 +174,13 @@ s = pg_latest.PGLatest()
 
 req = operations.PreauthorizationRequest(
     authorization_request=shared.AuthorizationRequest(
-        action=shared.AuthorizationRequestAction.CAPTURE,
-        amount=602.25,
+        action=shared.AuthorizationRequestAction.VOID,
+        amount=7369.18,
     ),
-    order_id='reiciendis',
-    x_api_version='est',
-    x_client_id='mollitia',
-    x_client_secret='laborum',
+    order_id='esse',
+    x_api_version='ipsum',
+    x_client_id='excepturi',
+    x_client_secret='aspernatur',
 )
 
 res = s.orders.preauthorization(req)

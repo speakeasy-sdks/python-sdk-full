@@ -10,7 +10,6 @@ from pg_latest import utils
 
 @dataclasses.dataclass
 class TerminalDetails:
-    r"""OK"""
     terminal_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('terminal_id') }})
     r"""The internal id that you use to map the terminal in your internal system"""
     terminal_phone_no: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('terminal_phone_no') }})

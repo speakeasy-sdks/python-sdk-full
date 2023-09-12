@@ -20,17 +20,17 @@ s = pg_latest.PGLatest()
 req = operations.PostReconRequest(
     fetch_pg_recon_request=shared.FetchPGReconRequest(
         filters=shared.FetchPGReconRequestFilters(
-            end_date='ipsam',
-            start_date='id',
+            end_date='architecto',
+            start_date='mollitia',
         ),
         pagination=shared.FetchPGReconRequestPagination(
-            cursor='possimus',
-            limit=13571,
+            cursor='dolorem',
+            limit=635059,
         ),
     ),
-    x_api_version='quasi',
-    x_client_id='error',
-    x_client_secret='temporibus',
+    x_api_version='consequuntur',
+    x_client_id='repellat',
+    x_client_secret='mollitia',
 )
 
 res = s.reconciliation.post_recon(req)
@@ -67,25 +67,22 @@ req = operations.PostSettlementReconRequest(
     fetch_settlement_recon_request=shared.FetchSettlementReconRequest(
         filters=shared.FetchSettlementReconRequestFilters(
             cf_settlement_ids=[
-                96098,
-                971945,
-                976460,
+                581850,
             ],
-            end_date='vero',
+            end_date='numquam',
             settlement_utrs=[
-                'praesentium',
-                'voluptatibus',
+                'commodi',
             ],
-            start_date='ipsa',
+            start_date='quam',
         ),
         pagination=shared.FetchSettlementReconRequestPagination(
-            cursor='omnis',
-            limit=451159,
+            cursor='molestiae',
+            limit=244425,
         ),
     ),
-    x_api_version='cum',
-    x_client_id='perferendis',
-    x_client_secret='doloremque',
+    x_api_version='error',
+    x_client_id='quia',
+    x_client_secret='quis',
 )
 
 res = s.reconciliation.post_settlement_recon(req)

@@ -25,7 +25,6 @@ class PaymentsEntityPaymentStatus(str, Enum):
 
 @dataclasses.dataclass
 class PaymentsEntity:
-    r"""OK"""
     auth_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth_id'), 'exclude': lambda f: f is None }})
     authorization: Optional[shared_authorizationinpaymentsentity.AuthorizationInPaymentsEntity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('authorization'), 'exclude': lambda f: f is None }})
     r"""The authorization details are present for payments which go through the preauthorization workflow. Or else this parameter will be null."""

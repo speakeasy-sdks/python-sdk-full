@@ -44,7 +44,6 @@ class RefundsEntityRefundType(str, Enum):
 
 @dataclasses.dataclass
 class RefundsEntity:
-    r"""Refund created"""
     cf_payment_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cf_payment_id'), 'exclude': lambda f: f is None }})
     r"""Cashfree Payments ID of the payment for which refund is initiated"""
     cf_refund_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cf_refund_id'), 'exclude': lambda f: f is None }})

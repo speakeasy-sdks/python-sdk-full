@@ -21,14 +21,14 @@ req = operations.CreateOfferRequest(
     create_offer_backend_request=shared.CreateOfferBackendRequest(
         offer_details=shared.OfferDetails(
             cashback_details=shared.CashbackDetails(
-                cashback_type=shared.CashbackDetailsCashbackType.PERCENTAGE,
-                cashback_value='placeat',
-                max_cashback_amount='voluptatum',
+                cashback_type=shared.CashbackDetailsCashbackType.FLAT,
+                cashback_value='molestiae',
+                max_cashback_amount='minus',
             ),
             discount_details=shared.DiscountDetails(
-                discount_type=shared.DiscountDetailsDiscountType.FLAT,
-                discount_value='excepturi',
-                max_discount_amount='nisi',
+                discount_type=shared.DiscountDetailsDiscountType.PERCENTAGE,
+                discount_value='voluptatum',
+                max_discount_amount='iusto',
             ),
             offer_type=shared.OfferDetailsOfferType.DISCOUNT_AND_CASHBACK,
         ),
@@ -46,16 +46,16 @@ req = operations.CreateOfferRequest(
         offer_validations=shared.OfferValidations(
             max_allowed='10',
             min_amount='1',
-            payment_method=shared.OfferPaylater(
-                paylater=shared.PaylaterOffer(
-                    provider='simpl',
+            payment_method=shared.OfferNB(
+                netbanking=shared.NBOffer(
+                    bank_name='all',
                 ),
             ),
         ),
     ),
-    x_api_version='ab',
-    x_client_id='quis',
-    x_client_secret='veritatis',
+    x_api_version='recusandae',
+    x_client_id='temporibus',
+    x_client_secret='ab',
 )
 
 res = s.offers.create_offer(req)
@@ -89,10 +89,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetOfferRequest(
-    offer_id='deserunt',
-    x_api_version='perferendis',
-    x_client_id='ipsam',
-    x_client_secret='repellendus',
+    offer_id='quis',
+    x_api_version='veritatis',
+    x_client_id='deserunt',
+    x_client_secret='perferendis',
 )
 
 res = s.offers.get_offer(req)

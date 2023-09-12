@@ -15,7 +15,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class OfferEntity:
-    r"""OK"""
     offer_details: Optional[shared_offerdetails.OfferDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offer_details'), 'exclude': lambda f: f is None }})
     offer_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offer_id'), 'exclude': lambda f: f is None }})
     offer_meta: Optional[shared_offermeta.OfferMeta] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offer_meta'), 'exclude': lambda f: f is None }})

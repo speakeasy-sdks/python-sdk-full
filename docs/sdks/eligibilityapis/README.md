@@ -68,7 +68,6 @@ req = operations.EligibilityOfferRequest(
         filters=shared.OfferFilters(
             offer_type=[
                 shared.OfferType.CASHBACK,
-                shared.OfferType.CASHBACK,
             ],
         ),
         queries=shared.OfferQueries(
@@ -76,9 +75,9 @@ req = operations.EligibilityOfferRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_api_version='debitis',
-    x_client_id='ipsa',
-    x_client_secret='delectus',
+    x_api_version='iure',
+    x_client_id='magnam',
+    x_client_secret='debitis',
 )
 
 res = s.eligibility_ap_is.eligibility_offer(req)
@@ -121,9 +120,9 @@ req = operations.EligibilityPaylaterRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_api_version='tempora',
-    x_client_id='suscipit',
-    x_client_secret='molestiae',
+    x_api_version='ipsa',
+    x_client_id='delectus',
+    x_client_secret='tempora',
 )
 
 res = s.eligibility_ap_is.eligibility_paylater(req)

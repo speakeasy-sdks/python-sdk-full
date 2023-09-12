@@ -11,7 +11,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class Cryptogram:
-    r"""OK"""
     card_display: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('card_display'), 'exclude': lambda f: f is None }})
     r"""last 4 digits of original card number"""
     card_expiry_mm: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('card_expiry_mm'), 'exclude': lambda f: f is None }})

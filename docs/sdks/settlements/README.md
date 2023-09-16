@@ -1,4 +1,4 @@
-# settlements
+# Settlements
 
 ### Available Operations
 

@@ -4,7 +4,8 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import errorresponse as shared_errorresponse
-from typing import Any, Optional
+from ..shared import paymentsentity as shared_paymentsentity
+from typing import Optional
 
 
 
@@ -25,9 +26,9 @@ class GetPaymentsfororderResponse:
     status_code: int = dataclasses.field()
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     r"""Any bad or invalid request will lead to following error object"""
-    get_paymentsfororder_200_application_json_one_of: Optional[Any] = dataclasses.field(default=None)
-    r"""OK"""
     headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
+    payments_entity: Optional[shared_paymentsentity.PaymentsEntity] = dataclasses.field(default=None)
+    r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
 

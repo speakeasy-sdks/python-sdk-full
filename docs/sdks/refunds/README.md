@@ -1,4 +1,4 @@
-# refunds
+# Refunds
 
 ### Available Operations
 

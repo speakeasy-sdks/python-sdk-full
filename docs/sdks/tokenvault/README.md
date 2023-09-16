@@ -1,4 +1,4 @@
-# token_vault
+# TokenVault
 
 ## Overview
 

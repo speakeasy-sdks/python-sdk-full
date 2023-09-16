@@ -1,4 +1,4 @@
-# payment_links
+# PaymentLinks
 
 ### Available Operations
 

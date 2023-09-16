@@ -1,4 +1,4 @@
-# eligibility_ap_is
+# EligibilityAPIs
 
 ### Available Operations
 

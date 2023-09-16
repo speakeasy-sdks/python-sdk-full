@@ -1,4 +1,4 @@
-# soft_pos
+# SoftPOS
 
 ## Overview
 

@@ -23,12 +23,15 @@ class CancelPaymentLinkRequest:
 @dataclasses.dataclass
 class CancelPaymentLinkResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
     link_cancelled_error: Optional[shared_linkcancellederror.LinkCancelledError] = dataclasses.field(default=None)
     r"""Cannot cancel Payment Link if status is not ACTIVE"""
     link_cancelled_response: Optional[shared_linkcancelledresponse.LinkCancelledResponse] = dataclasses.field(default=None)
     r"""Payment Link cancelled"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

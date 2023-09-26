@@ -23,11 +23,14 @@ class GetTerminalByMobileNumberRequest:
 @dataclasses.dataclass
 class GetTerminalByMobileNumberResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     r"""Any bad or invalid request will lead to following error object"""
     headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     terminal_details: Optional[shared_terminaldetails.TerminalDetails] = dataclasses.field(default=None)
     r"""OK"""
     

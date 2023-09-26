@@ -20,22 +20,22 @@ s = pg_latest.PGLatest()
 
 req = operations.CreaterefundRequest(
     create_refund_request=shared.CreateRefundRequest(
-        refund_amount=1103.75,
-        refund_id='laborum',
-        refund_note='animi',
-        refund_speed=shared.CreateRefundRequestRefundSpeed.STANDARD,
+        refund_amount=960.98,
+        refund_id='reiciendis',
+        refund_note='voluptatibus',
+        refund_speed=shared.CreateRefundRequestRefundSpeed.INSTANT,
         refund_splits=[
             shared.VendorSplit(
-                amount=1381.83,
-                percentage=7783.46,
-                vendor_id='sequi',
+                amount=4686.51,
+                percentage=5096.24,
+                vendor_id='voluptatibus',
             ),
         ],
     ),
-    order_id='tenetur',
-    x_api_version='ipsam',
-    x_client_id='id',
-    x_client_secret='possimus',
+    order_id='ipsa',
+    x_api_version='omnis',
+    x_client_id='voluptate',
+    x_client_secret='cum',
 )
 
 res = s.refunds.createrefund(req)
@@ -69,11 +69,11 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetRefundRequest(
-    order_id='aut',
-    refund_id='quasi',
-    x_api_version='error',
-    x_client_id='temporibus',
-    x_client_secret='laborum',
+    order_id='perferendis',
+    refund_id='doloremque',
+    x_api_version='reprehenderit',
+    x_client_id='ut',
+    x_client_secret='maiores',
 )
 
 res = s.refunds.get_refund(req)
@@ -107,10 +107,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetallrefundsfororderRequest(
-    order_id='quasi',
-    x_api_version='reiciendis',
-    x_client_id='voluptatibus',
-    x_client_secret='vero',
+    order_id='dicta',
+    x_api_version='corporis',
+    x_client_id='dolore',
+    x_client_secret='iusto',
 )
 
 res = s.refunds.getallrefundsfororder(req)

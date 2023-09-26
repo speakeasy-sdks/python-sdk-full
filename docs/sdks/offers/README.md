@@ -21,14 +21,14 @@ req = operations.CreateOfferRequest(
     create_offer_backend_request=shared.CreateOfferBackendRequest(
         offer_details=shared.OfferDetails(
             cashback_details=shared.CashbackDetails(
-                cashback_type=shared.CashbackDetailsCashbackType.FLAT,
-                cashback_value='molestiae',
-                max_cashback_amount='minus',
+                cashback_type=shared.CashbackDetailsCashbackType.PERCENTAGE,
+                cashback_value='iusto',
+                max_cashback_amount='excepturi',
             ),
             discount_details=shared.DiscountDetails(
-                discount_type=shared.DiscountDetailsDiscountType.PERCENTAGE,
-                discount_value='voluptatum',
-                max_discount_amount='iusto',
+                discount_type=shared.DiscountDetailsDiscountType.FLAT,
+                discount_value='recusandae',
+                max_discount_amount='temporibus',
             ),
             offer_type=shared.OfferDetailsOfferType.DISCOUNT_AND_CASHBACK,
         ),
@@ -40,7 +40,7 @@ req = operations.CreateOfferRequest(
             offer_title='Test Offer',
         ),
         offer_tnc=shared.OfferTnc(
-            offer_tnc_type=shared.OfferTncOfferTncType.POST,
+            offer_tnc_type=shared.OfferTncOfferTncType.LINK,
             offer_tnc_value='Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         ),
         offer_validations=shared.OfferValidations(
@@ -53,9 +53,9 @@ req = operations.CreateOfferRequest(
             ),
         ),
     ),
-    x_api_version='recusandae',
-    x_client_id='temporibus',
-    x_client_secret='ab',
+    x_api_version='veritatis',
+    x_client_id='deserunt',
+    x_client_secret='perferendis',
 )
 
 res = s.offers.create_offer(req)
@@ -89,10 +89,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetOfferRequest(
-    offer_id='quis',
-    x_api_version='veritatis',
-    x_client_id='deserunt',
-    x_client_secret='perferendis',
+    offer_id='ipsam',
+    x_api_version='repellendus',
+    x_client_id='sapiente',
+    x_client_secret='quo',
 )
 
 res = s.offers.get_offer(req)

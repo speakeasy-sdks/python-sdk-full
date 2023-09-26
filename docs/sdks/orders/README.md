@@ -22,42 +22,42 @@ s = pg_latest.PGLatest()
 req = operations.CreateOrderRequest(
     create_order_backend_request=shared.CreateOrderBackendRequest(
         customer_details=shared.CustomerDetails(
-            customer_bank_account_number='ipsam',
-            customer_bank_code='repellendus',
-            customer_bank_ifsc='sapiente',
-            customer_email='quo',
-            customer_id='odit',
-            customer_phone='at',
+            customer_bank_account_number='odit',
+            customer_bank_code='at',
+            customer_bank_ifsc='at',
+            customer_email='maiores',
+            customer_id='molestiae',
+            customer_phone='quod',
         ),
         order_amount=10.15,
         order_currency='INR',
         order_expiry_time='2021-07-29T00:00:00Z',
-        order_id='at',
+        order_id='quod',
         order_meta=shared.OrderMeta(
-            notify_url='maiores',
-            payment_methods='molestiae',
-            return_url='quod',
+            notify_url='esse',
+            payment_methods='totam',
+            return_url='porro',
         ),
         order_note='Test order',
         order_splits=[
             shared.VendorSplit(
-                amount=8009.11,
-                percentage=4614.79,
-                vendor_id='totam',
+                amount=6788.8,
+                percentage=1182.74,
+                vendor_id='nam',
             ),
         ],
         order_tags={
-            "porro": 'dolorum',
+            "officia": 'occaecati',
         },
         terminal=shared.TerminalDetails(
-            terminal_id='dicta',
-            terminal_phone_no='nam',
-            terminal_type='officia',
+            terminal_id='fugit',
+            terminal_phone_no='deleniti',
+            terminal_type='hic',
         ),
     ),
-    x_api_version='occaecati',
-    x_client_id='fugit',
-    x_client_secret='deleniti',
+    x_api_version='optio',
+    x_client_id='totam',
+    x_client_secret='beatae',
 )
 
 res = s.orders.create_order(req)
@@ -91,10 +91,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetOrderRequest(
-    order_id='hic',
-    x_api_version='optio',
-    x_client_id='totam',
-    x_client_secret='beatae',
+    order_id='commodi',
+    x_api_version='molestiae',
+    x_client_id='modi',
+    x_client_secret='qui',
 )
 
 res = s.orders.get_order(req)
@@ -130,16 +130,18 @@ s = pg_latest.PGLatest()
 req = operations.OrderPayRequest(
     order_pay_request=shared.OrderPayRequest(
         offer_id='faa6cc05-d1e2-401c-b0cf-0c9db3ff0f0b',
-        payment_method=shared.NetBankingPaymentMethod(
-            netbanking=shared.Netbanking(
-                channel='molestiae',
-                netbanking_bank_code=264555,
+        payment_method=shared.CardlessEMIPaymentMethod(
+            cardless_emi=shared.CardlessEMI(
+                channel='cum',
+                emi_tenure=456150,
+                phone='610.461.6263',
+                provider=shared.CardlessEMIProvider.KOTAK,
             ),
         ),
         payment_session_id='session__CvcEmNKDkmERQrxnx39ibhJ3Ii034pjc8ZVxf3qcgEXCWlgDDlHRgz2XYZCqpajDQSXMMtCusPgOIxYP2LZx0-05p39gC2Vgmq1RAj--gcn',
         save_instrument=False,
     ),
-    x_api_version='qui',
+    x_api_version='saepe',
 )
 
 res = s.orders.order_pay(req)
@@ -175,12 +177,12 @@ s = pg_latest.PGLatest()
 req = operations.PreauthorizationRequest(
     authorization_request=shared.AuthorizationRequest(
         action=shared.AuthorizationRequestAction.VOID,
-        amount=7369.18,
+        amount=4499.5,
     ),
-    order_id='esse',
-    x_api_version='ipsum',
-    x_client_id='excepturi',
-    x_client_secret='aspernatur',
+    order_id='corporis',
+    x_api_version='iste',
+    x_client_id='iure',
+    x_client_secret='saepe',
 )
 
 res = s.orders.preauthorization(req)

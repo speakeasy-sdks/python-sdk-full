@@ -20,17 +20,17 @@ s = pg_latest.PGLatest()
 req = operations.PostReconRequest(
     fetch_pg_recon_request=shared.FetchPGReconRequest(
         filters=shared.FetchPGReconRequestFilters(
-            end_date='architecto',
-            start_date='mollitia',
+            end_date='vitae',
+            start_date='laborum',
         ),
         pagination=shared.FetchPGReconRequestPagination(
-            cursor='dolorem',
-            limit=635059,
+            cursor='animi',
+            limit=317202,
         ),
     ),
-    x_api_version='consequuntur',
-    x_client_id='repellat',
-    x_client_secret='mollitia',
+    x_api_version='odit',
+    x_client_id='quo',
+    x_client_secret='sequi',
 )
 
 res = s.reconciliation.post_recon(req)
@@ -67,22 +67,22 @@ req = operations.PostSettlementReconRequest(
     fetch_settlement_recon_request=shared.FetchSettlementReconRequest(
         filters=shared.FetchSettlementReconRequestFilters(
             cf_settlement_ids=[
-                581850,
+                949572,
             ],
-            end_date='numquam',
+            end_date='ipsam',
             settlement_utrs=[
-                'commodi',
+                'id',
             ],
-            start_date='quam',
+            start_date='possimus',
         ),
         pagination=shared.FetchSettlementReconRequestPagination(
-            cursor='molestiae',
-            limit=244425,
+            cursor='aut',
+            limit=97101,
         ),
     ),
     x_api_version='error',
-    x_client_id='quia',
-    x_client_secret='quis',
+    x_client_id='temporibus',
+    x_client_secret='laborum',
 )
 
 res = s.reconciliation.post_settlement_recon(req)

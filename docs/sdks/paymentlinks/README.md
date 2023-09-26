@@ -20,10 +20,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.CancelPaymentLinkRequest(
-    link_id='perferendis',
-    x_api_version='ad',
-    x_client_id='natus',
-    x_client_secret='sed',
+    link_id='quidem',
+    x_api_version='architecto',
+    x_client_id='ipsa',
+    x_client_secret='reiciendis',
 )
 
 res = s.payment_links.cancel_payment_link(req)
@@ -59,35 +59,35 @@ s = pg_latest.PGLatest()
 req = operations.CreatePaymentLinkRequest(
     create_link_request=shared.CreateLinkRequest(
         customer_details=shared.LinkCustomerDetailsEntity(
-            customer_email='iste',
-            customer_name='dolor',
-            customer_phone='natus',
+            customer_email='est',
+            customer_name='mollitia',
+            customer_phone='laborum',
         ),
-        link_amount=3864.89,
+        link_amount=1709.09,
         link_auto_reminders=False,
-        link_currency='hic',
-        link_expiry_time='saepe',
-        link_id='fuga',
+        link_currency='dolorem',
+        link_expiry_time='corporis',
+        link_id='explicabo',
         link_meta=shared.LinkMetaEntity(
-            notify_url='in',
-            payment_methods='corporis',
-            return_url='iste',
+            notify_url='nobis',
+            payment_methods='enim',
+            return_url='omnis',
             upi_intent=False,
         ),
-        link_minimum_partial_amount=4370.32,
+        link_minimum_partial_amount=3637.11,
         link_notes={
-            "saepe": 'quidem',
+            "minima": 'excepturi',
         },
         link_notify=shared.LinkNotifyEntity(
             send_email=False,
             send_sms=False,
         ),
         link_partial_payments=False,
-        link_purpose='architecto',
+        link_purpose='accusantium',
     ),
-    x_api_version='ipsa',
-    x_client_id='reiciendis',
-    x_client_secret='est',
+    x_api_version='iure',
+    x_client_id='culpa',
+    x_client_secret='doloribus',
 )
 
 res = s.payment_links.create_payment_link(req)
@@ -121,9 +121,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetPaymentLinkDetailsRequest(
-    link_id='mollitia',
-    x_api_version='laborum',
-    x_client_id='dolores',
+    link_id='sapiente',
+    x_api_version='architecto',
+    x_client_id='mollitia',
     x_client_secret='dolorem',
 )
 
@@ -158,10 +158,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetPaymentLinkOrdersRequest(
-    link_id='corporis',
-    x_api_version='explicabo',
-    x_client_id='nobis',
-    x_client_secret='enim',
+    link_id='culpa',
+    x_api_version='consequuntur',
+    x_client_id='repellat',
+    x_client_secret='mollitia',
 )
 
 res = s.payment_links.get_payment_link_orders(req)

@@ -10,8 +10,6 @@ pip install git+https://github.com/speakeasy-sdks/python-sdk-full.git
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```python
 import pg_latest
 from pg_latest.models import operations, shared
@@ -21,10 +19,10 @@ s = pg_latest.PGLatest()
 req = operations.OTPRequestRequest(
     otp_request=shared.OTPRequest(
         action=shared.OTPRequestAction.RESEND_OTP,
-        otp='provident',
+        otp='nulla',
     ),
-    payment_id='distinctio',
-    x_api_version='quibusdam',
+    payment_id='corrupti',
+    x_api_version='illum',
 )
 
 res = s.authentication.otp_request(req)
@@ -100,6 +98,32 @@ if res.otp_response_entity is not None:
 * [create_terminals](docs/sdks/softpos/README.md#create_terminals) - Create Terminal
 * [get_terminal_by_mobile_number](docs/sdks/softpos/README.md#get_terminal_by_mobile_number) - Get terminal status using phone number
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Pagination -->
+# Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `Next` method that can be called to pull down the next group of results. If the
+return value of `Next` is `None`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+
+
+<!-- End Pagination -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

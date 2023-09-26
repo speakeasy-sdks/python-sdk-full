@@ -18,10 +18,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetsettlementsRequest(
-    order_id='nihil',
-    x_api_version='praesentium',
-    x_client_id='voluptatibus',
-    x_client_secret='ipsa',
+    order_id='dicta',
+    x_api_version='harum',
+    x_client_id='enim',
+    x_client_secret='accusamus',
 )
 
 res = s.settlements.getsettlements(req)
@@ -58,22 +58,22 @@ req = operations.PostSettlementsRequest(
     fetch_settlement_recon_request=shared.FetchSettlementReconRequest(
         filters=shared.FetchSettlementReconRequestFilters(
             cf_settlement_ids=[
-                604846,
+                414263,
             ],
-            end_date='voluptate',
+            end_date='repudiandae',
             settlement_utrs=[
-                'cum',
+                'quae',
             ],
-            start_date='perferendis',
+            start_date='ipsum',
         ),
         pagination=shared.FetchSettlementReconRequestPagination(
-            cursor='doloremque',
-            limit=441711,
+            cursor='quidem',
+            limit=565189,
         ),
     ),
-    x_api_version='ut',
-    x_client_id='maiores',
-    x_client_secret='dicta',
+    x_api_version='excepturi',
+    x_client_id='pariatur',
+    x_client_secret='modi',
 )
 
 res = s.settlements.post_settlements(req)

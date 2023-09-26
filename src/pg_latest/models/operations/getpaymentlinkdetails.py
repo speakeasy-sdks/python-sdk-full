@@ -22,10 +22,13 @@ class GetPaymentLinkDetailsRequest:
 @dataclasses.dataclass
 class GetPaymentLinkDetailsResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
     link_response: Optional[shared_linkresponse.LinkResponse] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

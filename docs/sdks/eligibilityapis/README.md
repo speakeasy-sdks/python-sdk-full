@@ -28,9 +28,9 @@ req = operations.EligibilityCardlessEMIRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_api_version='vel',
-    x_client_id='error',
-    x_client_secret='deserunt',
+    x_api_version='iure',
+    x_client_id='magnam',
+    x_client_secret='debitis',
 )
 
 res = s.eligibility_ap_is.eligibility_cardless_emi(req)
@@ -67,7 +67,7 @@ req = operations.EligibilityOfferRequest(
     eligibility_offers_request=shared.EligibilityOffersRequest(
         filters=shared.OfferFilters(
             offer_type=[
-                shared.OfferType.CASHBACK,
+                shared.OfferType.DISCOUNT,
             ],
         ),
         queries=shared.OfferQueries(
@@ -75,9 +75,9 @@ req = operations.EligibilityOfferRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_api_version='iure',
-    x_client_id='magnam',
-    x_client_secret='debitis',
+    x_api_version='delectus',
+    x_client_id='tempora',
+    x_client_secret='suscipit',
 )
 
 res = s.eligibility_ap_is.eligibility_offer(req)
@@ -120,9 +120,9 @@ req = operations.EligibilityPaylaterRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_api_version='ipsa',
-    x_client_id='delectus',
-    x_client_secret='tempora',
+    x_api_version='molestiae',
+    x_client_id='minus',
+    x_client_secret='placeat',
 )
 
 res = s.eligibility_ap_is.eligibility_paylater(req)

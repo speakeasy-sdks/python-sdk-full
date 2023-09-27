@@ -236,6 +236,7 @@ docs/models/shared/cardlessemiqueries.md
 docs/models/shared/customerdetailscardlessemi.md
 docs/models/shared/eligibleoffersentity.md
 docs/models/shared/offerentity.md
+docs/models/shared/offervalidationspaymentmethod.md
 docs/models/shared/offervalidations.md
 docs/models/shared/offerall.md
 docs/models/shared/all.md
@@ -295,6 +296,7 @@ docs/models/shared/orderpayresponsepaymentmethod.md
 docs/models/shared/orderpayresponse.md
 docs/models/shared/orderpaydatapayload.md
 docs/models/shared/orderpaydata.md
+docs/models/shared/orderpayrequestpaymentmethod.md
 docs/models/shared/orderpayrequest.md
 docs/models/shared/cardpaymentmethod.md
 docs/models/shared/cardcardbankname.md
@@ -320,6 +322,7 @@ docs/models/shared/paylaterprovider.md
 docs/models/shared/paylater.md
 docs/models/shared/paymentsentitypaymentstatus.md
 docs/models/shared/paymentsentity.md
+docs/models/shared/paymentmethodinpaymentsentitypaymentmethod.md
 docs/models/shared/paymentmethodinpaymentsentity.md
 docs/models/shared/paymentmethodcardinpaymentsentity.md
 docs/models/shared/paymentmethodnetbankinginpaymentsentity.md

@@ -1,4 +1,5 @@
 # Offers
+(*offers*)
 
 ### Available Operations
 
@@ -46,16 +47,12 @@ req = operations.CreateOfferRequest(
         offer_validations=shared.OfferValidations(
             max_allowed='10',
             min_amount='1',
-            payment_method=shared.OfferNB(
-                netbanking=shared.NBOffer(
-                    bank_name='all',
-                ),
-            ),
+            payment_method=[],
         ),
     ),
-    x_api_version='veritatis',
-    x_client_id='deserunt',
-    x_client_secret='perferendis',
+    x_api_version='quis',
+    x_client_id='veritatis',
+    x_client_secret='deserunt',
 )
 
 res = s.offers.create_offer(req)
@@ -89,10 +86,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetOfferRequest(
-    offer_id='ipsam',
-    x_api_version='repellendus',
-    x_client_id='sapiente',
-    x_client_secret='quo',
+    offer_id='perferendis',
+    x_api_version='ipsam',
+    x_client_id='repellendus',
+    x_client_secret='sapiente',
 )
 
 res = s.offers.get_offer(req)

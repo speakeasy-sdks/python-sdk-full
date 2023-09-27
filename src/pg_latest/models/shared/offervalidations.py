@@ -2,9 +2,22 @@
 
 from __future__ import annotations
 import dataclasses
+from ..shared import offerall as shared_offerall
+from ..shared import offercard as shared_offercard
+from ..shared import offeremi as shared_offeremi
+from ..shared import offernb as shared_offernb
+from ..shared import offerpaylater as shared_offerpaylater
+from ..shared import offerupi as shared_offerupi
+from ..shared import offerwallet as shared_offerwallet
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
-from typing import Any, Optional
+from typing import Optional, Union
+
+
+
+@dataclasses.dataclass
+class OfferValidationsPaymentMethod:
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -13,7 +26,7 @@ from typing import Any, Optional
 class OfferValidations:
     max_allowed: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max_allowed') }})
     r"""Maximum amount of Offer that can be availed."""
-    payment_method: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_method') }})
+    payment_method: Union[shared_offerall.OfferAll, shared_offercard.OfferCard, shared_offernb.OfferNB, shared_offerwallet.OfferWallet, shared_offerupi.OfferUPI, shared_offerpaylater.OfferPaylater, shared_offeremi.OfferEMI] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_method') }})
     min_amount: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('min_amount'), 'exclude': lambda f: f is None }})
     r"""Minimum Amount for Offer to be Applicable"""
     

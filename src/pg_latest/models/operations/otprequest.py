@@ -14,7 +14,7 @@ from typing import Optional
 class OTPRequestRequest:
     payment_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'payment_id', 'style': 'simple', 'explode': False }})
     otp_request: Optional[shared_otprequest.OTPRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    x_api_version: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-api-version', 'style': 'simple', 'explode': False }})
+    x_api_version: Optional[str] = dataclasses.field(default='2022-09-01', metadata={'header': { 'field_name': 'x-api-version', 'style': 'simple', 'explode': False }})
     
 
 

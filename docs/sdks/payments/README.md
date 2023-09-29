@@ -19,11 +19,11 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetPaymentbyIDRequest(
-    cf_payment_id=607831,
-    order_id='nemo',
-    x_api_version='minima',
-    x_client_id='excepturi',
-    x_client_secret='accusantium',
+    cf_payment_id=310675,
+    order_id='coulomb',
+    x_api_version='Solutions',
+    x_client_id='Surinam Centreville Berkshire',
+    x_client_secret='Consultant Southwest',
 )
 
 res = s.payments.get_paymentby_id(req)
@@ -57,10 +57,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetPaymentsfororderRequest(
-    order_id='iure',
-    x_api_version='culpa',
-    x_client_id='doloribus',
-    x_client_secret='sapiente',
+    order_id='female indexing',
+    x_api_version='Convertible Regional SAS',
+    x_client_id='Salad',
+    x_client_secret='copying Daniel',
 )
 
 res = s.payments.get_paymentsfororder(req)

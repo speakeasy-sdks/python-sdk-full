@@ -7,11 +7,7 @@ from ..shared import vendorsplit as shared_vendorsplit
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pg_latest import utils
-from typing import Optional
-
-class RefundsEntityEntity(str, Enum):
-    r"""Type of object"""
-    REFUND = 'refund'
+from typing import Final, Optional
 
 
 
@@ -50,7 +46,7 @@ class RefundsEntity:
     r"""Cashfree Payments ID for a refund"""
     created_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'exclude': lambda f: f is None }})
     r"""Time of refund creation"""
-    entity: Optional[RefundsEntityEntity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('entity'), 'exclude': lambda f: f is None }})
+    ENTITY: Final[Optional[str]] = dataclasses.field(default='refund', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('entity'), 'exclude': lambda f: f is None }})
     r"""Type of object"""
     metadata: Optional[RefundsEntityMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
     r"""Key-value pair that can be used to store additional information about the entity. Maximum 5 key-value pairs"""

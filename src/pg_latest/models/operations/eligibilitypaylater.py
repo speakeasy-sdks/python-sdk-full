@@ -14,7 +14,7 @@ class EligibilityPaylaterRequest:
     x_client_id: str = dataclasses.field(metadata={'header': { 'field_name': 'x-client-id', 'style': 'simple', 'explode': False }})
     x_client_secret: str = dataclasses.field(metadata={'header': { 'field_name': 'x-client-secret', 'style': 'simple', 'explode': False }})
     eligibility_cardless_emi_request: Optional[shared_eligibilitycardlessemirequest.EligibilityCardlessEMIRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    x_api_version: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-api-version', 'style': 'simple', 'explode': False }})
+    x_api_version: Optional[str] = dataclasses.field(default='2022-09-01', metadata={'header': { 'field_name': 'x-api-version', 'style': 'simple', 'explode': False }})
     
 
 

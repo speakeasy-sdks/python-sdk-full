@@ -29,9 +29,9 @@ req = operations.EligibilityCardlessEMIRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_api_version='iure',
-    x_client_id='magnam',
-    x_client_secret='debitis',
+    x_api_version='Handmade',
+    x_client_id='Principal',
+    x_client_secret='South male Boulder',
 )
 
 res = s.eligibility_ap_is.eligibility_cardless_emi(req)
@@ -68,7 +68,7 @@ req = operations.EligibilityOfferRequest(
     eligibility_offers_request=shared.EligibilityOffersRequest(
         filters=shared.OfferFilters(
             offer_type=[
-                shared.OfferType.DISCOUNT,
+                shared.OfferType.CASHBACK,
             ],
         ),
         queries=shared.OfferQueries(
@@ -76,9 +76,9 @@ req = operations.EligibilityOfferRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_api_version='delectus',
-    x_client_id='tempora',
-    x_client_secret='suscipit',
+    x_api_version='Electric Planner',
+    x_client_id='invoice female female',
+    x_client_secret='Washington Facilitator Cadillac',
 )
 
 res = s.eligibility_ap_is.eligibility_offer(req)
@@ -121,9 +121,9 @@ req = operations.EligibilityPaylaterRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_api_version='molestiae',
-    x_client_id='minus',
-    x_client_secret='placeat',
+    x_api_version='generate',
+    x_client_id='Livermorium',
+    x_client_secret='Christmas',
 )
 
 res = s.eligibility_ap_is.eligibility_paylater(req)

@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        | Example            |
 | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| `bank_name`        | *str*              | :heavy_check_mark: | N/A                | all                |
+| `bank_name`        | *Optional[str]*    | :heavy_check_mark: | N/A                | all                |

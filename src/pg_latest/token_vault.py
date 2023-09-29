@@ -22,7 +22,7 @@ class TokenVault:
         url = utils.generate_url(operations.DeleteSpecificSavedInstrumentRequest, base_url, '/customers/{customer_id}/instruments/{instrument_id}', request)
         headers = utils.get_headers(request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.client
         
@@ -61,7 +61,7 @@ class TokenVault:
         headers = utils.get_headers(request)
         query_params = utils.get_query_params(operations.FetchAllSavedInstrumentsRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.client
         
@@ -99,7 +99,7 @@ class TokenVault:
         url = utils.generate_url(operations.FetchCryptogramRequest, base_url, '/customers/{customer_id}/instruments/{instrument_id}/cryptogram', request)
         headers = utils.get_headers(request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.client
         
@@ -137,7 +137,7 @@ class TokenVault:
         url = utils.generate_url(operations.FetchSpecificSavedInstrumentRequest, base_url, '/customers/{customer_id}/instruments/{instrument_id}', request)
         headers = utils.get_headers(request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.client
         

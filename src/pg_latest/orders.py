@@ -20,11 +20,11 @@ class Orders:
         
         url = base_url + '/orders'
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "create_order_backend_request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "create_order_backend_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.client
         
@@ -86,7 +86,7 @@ class Orders:
         url = utils.generate_url(operations.GetOrderRequest, base_url, '/orders/{order_id}', request)
         headers = utils.get_headers(request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.client
         
@@ -123,11 +123,11 @@ class Orders:
         
         url = base_url + '/orders/sessions'
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "order_pay_request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "order_pay_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.client
         
@@ -180,11 +180,11 @@ class Orders:
         
         url = utils.generate_url(operations.PreauthorizationRequest, base_url, '/orders/{order_id}/authorization', request)
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "authorization_request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "authorization_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.client
         

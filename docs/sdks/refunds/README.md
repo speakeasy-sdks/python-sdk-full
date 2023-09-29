@@ -21,22 +21,22 @@ s = pg_latest.PGLatest()
 
 req = operations.CreaterefundRequest(
     create_refund_request=shared.CreateRefundRequest(
-        refund_amount=1103.75,
-        refund_id='laborum',
-        refund_note='animi',
-        refund_speed=shared.CreateRefundRequestRefundSpeed.STANDARD,
+        refund_amount=567.71,
+        refund_id='overstate Rutherfordium',
+        refund_note='perferendis Account',
+        refund_speed=shared.CreateRefundRequestRefundSpeed.INSTANT,
         refund_splits=[
             shared.VendorSplit(
-                amount=1381.83,
-                percentage=7783.46,
-                vendor_id='sequi',
+                amount=9046.67,
+                percentage=2487.44,
+                vendor_id='Rubber raccoon Division',
             ),
         ],
     ),
-    order_id='tenetur',
-    x_api_version='ipsam',
-    x_client_id='id',
-    x_client_secret='possimus',
+    order_id='alarming back',
+    x_api_version='users',
+    x_client_id='Administrator whiteboard',
+    x_client_secret='Transgender Identity Berkshire',
 )
 
 res = s.refunds.createrefund(req)
@@ -70,11 +70,11 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetRefundRequest(
-    order_id='aut',
-    refund_id='quasi',
-    x_api_version='error',
-    x_client_id='temporibus',
-    x_client_secret='laborum',
+    order_id='Connecticut East aliquid',
+    refund_id='Chair',
+    x_api_version='Elbert Personal Electric',
+    x_client_id='Director Beach Borders',
+    x_client_secret='networks Electric',
 )
 
 res = s.refunds.get_refund(req)
@@ -108,10 +108,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetallrefundsfororderRequest(
-    order_id='quasi',
-    x_api_version='reiciendis',
-    x_client_id='voluptatibus',
-    x_client_secret='vero',
+    order_id='trial South',
+    x_api_version='Music',
+    x_client_id='Recycled red',
+    x_client_secret='newton Lodge',
 )
 
 res = s.refunds.getallrefundsfororder(req)

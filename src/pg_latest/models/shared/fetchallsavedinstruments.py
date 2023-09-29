@@ -6,16 +6,12 @@ from ..shared import savedinstrumentmeta as shared_savedinstrumentmeta
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pg_latest import utils
-from typing import Optional
+from typing import Final, Optional
 
 class FetchAllSavedInstrumentsInstrumentStatus(str, Enum):
     r"""Status of the saved instrument."""
     ACTIVE = 'ACTIVE'
     INACTIVE = 'INACTIVE'
-
-class FetchAllSavedInstrumentsInstrumentType(str, Enum):
-    r"""Type of the saved instrument"""
-    CARD = 'card'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -35,7 +31,7 @@ class FetchAllSavedInstruments:
     instrument_meta: Optional[shared_savedinstrumentmeta.SavedInstrumentMeta] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instrument_meta'), 'exclude': lambda f: f is None }})
     instrument_status: Optional[FetchAllSavedInstrumentsInstrumentStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instrument_status'), 'exclude': lambda f: f is None }})
     r"""Status of the saved instrument."""
-    instrument_type: Optional[FetchAllSavedInstrumentsInstrumentType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instrument_type'), 'exclude': lambda f: f is None }})
+    INSTRUMENT_TYPE: Final[Optional[str]] = dataclasses.field(default='card', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instrument_type'), 'exclude': lambda f: f is None }})
     r"""Type of the saved instrument"""
     instrument_uid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instrument_uid'), 'exclude': lambda f: f is None }})
     r"""Unique id for the saved instrument"""

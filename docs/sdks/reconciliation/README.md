@@ -21,17 +21,17 @@ s = pg_latest.PGLatest()
 req = operations.PostReconRequest(
     fetch_pg_recon_request=shared.FetchPGReconRequest(
         filters=shared.FetchPGReconRequestFilters(
-            end_date='architecto',
-            start_date='mollitia',
+            end_date='Bentley',
+            start_date='Bolingbrook Generic',
         ),
         pagination=shared.FetchPGReconRequestPagination(
-            cursor='dolorem',
-            limit=635059,
+            cursor='Shoes framework',
+            limit=805084,
         ),
     ),
-    x_api_version='consequuntur',
-    x_client_id='repellat',
-    x_client_secret='mollitia',
+    x_api_version='Liaison',
+    x_client_id='calculating Universal',
+    x_client_secret='mostly Checking',
 )
 
 res = s.reconciliation.post_recon(req)
@@ -68,22 +68,22 @@ req = operations.PostSettlementReconRequest(
     fetch_settlement_recon_request=shared.FetchSettlementReconRequest(
         filters=shared.FetchSettlementReconRequestFilters(
             cf_settlement_ids=[
-                581850,
+                956121,
             ],
-            end_date='numquam',
+            end_date='olive',
             settlement_utrs=[
-                'commodi',
+                'Reynolds',
             ],
-            start_date='quam',
+            start_date='schemas Recumbent API',
         ),
         pagination=shared.FetchSettlementReconRequestPagination(
-            cursor='molestiae',
-            limit=244425,
+            cursor='wireless Movies',
+            limit=781173,
         ),
     ),
-    x_api_version='error',
-    x_client_id='quia',
-    x_client_secret='quis',
+    x_api_version='or Bicycle navigate',
+    x_client_id='Agent North',
+    x_client_secret='Savings',
 )
 
 res = s.reconciliation.post_settlement_recon(req)

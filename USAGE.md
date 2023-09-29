@@ -9,11 +9,11 @@ s = pg_latest.PGLatest()
 
 req = operations.OTPRequestRequest(
     otp_request=shared.OTPRequest(
-        action=shared.OTPRequestAction.RESEND_OTP,
-        otp='provident',
+        action=shared.OTPRequestAction.SUBMIT_OTP,
+        otp='Tricycle pace',
     ),
-    payment_id='distinctio',
-    x_api_version='quibusdam',
+    payment_id='Nobelium Planner',
+    x_api_version='babyish Toys',
 )
 
 res = s.authentication.otp_request(req)

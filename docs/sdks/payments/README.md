@@ -65,7 +65,7 @@ req = operations.GetPaymentsfororderRequest(
 
 res = s.payments.get_paymentsfororder(req)
 
-if res.payments_entity is not None:
+if res.get_paymentsfororder_200_application_json_one_of is not None:
     # handle response
 ```
 

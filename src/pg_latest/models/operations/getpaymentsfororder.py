@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import errorresponse as shared_errorresponse
 from ..shared import paymentsentity as shared_paymentsentity
-from typing import Optional
+from typing import Optional, Union
 
 
 
@@ -21,6 +21,14 @@ class GetPaymentsfororderRequest:
 
 
 @dataclasses.dataclass
+class GetPaymentsfororder200ApplicationJSON:
+    r"""OK"""
+    
+
+
+
+
+@dataclasses.dataclass
 class GetPaymentsfororderResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
@@ -28,9 +36,9 @@ class GetPaymentsfororderResponse:
     r"""HTTP response status code for this operation"""
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     r"""Any bad or invalid request will lead to following error object"""
-    headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
-    payments_entity: Optional[shared_paymentsentity.PaymentsEntity] = dataclasses.field(default=None)
+    get_paymentsfororder_200_application_json_one_of: Optional[Union[shared_paymentsentity.PaymentsEntity]] = dataclasses.field(default=None)
     r"""OK"""
+    headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
     

@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pg_latest import utils
 from pg_latest.models import errors, operations, shared
-from typing import Optional
+from typing import Optional, Union
 
 class Payments:
     sdk_configuration: SDKConfiguration
@@ -72,8 +72,8 @@ class Payments:
             res.headers = http_res.headers
             
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.PaymentsEntity])
-                res.payments_entity = out
+                out = utils.unmarshal_json(http_res.text, Optional[Union[shared.PaymentsEntity]])
+                res.get_paymentsfororder_200_application_json_one_of = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         else:

@@ -64,10 +64,10 @@ s = pg_latest.PGLatest()
 
 req = operations.FetchAllSavedInstrumentsRequest(
     customer_id='Internal',
-    instrument_type='array',
-    x_api_version='aggravate Wooden black',
-    x_client_id='Berkshire yahoo quo',
-    x_client_secret='Producer blue gray',
+    instrument_type=operations.FetchAllSavedInstrumentsInstrumentType.CARD,
+    x_api_version='array',
+    x_client_id='aggravate Wooden black',
+    x_client_secret='Berkshire yahoo quo',
 )
 
 res = s.token_vault.fetch_all_saved_instruments(req)

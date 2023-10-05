@@ -5,16 +5,22 @@ import dataclasses
 import requests as requests_http
 from ..shared import errorresponse as shared_errorresponse
 from ..shared import fetchallsavedinstruments as shared_fetchallsavedinstruments
-from typing import Final, Optional
+from enum import Enum
+from typing import Optional
+
+class FetchAllSavedInstrumentsInstrumentType(str, Enum):
+    r"""type to instrument to query"""
+    CARD = 'card'
 
 
 
 @dataclasses.dataclass
 class FetchAllSavedInstrumentsRequest:
     customer_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'customer_id', 'style': 'simple', 'explode': False }})
+    instrument_type: FetchAllSavedInstrumentsInstrumentType = dataclasses.field(metadata={'query_param': { 'field_name': 'instrument_type', 'style': 'form', 'explode': True }})
+    r"""type to instrument to query"""
     x_client_id: str = dataclasses.field(metadata={'header': { 'field_name': 'x-client-id', 'style': 'simple', 'explode': False }})
     x_client_secret: str = dataclasses.field(metadata={'header': { 'field_name': 'x-client-secret', 'style': 'simple', 'explode': False }})
-    INSTRUMENT_TYPE: Final[str] = dataclasses.field(default='card', metadata={'query_param': { 'field_name': 'instrument_type', 'style': 'form', 'explode': True }})
     x_api_version: Optional[str] = dataclasses.field(default='2022-09-01', metadata={'header': { 'field_name': 'x-api-version', 'style': 'simple', 'explode': False }})
     
 

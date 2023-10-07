@@ -22,9 +22,8 @@ s = pg_latest.PGLatest()
 
 req = operations.CancelPaymentLinkRequest(
     link_id='Mercury Michel',
-    x_api_version='yellow',
-    x_client_id='Draper sweltering Diesel',
-    x_client_secret='Maine',
+    x_client_id='yellow',
+    x_client_secret='Draper sweltering Diesel',
 )
 
 res = s.payment_links.cancel_payment_link(req)
@@ -60,35 +59,21 @@ s = pg_latest.PGLatest()
 req = operations.CreatePaymentLinkRequest(
     create_link_request=shared.CreateLinkRequest(
         customer_details=shared.LinkCustomerDetailsEntity(
-            customer_email='grin Fort',
-            customer_name='Licensed',
-            customer_phone='firewall Bicycle Jordan',
+            customer_phone='grin Fort',
         ),
-        link_amount=4444.02,
-        link_auto_reminders=False,
-        link_currency='reintermediate',
-        link_expiry_time='Forward Reggae Designer',
-        link_id='fuga flexibility',
-        link_meta=shared.LinkMetaEntity(
-            notify_url='female',
-            payment_methods='Northeast Blues Communications',
-            return_url='SUV Smart Clothing',
-            upi_intent=False,
-        ),
-        link_minimum_partial_amount=7331.25,
+        link_amount=185.31,
+        link_currency='Hybrid',
+        link_id='synthesizing programming',
+        link_meta=shared.LinkMetaEntity(),
         link_notes={
-            "quia": 'Bermuda',
+            "key_1": 'value_1',
+            "key_2": 'value_2',
         },
-        link_notify=shared.LinkNotifyEntity(
-            send_email=False,
-            send_sms=False,
-        ),
-        link_partial_payments=False,
-        link_purpose='brr Account',
+        link_notify=shared.LinkNotifyEntity(),
+        link_purpose='Mazda',
     ),
-    x_api_version='Colombia',
-    x_client_id='firewall Bicycle Ferry',
-    x_client_secret='static',
+    x_client_id='Bedfordshire Human',
+    x_client_secret='plum becquerel',
 )
 
 res = s.payment_links.create_payment_link(req)
@@ -123,9 +108,8 @@ s = pg_latest.PGLatest()
 
 req = operations.GetPaymentLinkDetailsRequest(
     link_id='Bayamon male Northwest',
-    x_api_version='regional Hybrid ew',
-    x_client_id='Operative',
-    x_client_secret='migrate Southwest',
+    x_client_id='regional Hybrid ew',
+    x_client_secret='Operative',
 )
 
 res = s.payment_links.get_payment_link_details(req)
@@ -160,9 +144,8 @@ s = pg_latest.PGLatest()
 
 req = operations.GetPaymentLinkOrdersRequest(
     link_id='North sophomore',
-    x_api_version='Supervisor sue Tunnel',
-    x_client_id='Account',
-    x_client_secret='Ferrari South Beauty',
+    x_client_id='Supervisor sue Tunnel',
+    x_client_secret='Account',
 )
 
 res = s.payment_links.get_payment_link_orders(req)

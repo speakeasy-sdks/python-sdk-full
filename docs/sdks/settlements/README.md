@@ -20,9 +20,8 @@ s = pg_latest.PGLatest()
 
 req = operations.GetsettlementsRequest(
     order_id='Liaison',
-    x_api_version='Lawrencium aggregate black',
-    x_client_id='Kids sole',
-    x_client_secret='Modern Corporate redouble',
+    x_client_id='Lawrencium aggregate black',
+    x_client_secret='Kids sole',
 )
 
 res = s.settlements.getsettlements(req)
@@ -61,20 +60,16 @@ req = operations.PostSettlementsRequest(
             cf_settlement_ids=[
                 297769,
             ],
-            end_date='provided',
             settlement_utrs=[
-                'Interactions',
+                'Southwest',
             ],
-            start_date='Bedfordshire Planner Representative',
         ),
         pagination=shared.FetchSettlementReconRequestPagination(
-            cursor='program Senior',
-            limit=325622,
+            limit=542580,
         ),
     ),
-    x_api_version='generate Abbie South',
-    x_client_id='incidentally up',
-    x_client_secret='Account Northwest',
+    x_client_id='Southwest Stacy Planner',
+    x_client_secret='length program Senior',
 )
 
 res = s.settlements.post_settlements(req)

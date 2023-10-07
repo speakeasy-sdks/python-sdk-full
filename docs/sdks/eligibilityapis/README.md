@@ -29,9 +29,8 @@ req = operations.EligibilityCardlessEMIRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_api_version='Handmade',
-    x_client_id='Principal',
-    x_client_secret='South male Boulder',
+    x_client_id='Handmade',
+    x_client_secret='Principal',
 )
 
 res = s.eligibility_ap_is.eligibility_cardless_emi(req)
@@ -76,9 +75,8 @@ req = operations.EligibilityOfferRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_api_version='Electric Planner',
-    x_client_id='invoice female female',
-    x_client_secret='Washington Facilitator Cadillac',
+    x_client_id='Electric Planner',
+    x_client_secret='invoice female female',
 )
 
 res = s.eligibility_ap_is.eligibility_offer(req)
@@ -121,9 +119,8 @@ req = operations.EligibilityPaylaterRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_api_version='generate',
-    x_client_id='Livermorium',
-    x_client_secret='Christmas',
+    x_client_id='generate',
+    x_client_secret='Livermorium',
 )
 
 res = s.eligibility_ap_is.eligibility_paylater(req)

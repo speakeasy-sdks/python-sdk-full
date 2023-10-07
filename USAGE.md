@@ -13,7 +13,6 @@ req = operations.OTPRequestRequest(
         otp='Tricycle pace',
     ),
     payment_id='Nobelium Planner',
-    x_api_version='babyish Toys',
 )
 
 res = s.authentication.otp_request(req)

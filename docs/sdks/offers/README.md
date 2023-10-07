@@ -22,14 +22,12 @@ req = operations.CreateOfferRequest(
     create_offer_backend_request=shared.CreateOfferBackendRequest(
         offer_details=shared.OfferDetails(
             cashback_details=shared.CashbackDetails(
-                cashback_type=shared.CashbackDetailsCashbackType.PERCENTAGE,
-                cashback_value='Account viral',
-                max_cashback_amount='Planner where',
+                max_cashback_amount='Regional viral',
             ),
             discount_details=shared.DiscountDetails(
-                discount_type=shared.DiscountDetailsDiscountType.FLAT,
-                discount_value='IB West',
-                max_discount_amount='mouton openly Electric',
+                discount_type=shared.DiscountDetailsDiscountType.PERCENTAGE,
+                discount_value='instead Blues where',
+                max_discount_amount='Investment',
             ),
             offer_type=shared.OfferDetailsOfferType.DISCOUNT_AND_CASHBACK,
         ),
@@ -41,18 +39,21 @@ req = operations.CreateOfferRequest(
             offer_title='Test Offer',
         ),
         offer_tnc=shared.OfferTnc(
-            offer_tnc_type=shared.OfferTncOfferTncType.POST,
+            offer_tnc_type=shared.OfferTncOfferTncType.LINK,
             offer_tnc_value='Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         ),
         offer_validations=shared.OfferValidations(
             max_allowed='10',
             min_amount='1',
-            payment_method=[],
+            shared.OfferWallet(
+                app=shared.WalletOffer(
+                    provider='paytm',
+                ),
+            ),
         ),
     ),
-    x_api_version='penicillin drat',
-    x_client_id='TCP Copernicium Beryllium',
-    x_client_secret='yuck CSS',
+    x_client_id='mouton openly Electric',
+    x_client_secret='Franc drat now',
 )
 
 res = s.offers.create_offer(req)
@@ -87,9 +88,8 @@ s = pg_latest.PGLatest()
 
 req = operations.GetOfferRequest(
     offer_id='frankly navigate',
-    x_api_version='Electric system kilogram',
-    x_client_id='violet green',
-    x_client_secret='Idaho',
+    x_client_id='Electric system kilogram',
+    x_client_secret='violet green',
 )
 
 res = s.offers.get_offer(req)

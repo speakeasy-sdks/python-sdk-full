@@ -27,9 +27,8 @@ s = pg_latest.PGLatest()
 req = operations.DeleteSpecificSavedInstrumentRequest(
     customer_id='as',
     instrument_id='Bentley',
-    x_api_version='azure improbable Nickel',
-    x_client_id='where Soul budgetary',
-    x_client_secret='scratch',
+    x_client_id='azure improbable Nickel',
+    x_client_secret='where Soul budgetary',
 )
 
 res = s.token_vault.delete_specific_saved_instrument(req)
@@ -65,9 +64,8 @@ s = pg_latest.PGLatest()
 req = operations.FetchAllSavedInstrumentsRequest(
     customer_id='Internal',
     instrument_type=operations.FetchAllSavedInstrumentsInstrumentType.CARD,
-    x_api_version='array',
-    x_client_id='aggravate Wooden black',
-    x_client_secret='Berkshire yahoo quo',
+    x_client_id='array',
+    x_client_secret='aggravate Wooden black',
 )
 
 res = s.token_vault.fetch_all_saved_instruments(req)
@@ -103,9 +101,8 @@ s = pg_latest.PGLatest()
 req = operations.FetchCryptogramRequest(
     customer_id='Northwest Touring overbook',
     instrument_id='lest',
-    x_api_version='distil',
-    x_client_id='hacking Van Checking',
-    x_client_secret='collaborative',
+    x_client_id='distil',
+    x_client_secret='hacking Van Checking',
 )
 
 res = s.token_vault.fetch_cryptogram(req)
@@ -141,9 +138,8 @@ s = pg_latest.PGLatest()
 req = operations.FetchSpecificSavedInstrumentRequest(
     customer_id='excluding Diesel perspiciatis',
     instrument_id='tan male',
-    x_api_version='eaque empower',
-    x_client_id='Auto siemens Altoona',
-    x_client_secret='Minivan',
+    x_client_id='eaque empower',
+    x_client_secret='Auto siemens Altoona',
 )
 
 res = s.token_vault.fetch_specific_saved_instrument(req)

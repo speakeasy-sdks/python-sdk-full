@@ -24,13 +24,11 @@ s = pg_latest.PGLatest()
 
 req = operations.CreateTerminalsRequest(
     create_terminal_request=shared.CreateTerminalRequest(
-        terminal_id='opium navigating Schaden',
-        terminal_name='parse Branding passage',
-        terminal_phone_no='siemens',
+        terminal_name='opium navigating Schaden',
+        terminal_phone_no='parse Branding passage',
     ),
-    x_api_version='Account',
-    x_client_id='with',
-    x_client_secret='ivory scalable Tricycle',
+    x_client_id='siemens',
+    x_client_secret='Account',
 )
 
 res = s.soft_pos.create_terminals(req)
@@ -65,9 +63,8 @@ s = pg_latest.PGLatest()
 
 req = operations.GetTerminalByMobileNumberRequest(
     terminal_phone_no='coulomb Bedfordshire',
-    x_api_version='Producer Trial',
-    x_client_id='Maine Global',
-    x_client_secret='perspiciatis',
+    x_client_id='Producer Trial',
+    x_client_secret='Maine Global',
 )
 
 res = s.soft_pos.get_terminal_by_mobile_number(req)

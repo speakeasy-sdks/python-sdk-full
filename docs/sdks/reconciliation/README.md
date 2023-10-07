@@ -25,13 +25,11 @@ req = operations.PostReconRequest(
             start_date='Bolingbrook Generic',
         ),
         pagination=shared.FetchPGReconRequestPagination(
-            cursor='Shoes framework',
-            limit=805084,
+            limit=405830,
         ),
     ),
-    x_api_version='Liaison',
-    x_client_id='calculating Universal',
-    x_client_secret='mostly Checking',
+    x_client_id='joule',
+    x_client_secret='Diesel Liaison',
 )
 
 res = s.reconciliation.post_recon(req)
@@ -70,20 +68,16 @@ req = operations.PostSettlementReconRequest(
             cf_settlement_ids=[
                 956121,
             ],
-            end_date='olive',
             settlement_utrs=[
-                'Reynolds',
+                'Buckinghamshire',
             ],
-            start_date='schemas Recumbent API',
         ),
         pagination=shared.FetchSettlementReconRequestPagination(
-            cursor='wireless Movies',
-            limit=781173,
+            limit=661166,
         ),
     ),
-    x_api_version='or Bicycle navigate',
-    x_client_id='Agent North',
-    x_client_secret='Savings',
+    x_client_id='pro',
+    x_client_secret='Southeast schemas',
 )
 
 res = s.reconciliation.post_settlement_recon(req)

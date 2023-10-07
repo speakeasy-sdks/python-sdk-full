@@ -23,20 +23,13 @@ req = operations.CreaterefundRequest(
     create_refund_request=shared.CreateRefundRequest(
         refund_amount=567.71,
         refund_id='overstate Rutherfordium',
-        refund_note='perferendis Account',
-        refund_speed=shared.CreateRefundRequestRefundSpeed.INSTANT,
         refund_splits=[
-            shared.VendorSplit(
-                amount=9046.67,
-                percentage=2487.44,
-                vendor_id='Rubber raccoon Division',
-            ),
+            shared.VendorSplit(),
         ],
     ),
-    order_id='alarming back',
-    x_api_version='users',
-    x_client_id='Administrator whiteboard',
-    x_client_secret='Transgender Identity Berkshire',
+    order_id='perferendis Account',
+    x_client_id='hence Interactions invoice',
+    x_client_secret='Division program Miami',
 )
 
 res = s.refunds.createrefund(req)
@@ -72,9 +65,8 @@ s = pg_latest.PGLatest()
 req = operations.GetRefundRequest(
     order_id='Connecticut East aliquid',
     refund_id='Chair',
-    x_api_version='Elbert Personal Electric',
-    x_client_id='Director Beach Borders',
-    x_client_secret='networks Electric',
+    x_client_id='Elbert Personal Electric',
+    x_client_secret='Director Beach Borders',
 )
 
 res = s.refunds.get_refund(req)
@@ -109,9 +101,8 @@ s = pg_latest.PGLatest()
 
 req = operations.GetallrefundsfororderRequest(
     order_id='trial South',
-    x_api_version='Music',
-    x_client_id='Recycled red',
-    x_client_secret='newton Lodge',
+    x_client_id='Music',
+    x_client_secret='Recycled red',
 )
 
 res = s.refunds.getallrefundsfororder(req)

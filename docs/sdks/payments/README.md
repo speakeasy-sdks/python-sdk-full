@@ -21,9 +21,8 @@ s = pg_latest.PGLatest()
 req = operations.GetPaymentbyIDRequest(
     cf_payment_id=310675,
     order_id='coulomb',
-    x_api_version='Solutions',
-    x_client_id='Surinam Centreville Berkshire',
-    x_client_secret='Consultant Southwest',
+    x_client_id='Solutions',
+    x_client_secret='Surinam Centreville Berkshire',
 )
 
 res = s.payments.get_paymentby_id(req)
@@ -58,9 +57,8 @@ s = pg_latest.PGLatest()
 
 req = operations.GetPaymentsfororderRequest(
     order_id='female indexing',
-    x_api_version='Convertible Regional SAS',
-    x_client_id='Salad',
-    x_client_secret='copying Daniel',
+    x_client_id='Convertible Regional SAS',
+    x_client_secret='Salad',
 )
 
 res = s.payments.get_paymentsfororder(req)

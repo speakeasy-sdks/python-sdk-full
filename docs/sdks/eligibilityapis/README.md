@@ -37,6 +37,7 @@ res = s.eligibility_ap_is.eligibility_cardless_emi(req)
 
 if res.eligible_cardless_emi_entities is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -83,6 +84,7 @@ res = s.eligibility_ap_is.eligibility_offer(req)
 
 if res.eligible_offers_entities is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -127,6 +129,7 @@ res = s.eligibility_ap_is.eligibility_paylater(req)
 
 if res.eligible_paylaters is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

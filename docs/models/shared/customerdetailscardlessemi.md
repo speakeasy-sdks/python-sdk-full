@@ -7,4 +7,4 @@ Details of the customer for whom eligibility is being checked.
 
 | Field                        | Type                         | Required                     | Description                  | Example                      |
 | ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
-| `customer_phone`             | *Optional[str]*              | :heavy_check_mark:           | Phone Number of the customer | 9898989898                   |
+| `customer_phone`             | *str*                        | :heavy_check_mark:           | Phone Number of the customer | 9898989898                   |

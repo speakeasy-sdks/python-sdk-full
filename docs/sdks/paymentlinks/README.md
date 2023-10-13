@@ -30,6 +30,7 @@ res = s.payment_links.cancel_payment_link(req)
 
 if res.link_cancelled_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -80,6 +81,7 @@ res = s.payment_links.create_payment_link(req)
 
 if res.link_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -116,6 +118,7 @@ res = s.payment_links.get_payment_link_details(req)
 
 if res.link_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -152,6 +155,7 @@ res = s.payment_links.get_payment_link_orders(req)
 
 if res.link_orders_responses is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

@@ -28,6 +28,7 @@ res = s.settlements.getsettlements(req)
 
 if res.settlements_entity is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -76,6 +77,7 @@ res = s.settlements.post_settlements(req)
 
 if res.fetch_settlement is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

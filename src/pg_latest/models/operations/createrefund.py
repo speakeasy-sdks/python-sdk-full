@@ -6,8 +6,7 @@ import requests as requests_http
 from ..shared import createrefundrequest as shared_createrefundrequest
 from ..shared import errorresponse as shared_errorresponse
 from ..shared import refundsentity as shared_refundsentity
-from typing import Optional
-
+from typing import Dict, List, Optional
 
 
 @dataclasses.dataclass
@@ -21,7 +20,6 @@ class CreaterefundRequest:
 
 
 
-
 @dataclasses.dataclass
 class CreaterefundResponse:
     content_type: str = dataclasses.field()
@@ -30,7 +28,7 @@ class CreaterefundResponse:
     r"""HTTP response status code for this operation"""
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     r"""Any bad or invalid request will lead to following error object"""
-    headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
+    headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
     refunds_entity: Optional[shared_refundsentity.RefundsEntity] = dataclasses.field(default=None)

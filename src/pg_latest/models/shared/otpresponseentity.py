@@ -19,7 +19,6 @@ class OTPResponseEntityAuthenticateStatus(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class OTPResponseEntity:
     r"""This is the response shared when merchant inovkes the OTP submit or resend API"""

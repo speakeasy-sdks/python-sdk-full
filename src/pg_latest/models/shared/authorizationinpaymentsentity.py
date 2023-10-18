@@ -19,7 +19,6 @@ class AuthorizationInPaymentsEntityStatus(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AuthorizationInPaymentsEntity:
     r"""The authorization details are present for payments which go through the preauthorization workflow. Or else this parameter will be null."""

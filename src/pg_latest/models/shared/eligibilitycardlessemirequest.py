@@ -8,7 +8,6 @@ from pg_latest import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class EligibilityCardlessEMIRequest:
     queries: shared_cardlessemiqueries.CardlessEMIQueries = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('queries') }})

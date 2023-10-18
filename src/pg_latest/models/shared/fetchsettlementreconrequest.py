@@ -4,19 +4,18 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class FetchSettlementReconRequestFilters:
     r"""Specify either the Settlement ID, Settlement UTR, or start date and end date to fetch the settlement details."""
-    cf_settlement_ids: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cf_settlement_ids'), 'exclude': lambda f: f is None }})
+    cf_settlement_ids: Optional[List[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cf_settlement_ids'), 'exclude': lambda f: f is None }})
     r"""List of settlement IDs for which you want the settlement reconciliation details."""
     end_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('end_date'), 'exclude': lambda f: f is None }})
     r"""Specify the end date till when you want the settlement reconciliation details."""
-    settlement_utrs: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('settlement_utrs'), 'exclude': lambda f: f is None }})
+    settlement_utrs: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('settlement_utrs'), 'exclude': lambda f: f is None }})
     r"""List of settlement UTRs for which you want the settlement reconciliation details."""
     start_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('start_date'), 'exclude': lambda f: f is None }})
     r"""Specify the start date from when you want the settlement reconciliation details."""
@@ -25,7 +24,6 @@ class FetchSettlementReconRequestFilters:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class FetchSettlementReconRequestPagination:
     r"""To fetch the next set of settlements, pass the cursor received in the response to the next API call.
@@ -41,7 +39,6 @@ class FetchSettlementReconRequestPagination:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class FetchSettlementReconRequest:
     filters: FetchSettlementReconRequestFilters = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters') }})

@@ -13,7 +13,6 @@ class DiscountDetailsDiscountType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class DiscountDetails:
     discount_type: DiscountDetailsDiscountType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discount_type') }})

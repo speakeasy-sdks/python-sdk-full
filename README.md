@@ -19,9 +19,9 @@ s = pg_latest.PGLatest()
 req = operations.OTPRequestRequest(
     otp_request=shared.OTPRequest(
         action=shared.OTPRequestAction.SUBMIT_OTP,
-        otp='Tricycle pace',
+        otp='1080p',
     ),
-    payment_id='Nobelium Planner',
+    payment_id='whey',
 )
 
 res = s.authentication.otp_request(req)

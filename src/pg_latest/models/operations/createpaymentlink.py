@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import createlinkrequest as shared_createlinkrequest
 from ..shared import linkresponse as shared_linkresponse
-from typing import Optional
-
+from typing import Dict, List, Optional
 
 
 @dataclasses.dataclass
@@ -19,14 +18,13 @@ class CreatePaymentLinkRequest:
 
 
 
-
 @dataclasses.dataclass
 class CreatePaymentLinkResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
+    headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     link_response: Optional[shared_linkresponse.LinkResponse] = dataclasses.field(default=None)
     r"""Payment Link created"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)

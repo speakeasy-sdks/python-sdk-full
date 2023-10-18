@@ -8,7 +8,6 @@ from pg_latest import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class OfferPaylater:
     paylater: shared_paylateroffer.PaylaterOffer = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paylater') }})

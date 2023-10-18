@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import eligibilitycardlessemirequest as shared_eligibilitycardlessemirequest
 from ..shared import eligiblecardlessemientity as shared_eligiblecardlessemientity
-from typing import Optional
-
+from typing import Dict, List, Optional
 
 
 @dataclasses.dataclass
@@ -19,16 +18,15 @@ class EligibilityCardlessEMIRequest:
 
 
 
-
 @dataclasses.dataclass
 class EligibilityCardlessEMIResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    eligible_cardless_emi_entities: Optional[list[shared_eligiblecardlessemientity.EligibleCardlessEMIEntity]] = dataclasses.field(default=None)
+    eligible_cardless_emi_entities: Optional[List[shared_eligiblecardlessemientity.EligibleCardlessEMIEntity]] = dataclasses.field(default=None)
     r"""OK"""
-    headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
+    headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
     

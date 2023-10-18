@@ -22,12 +22,12 @@ req = operations.CreateOfferRequest(
     create_offer_backend_request=shared.CreateOfferBackendRequest(
         offer_details=shared.OfferDetails(
             cashback_details=shared.CashbackDetails(
-                max_cashback_amount='Regional viral',
+                max_cashback_amount='animi',
             ),
             discount_details=shared.DiscountDetails(
-                discount_type=shared.DiscountDetailsDiscountType.PERCENTAGE,
-                discount_value='instead Blues where',
-                max_discount_amount='Investment',
+                discount_type=shared.DiscountDetailsDiscountType.FLAT,
+                discount_value='viral',
+                max_discount_amount='synthesize',
             ),
             offer_type=shared.OfferDetailsOfferType.DISCOUNT_AND_CASHBACK,
         ),
@@ -39,21 +39,21 @@ req = operations.CreateOfferRequest(
             offer_title='Test Offer',
         ),
         offer_tnc=shared.OfferTnc(
-            offer_tnc_type=shared.OfferTncOfferTncType.LINK,
+            offer_tnc_type=shared.OfferTncOfferTncType.POST,
             offer_tnc_value='Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         ),
         offer_validations=shared.OfferValidations(
             max_allowed='10',
             min_amount='1',
-            shared.OfferWallet(
-                app=shared.WalletOffer(
-                    provider='paytm',
+            shared.OfferNB(
+                netbanking=shared.NBOffer(
+                    bank_name='all',
                 ),
             ),
         ),
     ),
-    x_client_id='mouton openly Electric',
-    x_client_secret='Franc drat now',
+    x_client_id='Blues',
+    x_client_secret='where',
 )
 
 res = s.offers.create_offer(req)
@@ -88,9 +88,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetOfferRequest(
-    offer_id='frankly navigate',
-    x_client_id='Electric system kilogram',
-    x_client_secret='violet green',
+    offer_id='tangible',
+    x_client_id='Bacon',
+    x_client_secret='male',
 )
 
 res = s.offers.get_offer(req)

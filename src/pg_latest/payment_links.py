@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pg_latest import utils
 from pg_latest.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class PaymentLinks:
     sdk_configuration: SDKConfiguration
@@ -135,7 +135,7 @@ class PaymentLinks:
             res.headers = http_res.headers
             
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.LinkOrdersResponse]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.LinkOrdersResponse]])
                 res.link_orders_responses = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

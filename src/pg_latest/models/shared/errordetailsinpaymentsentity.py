@@ -8,7 +8,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ErrorDetailsInPaymentsEntity:
     r"""The error details are present only for failed payments"""

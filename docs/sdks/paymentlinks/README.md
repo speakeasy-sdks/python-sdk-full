@@ -21,9 +21,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.CancelPaymentLinkRequest(
-    link_id='Mercury Michel',
-    x_client_id='yellow',
-    x_client_secret='Draper sweltering Diesel',
+    link_id='payment',
+    x_client_id='Identity',
+    x_client_secret='Club',
 )
 
 res = s.payment_links.cancel_payment_link(req)
@@ -60,21 +60,21 @@ s = pg_latest.PGLatest()
 req = operations.CreatePaymentLinkRequest(
     create_link_request=shared.CreateLinkRequest(
         customer_details=shared.LinkCustomerDetailsEntity(
-            customer_phone='grin Fort',
+            customer_phone='navigate',
         ),
-        link_amount=185.31,
-        link_currency='Hybrid',
-        link_id='synthesizing programming',
+        link_amount=9424.43,
+        link_currency='grin',
+        link_id='Fort',
         link_meta=shared.LinkMetaEntity(),
         link_notes={
             "key_1": 'value_1',
             "key_2": 'value_2',
         },
         link_notify=shared.LinkNotifyEntity(),
-        link_purpose='Mazda',
+        link_purpose='North',
     ),
-    x_client_id='Bedfordshire Human',
-    x_client_secret='plum becquerel',
+    x_client_id='Hybrid',
+    x_client_secret='firewall',
 )
 
 res = s.payment_links.create_payment_link(req)
@@ -109,9 +109,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetPaymentLinkDetailsRequest(
-    link_id='Bayamon male Northwest',
-    x_client_id='regional Hybrid ew',
-    x_client_secret='Operative',
+    link_id='anxiously',
+    x_client_id='Buckinghamshire',
+    x_client_secret='bandwidth',
 )
 
 res = s.payment_links.get_payment_link_details(req)
@@ -146,9 +146,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetPaymentLinkOrdersRequest(
-    link_id='North sophomore',
-    x_client_id='Supervisor sue Tunnel',
-    x_client_secret='Account',
+    link_id='Security',
+    x_client_id='Virginia',
+    x_client_secret='rank',
 )
 
 res = s.payment_links.get_payment_link_orders(req)

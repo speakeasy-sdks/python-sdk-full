@@ -13,7 +13,6 @@ class OfferTncOfferTncType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class OfferTnc:
     offer_tnc_type: OfferTncOfferTncType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offer_tnc_type') }})

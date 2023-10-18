@@ -4,17 +4,16 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class EMIOffer:
     bank_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bank_name') }})
     r"""Bank Name"""
     type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     r"""Type of emi offer. Possible values are `credit_card_emi`, `debit_card_emi`, `cardless_emi`"""
-    tenures: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tenures'), 'exclude': lambda f: f is None }})
+    tenures: Optional[List[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tenures'), 'exclude': lambda f: f is None }})
     
 

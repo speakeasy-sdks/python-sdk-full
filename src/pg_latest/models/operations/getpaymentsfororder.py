@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import errorresponse as shared_errorresponse
 from ..shared import paymentsentity as shared_paymentsentity
-from typing import Optional, Union
-
+from typing import Dict, List, Optional, Union
 
 
 @dataclasses.dataclass
@@ -19,12 +18,10 @@ class GetPaymentsfororderRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetPaymentsfororder200ApplicationJSON:
     r"""OK"""
     
-
 
 
 
@@ -38,7 +35,7 @@ class GetPaymentsfororderResponse:
     r"""Any bad or invalid request will lead to following error object"""
     get_paymentsfororder_200_application_json_one_of: Optional[Union[shared_paymentsentity.PaymentsEntity]] = dataclasses.field(default=None)
     r"""OK"""
-    headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
+    headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
     

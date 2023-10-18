@@ -22,7 +22,6 @@ class PaymentsEntityPaymentStatus(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PaymentsEntity:
     auth_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth_id'), 'exclude': lambda f: f is None }})

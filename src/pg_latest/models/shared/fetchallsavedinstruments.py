@@ -19,7 +19,6 @@ class FetchAllSavedInstrumentsInstrumentType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class FetchAllSavedInstruments:
     afa_reference: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('afa_reference'), 'exclude': lambda f: f is None }})

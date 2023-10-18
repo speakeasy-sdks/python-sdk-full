@@ -6,8 +6,7 @@ import requests as requests_http
 from ..shared import errorresponse as shared_errorresponse
 from ..shared import otprequest as shared_otprequest
 from ..shared import otpresponseentity as shared_otpresponseentity
-from typing import Optional
-
+from typing import Dict, List, Optional
 
 
 @dataclasses.dataclass
@@ -19,7 +18,6 @@ class OTPRequestRequest:
 
 
 
-
 @dataclasses.dataclass
 class OTPRequestResponse:
     content_type: str = dataclasses.field()
@@ -28,7 +26,7 @@ class OTPRequestResponse:
     r"""HTTP response status code for this operation"""
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     r"""Any bad or invalid request will lead to following error object"""
-    headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
+    headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     otp_response_entity: Optional[shared_otpresponseentity.OTPResponseEntity] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)

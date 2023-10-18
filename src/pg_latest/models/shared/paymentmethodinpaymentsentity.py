@@ -13,14 +13,12 @@ from pg_latest import utils
 from typing import Optional, Union
 
 
-
 @dataclasses.dataclass
 class PaymentMethodInPaymentsEntityPaymentMethod:
     pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PaymentMethodInPaymentsEntity:
     payment_method: Optional[Union[shared_paymentmethodcardinpaymentsentity.PaymentMethodCardInPaymentsEntity, shared_paymentmethodnetbankinginpaymentsentity.PaymentMethodNetBankingInPaymentsEntity, shared_paymentmethodupiinpaymentsentity.PaymentMethodUPIInPaymentsEntity, shared_paymentmethodappinpaymentsentity.PaymentMethodAppInPaymentsEntity, shared_paymentmethodcardlessemiinpaymentsentity.PaymentMethodCardlessEMIInPaymentsEntity, shared_paymentmethodpaylaterinpaymentsentity.PaymentMethodPaylaterInPaymentsEntity]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_method'), 'exclude': lambda f: f is None }})

@@ -14,14 +14,12 @@ from pg_latest import utils
 from typing import Optional, Union
 
 
-
 @dataclasses.dataclass
 class OfferValidationsPaymentMethod:
     pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class OfferValidations:
     max_allowed: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max_allowed') }})

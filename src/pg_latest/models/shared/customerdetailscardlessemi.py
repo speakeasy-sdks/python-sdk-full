@@ -7,7 +7,6 @@ from pg_latest import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CustomerDetailsCardlessEMI:
     r"""Details of the customer for whom eligibility is being checked."""

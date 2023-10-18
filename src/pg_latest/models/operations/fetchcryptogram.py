@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import cryptogram as shared_cryptogram
 from ..shared import errorresponse as shared_errorresponse
-from typing import Optional
-
+from typing import Dict, List, Optional
 
 
 @dataclasses.dataclass
@@ -20,7 +19,6 @@ class FetchCryptogramRequest:
 
 
 
-
 @dataclasses.dataclass
 class FetchCryptogramResponse:
     content_type: str = dataclasses.field()
@@ -31,7 +29,7 @@ class FetchCryptogramResponse:
     r"""OK"""
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     r"""Any bad or invalid request will lead to following error object"""
-    headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
+    headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
     

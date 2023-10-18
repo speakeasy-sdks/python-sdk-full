@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import errorresponse as shared_errorresponse
 from ..shared import fetchallsavedinstruments as shared_fetchallsavedinstruments
-from typing import Optional
-
+from typing import Dict, List, Optional
 
 
 @dataclasses.dataclass
@@ -20,7 +19,6 @@ class DeleteSpecificSavedInstrumentRequest:
 
 
 
-
 @dataclasses.dataclass
 class DeleteSpecificSavedInstrumentResponse:
     content_type: str = dataclasses.field()
@@ -31,7 +29,7 @@ class DeleteSpecificSavedInstrumentResponse:
     r"""Any bad or invalid request will lead to following error object"""
     fetch_all_saved_instruments: Optional[shared_fetchallsavedinstruments.FetchAllSavedInstruments] = dataclasses.field(default=None)
     r"""OK"""
-    headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
+    headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
     

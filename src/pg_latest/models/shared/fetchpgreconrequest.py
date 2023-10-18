@@ -8,7 +8,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class FetchPGReconRequestFilters:
     end_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('end_date') }})
@@ -20,7 +19,6 @@ class FetchPGReconRequestFilters:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class FetchPGReconRequestPagination:
     r"""To fetch the next set of settlements, pass the cursor received in the response to the next API call.
@@ -36,7 +34,6 @@ class FetchPGReconRequestPagination:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class FetchPGReconRequest:
     filters: FetchPGReconRequestFilters = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters') }})

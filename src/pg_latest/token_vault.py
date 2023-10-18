@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pg_latest import utils
 from pg_latest.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class TokenVault:
     r"""Cashfree's token Vault helps you save cards and tokenize them in a PCI complaint manner. We support creation of network tokens which can be used across acquiring banks"""
@@ -74,7 +74,7 @@ class TokenVault:
             res.headers = http_res.headers
             
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.FetchAllSavedInstruments]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.FetchAllSavedInstruments]])
                 res.fetch_all_saved_instruments = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

@@ -14,7 +14,6 @@ class CashbackDetailsCashbackType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CashbackDetails:
     max_cashback_amount: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max_cashback_amount') }})

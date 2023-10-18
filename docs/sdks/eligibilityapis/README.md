@@ -29,8 +29,8 @@ req = operations.EligibilityCardlessEMIRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_client_id='Handmade',
-    x_client_secret='Principal',
+    x_client_id='white',
+    x_client_secret='female',
 )
 
 res = s.eligibility_ap_is.eligibility_cardless_emi(req)
@@ -76,8 +76,8 @@ req = operations.EligibilityOfferRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_client_id='Electric Planner',
-    x_client_secret='invoice female female',
+    x_client_id='invoice',
+    x_client_secret='And',
 )
 
 res = s.eligibility_ap_is.eligibility_offer(req)
@@ -121,8 +121,8 @@ req = operations.EligibilityPaylaterRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_client_id='generate',
-    x_client_secret='Livermorium',
+    x_client_id='Granite',
+    x_client_secret='protocol',
 )
 
 res = s.eligibility_ap_is.eligibility_paylater(req)

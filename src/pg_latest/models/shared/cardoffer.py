@@ -4,15 +4,15 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
+from typing import List
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CardOffer:
     bank_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bank_name') }})
     r"""Bank Name of Card."""
-    scheme_name: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheme_name') }})
-    type: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    scheme_name: List[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheme_name') }})
+    type: List[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     
 

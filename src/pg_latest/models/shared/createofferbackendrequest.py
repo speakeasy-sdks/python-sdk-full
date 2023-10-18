@@ -11,7 +11,6 @@ from pg_latest import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CreateOfferBackendRequest:
     offer_details: shared_offerdetails.OfferDetails = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offer_details') }})

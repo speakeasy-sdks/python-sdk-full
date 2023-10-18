@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pg_latest import utils
 from pg_latest.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class EligibilityAPIs:
     sdk_configuration: SDKConfiguration
@@ -37,7 +37,7 @@ class EligibilityAPIs:
             res.headers = http_res.headers
             
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.EligibleCardlessEMIEntity]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.EligibleCardlessEMIEntity]])
                 res.eligible_cardless_emi_entities = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -70,7 +70,7 @@ class EligibilityAPIs:
             res.headers = http_res.headers
             
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.EligibleOffersEntity]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.EligibleOffersEntity]])
                 res.eligible_offers_entities = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -103,7 +103,7 @@ class EligibilityAPIs:
             res.headers = http_res.headers
             
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.EligiblePaylater]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.EligiblePaylater]])
                 res.eligible_paylaters = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

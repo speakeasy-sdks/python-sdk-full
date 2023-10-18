@@ -5,14 +5,13 @@ import dataclasses
 from ..shared import emiplansarray as shared_emiplansarray
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CardlessEMIEntity:
-    emi_plans: Optional[list[shared_emiplansarray.EMIPlansArray]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('emi_plans'), 'exclude': lambda f: f is None }})
+    emi_plans: Optional[List[shared_emiplansarray.EMIPlansArray]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('emi_plans'), 'exclude': lambda f: f is None }})
     payment_method: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_method'), 'exclude': lambda f: f is None }})
     
 

@@ -18,7 +18,6 @@ class OfferDetailsOfferType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class OfferDetails:
     offer_type: OfferDetailsOfferType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offer_type') }})

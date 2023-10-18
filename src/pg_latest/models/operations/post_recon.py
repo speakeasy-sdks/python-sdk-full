@@ -6,8 +6,7 @@ import requests as requests_http
 from ..shared import errorresponse as shared_errorresponse
 from ..shared import fetchpgrecon as shared_fetchpgrecon
 from ..shared import fetchpgreconrequest as shared_fetchpgreconrequest
-from typing import Optional
-
+from typing import Dict, List, Optional
 
 
 @dataclasses.dataclass
@@ -17,7 +16,6 @@ class PostReconRequest:
     fetch_pg_recon_request: Optional[shared_fetchpgreconrequest.FetchPGReconRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     x_api_version: Optional[str] = dataclasses.field(default='2022-09-01', metadata={'header': { 'field_name': 'x-api-version', 'style': 'simple', 'explode': False }})
     
-
 
 
 
@@ -31,7 +29,7 @@ class PostReconResponse:
     r"""Any bad or invalid request will lead to following error object"""
     fetch_pg_recon: Optional[shared_fetchpgrecon.FetchPGRecon] = dataclasses.field(default=None)
     r"""OK"""
-    headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
+    headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
     

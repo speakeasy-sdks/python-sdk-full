@@ -7,12 +7,11 @@ from ..shared import vendorsplit as shared_vendorsplit
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pg_latest import utils
-from typing import Optional
+from typing import List, Optional
 
 class RefundsEntityEntity(str, Enum):
     r"""Type of object"""
     REFUND = 'refund'
-
 
 
 @dataclasses.dataclass
@@ -41,7 +40,6 @@ class RefundsEntityRefundType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class RefundsEntity:
     cf_payment_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cf_payment_id'), 'exclude': lambda f: f is None }})
@@ -73,7 +71,7 @@ class RefundsEntity:
     refund_note: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_note'), 'exclude': lambda f: f is None }})
     r"""Note added by merchant for the refund"""
     refund_speed: Optional[shared_refundspeed.RefundSpeed] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_speed'), 'exclude': lambda f: f is None }})
-    refund_splits: Optional[list[shared_vendorsplit.VendorSplit]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_splits'), 'exclude': lambda f: f is None }})
+    refund_splits: Optional[List[shared_vendorsplit.VendorSplit]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_splits'), 'exclude': lambda f: f is None }})
     refund_status: Optional[RefundsEntityRefundStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_status'), 'exclude': lambda f: f is None }})
     r"""This can be one of [\\"SUCCESS\\", \\"PENDING\\", \\"CANCELLED\\", \\"ONHOLD\\", \\"FAILED\\"]"""
     refund_type: Optional[RefundsEntityRefundType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_type'), 'exclude': lambda f: f is None }})

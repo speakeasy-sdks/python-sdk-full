@@ -21,15 +21,15 @@ s = pg_latest.PGLatest()
 req = operations.PostReconRequest(
     fetch_pg_recon_request=shared.FetchPGReconRequest(
         filters=shared.FetchPGReconRequestFilters(
-            end_date='Bentley',
-            start_date='Bolingbrook Generic',
+            end_date='Southeast',
+            start_date='Borders',
         ),
         pagination=shared.FetchPGReconRequestPagination(
-            limit=405830,
+            limit=30545,
         ),
     ),
-    x_client_id='joule',
-    x_client_secret='Diesel Liaison',
+    x_client_id='South',
+    x_client_secret='Global',
 )
 
 res = s.reconciliation.post_recon(req)
@@ -77,8 +77,8 @@ req = operations.PostSettlementReconRequest(
             limit=661166,
         ),
     ),
-    x_client_id='pro',
-    x_client_secret='Southeast schemas',
+    x_client_id='Reynolds',
+    x_client_secret='gleeful',
 )
 
 res = s.reconciliation.post_settlement_recon(req)

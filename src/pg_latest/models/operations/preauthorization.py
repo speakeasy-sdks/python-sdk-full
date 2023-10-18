@@ -6,8 +6,7 @@ import requests as requests_http
 from ..shared import authorizationrequest as shared_authorizationrequest
 from ..shared import errorresponse as shared_errorresponse
 from ..shared import paymentsentity as shared_paymentsentity
-from typing import Optional
-
+from typing import Dict, List, Optional
 
 
 @dataclasses.dataclass
@@ -21,7 +20,6 @@ class PreauthorizationRequest:
 
 
 
-
 @dataclasses.dataclass
 class PreauthorizationResponse:
     content_type: str = dataclasses.field()
@@ -30,7 +28,7 @@ class PreauthorizationResponse:
     r"""HTTP response status code for this operation"""
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     r"""Any bad or invalid request will lead to following error object"""
-    headers: Optional[dict[str, list[str]]] = dataclasses.field(default=None)
+    headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     payments_entity: Optional[shared_paymentsentity.PaymentsEntity] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)

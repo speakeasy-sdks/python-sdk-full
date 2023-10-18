@@ -8,7 +8,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CreateTerminalRequest:
     terminal_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('terminal_name') }})

@@ -25,10 +25,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.DeleteSpecificSavedInstrumentRequest(
-    customer_id='West',
-    instrument_id='Sports',
-    x_client_id='Buckinghamshire',
-    x_client_secret='azure',
+    customer_id='string',
+    instrument_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.token_vault.delete_specific_saved_instrument(req)
@@ -63,10 +63,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.FetchAllSavedInstrumentsRequest(
-    customer_id='Louisiana',
+    customer_id='string',
     instrument_type=operations.FetchAllSavedInstrumentsInstrumentType.CARD,
-    x_client_id='SDD',
-    x_client_secret='Diesel',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.token_vault.fetch_all_saved_instruments(req)
@@ -101,10 +101,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.FetchCryptogramRequest(
-    customer_id='BMW',
-    instrument_id='invoice',
-    x_client_id='Honda',
-    x_client_secret='overbook',
+    customer_id='string',
+    instrument_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.token_vault.fetch_cryptogram(req)
@@ -139,10 +139,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.FetchSpecificSavedInstrumentRequest(
-    customer_id='wiry',
-    instrument_id='Turkish',
-    x_client_id='perspiciatis',
-    x_client_secret='sensor',
+    customer_id='string',
+    instrument_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.token_vault.fetch_specific_saved_instrument(req)

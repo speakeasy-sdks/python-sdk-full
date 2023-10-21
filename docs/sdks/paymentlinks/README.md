@@ -21,9 +21,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.CancelPaymentLinkRequest(
-    link_id='payment',
-    x_client_id='Identity',
-    x_client_secret='Club',
+    link_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.payment_links.cancel_payment_link(req)
@@ -60,21 +60,21 @@ s = pg_latest.PGLatest()
 req = operations.CreatePaymentLinkRequest(
     create_link_request=shared.CreateLinkRequest(
         customer_details=shared.LinkCustomerDetailsEntity(
-            customer_phone='navigate',
+            customer_phone='string',
         ),
-        link_amount=9424.43,
-        link_currency='grin',
-        link_id='Fort',
+        link_amount=5411.24,
+        link_currency='string',
+        link_id='string',
         link_meta=shared.LinkMetaEntity(),
         link_notes={
             "key_1": 'value_1',
             "key_2": 'value_2',
         },
         link_notify=shared.LinkNotifyEntity(),
-        link_purpose='North',
+        link_purpose='string',
     ),
-    x_client_id='Hybrid',
-    x_client_secret='firewall',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.payment_links.create_payment_link(req)
@@ -109,9 +109,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetPaymentLinkDetailsRequest(
-    link_id='anxiously',
-    x_client_id='Buckinghamshire',
-    x_client_secret='bandwidth',
+    link_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.payment_links.get_payment_link_details(req)
@@ -146,9 +146,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetPaymentLinkOrdersRequest(
-    link_id='Security',
-    x_client_id='Virginia',
-    x_client_secret='rank',
+    link_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.payment_links.get_payment_link_orders(req)

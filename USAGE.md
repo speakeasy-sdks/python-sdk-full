@@ -10,9 +10,9 @@ s = pg_latest.PGLatest()
 req = operations.OTPRequestRequest(
     otp_request=shared.OTPRequest(
         action=shared.OTPRequestAction.SUBMIT_OTP,
-        otp='1080p',
+        otp='string',
     ),
-    payment_id='whey',
+    payment_id='string',
 )
 
 res = s.authentication.otp_request(req)

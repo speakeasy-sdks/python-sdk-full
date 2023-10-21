@@ -24,11 +24,11 @@ s = pg_latest.PGLatest()
 
 req = operations.CreateTerminalsRequest(
     create_terminal_request=shared.CreateTerminalRequest(
-        terminal_name='Representative',
-        terminal_phone_no='M2F',
+        terminal_name='string',
+        terminal_phone_no='string',
     ),
-    x_client_id='capacity',
-    x_client_secret='Neptunium',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.soft_pos.create_terminals(req)
@@ -63,9 +63,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetTerminalByMobileNumberRequest(
-    terminal_phone_no='portal',
-    x_client_id='API',
-    x_client_secret='extensible',
+    terminal_phone_no='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.soft_pos.get_terminal_by_mobile_number(req)

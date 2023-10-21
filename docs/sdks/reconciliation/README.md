@@ -21,15 +21,15 @@ s = pg_latest.PGLatest()
 req = operations.PostReconRequest(
     fetch_pg_recon_request=shared.FetchPGReconRequest(
         filters=shared.FetchPGReconRequestFilters(
-            end_date='Southeast',
-            start_date='Borders',
+            end_date='string',
+            start_date='string',
         ),
         pagination=shared.FetchPGReconRequestPagination(
-            limit=30545,
+            limit=85382,
         ),
     ),
-    x_client_id='South',
-    x_client_secret='Global',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.reconciliation.post_recon(req)
@@ -70,15 +70,15 @@ req = operations.PostSettlementReconRequest(
                 956121,
             ],
             settlement_utrs=[
-                'Buckinghamshire',
+                'string',
             ],
         ),
         pagination=shared.FetchSettlementReconRequestPagination(
-            limit=661166,
+            limit=71166,
         ),
     ),
-    x_client_id='Reynolds',
-    x_client_secret='gleeful',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.reconciliation.post_settlement_recon(req)

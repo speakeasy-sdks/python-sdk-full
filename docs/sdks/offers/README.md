@@ -22,12 +22,12 @@ req = operations.CreateOfferRequest(
     create_offer_backend_request=shared.CreateOfferBackendRequest(
         offer_details=shared.OfferDetails(
             cashback_details=shared.CashbackDetails(
-                max_cashback_amount='animi',
+                max_cashback_amount='string',
             ),
             discount_details=shared.DiscountDetails(
-                discount_type=shared.DiscountDetailsDiscountType.FLAT,
-                discount_value='viral',
-                max_discount_amount='synthesize',
+                discount_type=shared.DiscountDetailsDiscountType.PERCENTAGE,
+                discount_value='string',
+                max_discount_amount='string',
             ),
             offer_type=shared.OfferDetailsOfferType.DISCOUNT_AND_CASHBACK,
         ),
@@ -52,8 +52,8 @@ req = operations.CreateOfferRequest(
             ),
         ),
     ),
-    x_client_id='Blues',
-    x_client_secret='where',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.offers.create_offer(req)
@@ -88,9 +88,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetOfferRequest(
-    offer_id='tangible',
-    x_client_id='Bacon',
-    x_client_secret='male',
+    offer_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.offers.get_offer(req)

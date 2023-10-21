@@ -22,14 +22,14 @@ s = pg_latest.PGLatest()
 req = operations.CreaterefundRequest(
     create_refund_request=shared.CreateRefundRequest(
         refund_amount=567.71,
-        refund_id='Kwacha',
+        refund_id='string',
         refund_splits=[
             shared.VendorSplit(),
         ],
     ),
-    order_id='Rutherfordium',
-    x_client_id='Male',
-    x_client_secret='Account',
+    order_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.refunds.createrefund(req)
@@ -64,10 +64,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetRefundRequest(
-    order_id='cast',
-    refund_id='Alabama',
-    x_client_id='Loan',
-    x_client_secret='Wooden',
+    order_id='string',
+    refund_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.refunds.get_refund(req)
@@ -102,9 +102,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetallrefundsfororderRequest(
-    order_id='yuck',
-    x_client_id='Directives',
-    x_client_secret='Recycled',
+    order_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.refunds.getallrefundsfororder(req)

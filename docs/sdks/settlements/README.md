@@ -19,9 +19,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetsettlementsRequest(
-    order_id='Metal',
-    x_client_id='Rice',
-    x_client_secret='Bacon',
+    order_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.settlements.getsettlements(req)
@@ -62,15 +62,15 @@ req = operations.PostSettlementsRequest(
                 297769,
             ],
             settlement_utrs=[
-                'Southwest',
+                'string',
             ],
         ),
         pagination=shared.FetchSettlementReconRequestPagination(
-            limit=542580,
+            limit=116172,
         ),
     ),
-    x_client_id='Interactions',
-    x_client_secret='bravely',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.settlements.post_settlements(req)

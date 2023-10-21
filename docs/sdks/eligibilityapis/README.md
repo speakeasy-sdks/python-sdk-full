@@ -29,8 +29,8 @@ req = operations.EligibilityCardlessEMIRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_client_id='white',
-    x_client_secret='female',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.eligibility_ap_is.eligibility_cardless_emi(req)
@@ -76,8 +76,8 @@ req = operations.EligibilityOfferRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_client_id='invoice',
-    x_client_secret='And',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.eligibility_ap_is.eligibility_offer(req)
@@ -121,8 +121,8 @@ req = operations.EligibilityPaylaterRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_client_id='Granite',
-    x_client_secret='protocol',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
 res = s.eligibility_ap_is.eligibility_paylater(req)

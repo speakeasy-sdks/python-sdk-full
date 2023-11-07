@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import paymentmethodappinpaymentsentity as shared_paymentmethodappinpaymentsentity
-from ..shared import paymentmethodcardinpaymentsentity as shared_paymentmethodcardinpaymentsentity
-from ..shared import paymentmethodcardlessemiinpaymentsentity as shared_paymentmethodcardlessemiinpaymentsentity
-from ..shared import paymentmethodnetbankinginpaymentsentity as shared_paymentmethodnetbankinginpaymentsentity
-from ..shared import paymentmethodpaylaterinpaymentsentity as shared_paymentmethodpaylaterinpaymentsentity
-from ..shared import paymentmethodupiinpaymentsentity as shared_paymentmethodupiinpaymentsentity
+from .paymentmethodappinpaymentsentity import PaymentMethodAppInPaymentsEntity
+from .paymentmethodcardinpaymentsentity import PaymentMethodCardInPaymentsEntity
+from .paymentmethodcardlessemiinpaymentsentity import PaymentMethodCardlessEMIInPaymentsEntity
+from .paymentmethodnetbankinginpaymentsentity import PaymentMethodNetBankingInPaymentsEntity
+from .paymentmethodpaylaterinpaymentsentity import PaymentMethodPaylaterInPaymentsEntity
+from .paymentmethodupiinpaymentsentity import PaymentMethodUPIInPaymentsEntity
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
 from typing import Optional, Union
@@ -21,6 +21,6 @@ class PaymentMethodInPaymentsEntityPaymentMethod:
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class PaymentMethodInPaymentsEntity:
-    payment_method: Optional[Union[shared_paymentmethodcardinpaymentsentity.PaymentMethodCardInPaymentsEntity, shared_paymentmethodnetbankinginpaymentsentity.PaymentMethodNetBankingInPaymentsEntity, shared_paymentmethodupiinpaymentsentity.PaymentMethodUPIInPaymentsEntity, shared_paymentmethodappinpaymentsentity.PaymentMethodAppInPaymentsEntity, shared_paymentmethodcardlessemiinpaymentsentity.PaymentMethodCardlessEMIInPaymentsEntity, shared_paymentmethodpaylaterinpaymentsentity.PaymentMethodPaylaterInPaymentsEntity]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_method'), 'exclude': lambda f: f is None }})
+    payment_method: Optional[Union[PaymentMethodCardInPaymentsEntity, PaymentMethodNetBankingInPaymentsEntity, PaymentMethodUPIInPaymentsEntity, PaymentMethodAppInPaymentsEntity, PaymentMethodCardlessEMIInPaymentsEntity, PaymentMethodPaylaterInPaymentsEntity]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_method'), 'exclude': lambda f: f is None }})
     
 

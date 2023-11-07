@@ -1,5 +1,5 @@
 # TokenVault
-(*token_vault*)
+(*.token_vault*)
 
 ## Overview
 
@@ -64,14 +64,14 @@ s = pg_latest.PGLatest()
 
 req = operations.FetchAllSavedInstrumentsRequest(
     customer_id='string',
-    instrument_type=operations.FetchAllSavedInstrumentsInstrumentType.CARD,
+    instrument_type=operations.InstrumentType.CARD,
     x_client_id='string',
     x_client_secret='string',
 )
 
 res = s.token_vault.fetch_all_saved_instruments(req)
 
-if res.fetch_all_saved_instruments is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

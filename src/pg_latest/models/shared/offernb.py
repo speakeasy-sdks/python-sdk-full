@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import nboffer as shared_nboffer
+from .nboffer import NBOffer
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
 from typing import Optional
@@ -11,6 +11,6 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class OfferNB:
-    netbanking: Optional[shared_nboffer.NBOffer] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('netbanking'), 'exclude': lambda f: f is None }})
+    netbanking: Optional[NBOffer] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('netbanking'), 'exclude': lambda f: f is None }})
     
 

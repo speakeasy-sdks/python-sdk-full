@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import emioffer as shared_emioffer
+from .emioffer import EMIOffer
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
 
@@ -10,6 +10,6 @@ from pg_latest import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class OfferEMI:
-    emi: shared_emioffer.EMIOffer = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('emi') }})
+    emi: EMIOffer = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('emi') }})
     
 

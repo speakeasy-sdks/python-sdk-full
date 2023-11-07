@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import cardlessemientity as shared_cardlessemientity
+from .cardlessemientity import CardlessEMIEntity
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
 from typing import Optional
@@ -12,7 +12,7 @@ from typing import Optional
 @dataclasses.dataclass
 class EligibleCardlessEMIEntity:
     eligibility: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eligibility'), 'exclude': lambda f: f is None }})
-    entity_details: Optional[shared_cardlessemientity.CardlessEMIEntity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('entity_details'), 'exclude': lambda f: f is None }})
+    entity_details: Optional[CardlessEMIEntity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('entity_details'), 'exclude': lambda f: f is None }})
     entity_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('entity_type'), 'exclude': lambda f: f is None }})
     entity_value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('entity_value'), 'exclude': lambda f: f is None }})
     

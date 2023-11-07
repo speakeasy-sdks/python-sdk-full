@@ -1,5 +1,5 @@
 # Payments
-(*payments*)
+(*.payments*)
 
 ### Available Operations
 
@@ -64,7 +64,7 @@ req = operations.GetPaymentsfororderRequest(
 
 res = s.payments.get_paymentsfororder(req)
 
-if res.get_paymentsfororder_200_application_json_one_of is not None:
+if res.one_of is not None:
     # handle response
     pass
 ```

@@ -2,37 +2,37 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import refundspeed as shared_refundspeed
-from ..shared import vendorsplit as shared_vendorsplit
+from .refundspeed import RefundSpeed
+from .vendorsplit import VendorSplit
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pg_latest import utils
 from typing import List, Optional
 
-class RefundsEntityEntity(str, Enum):
+class Entity(str, Enum):
     r"""Type of object"""
     REFUND = 'refund'
 
 
 @dataclasses.dataclass
-class RefundsEntityMetadata:
+class Metadata:
     r"""Key-value pair that can be used to store additional information about the entity. Maximum 5 key-value pairs"""
     
 
 
-class RefundsEntityRefundMode(str, Enum):
+class RefundMode(str, Enum):
     r"""Method or speed of processing refund"""
     STANDARD = 'STANDARD'
     INSTANT = 'INSTANT'
 
-class RefundsEntityRefundStatus(str, Enum):
+class RefundStatus(str, Enum):
     r"""This can be one of [\\"SUCCESS\\", \\"PENDING\\", \\"CANCELLED\\", \\"ONHOLD\\", \\"FAILED\\"]"""
     SUCCESS = 'SUCCESS'
     PENDING = 'PENDING'
     CANCELLED = 'CANCELLED'
     ONHOLD = 'ONHOLD'
 
-class RefundsEntityRefundType(str, Enum):
+class RefundType(str, Enum):
     r"""This can be one of [\\"PAYMENT_AUTO_REFUND\\", \\"MERCHANT_INITIATED\\", \\"UNRECONCILED_AUTO_REFUND\\"]"""
     PAYMENT_AUTO_REFUND = 'PAYMENT_AUTO_REFUND'
     MERCHANT_INITIATED = 'MERCHANT_INITIATED'
@@ -48,9 +48,9 @@ class RefundsEntity:
     r"""Cashfree Payments ID for a refund"""
     created_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'exclude': lambda f: f is None }})
     r"""Time of refund creation"""
-    entity: Optional[RefundsEntityEntity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('entity'), 'exclude': lambda f: f is None }})
+    entity: Optional[Entity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('entity'), 'exclude': lambda f: f is None }})
     r"""Type of object"""
-    metadata: Optional[RefundsEntityMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
+    metadata: Optional[Metadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
     r"""Key-value pair that can be used to store additional information about the entity. Maximum 5 key-value pairs"""
     order_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('order_id'), 'exclude': lambda f: f is None }})
     r"""Merchant’s order Id of the order for which refund is initiated"""
@@ -66,15 +66,15 @@ class RefundsEntity:
     r"""Currency of the refund amount"""
     refund_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_id'), 'exclude': lambda f: f is None }})
     r"""Merchant’s refund ID of the refund"""
-    refund_mode: Optional[RefundsEntityRefundMode] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_mode'), 'exclude': lambda f: f is None }})
+    refund_mode: Optional[RefundMode] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_mode'), 'exclude': lambda f: f is None }})
     r"""Method or speed of processing refund"""
     refund_note: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_note'), 'exclude': lambda f: f is None }})
     r"""Note added by merchant for the refund"""
-    refund_speed: Optional[shared_refundspeed.RefundSpeed] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_speed'), 'exclude': lambda f: f is None }})
-    refund_splits: Optional[List[shared_vendorsplit.VendorSplit]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_splits'), 'exclude': lambda f: f is None }})
-    refund_status: Optional[RefundsEntityRefundStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_status'), 'exclude': lambda f: f is None }})
+    refund_speed: Optional[RefundSpeed] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_speed'), 'exclude': lambda f: f is None }})
+    refund_splits: Optional[List[VendorSplit]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_splits'), 'exclude': lambda f: f is None }})
+    refund_status: Optional[RefundStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_status'), 'exclude': lambda f: f is None }})
     r"""This can be one of [\\"SUCCESS\\", \\"PENDING\\", \\"CANCELLED\\", \\"ONHOLD\\", \\"FAILED\\"]"""
-    refund_type: Optional[RefundsEntityRefundType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_type'), 'exclude': lambda f: f is None }})
+    refund_type: Optional[RefundType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_type'), 'exclude': lambda f: f is None }})
     r"""This can be one of [\\"PAYMENT_AUTO_REFUND\\", \\"MERCHANT_INITIATED\\", \\"UNRECONCILED_AUTO_REFUND\\"]"""
     status_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status_description'), 'exclude': lambda f: f is None }})
     r"""Description of refund status"""

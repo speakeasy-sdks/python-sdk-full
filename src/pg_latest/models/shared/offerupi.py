@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import upioffer as shared_upioffer
+from .upioffer import UPIOffer
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
 
@@ -10,6 +10,6 @@ from pg_latest import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class OfferUPI:
-    upi: shared_upioffer.UPIOffer = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('upi') }})
+    upi: UPIOffer = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('upi') }})
     
 

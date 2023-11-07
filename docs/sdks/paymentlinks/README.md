@@ -1,5 +1,5 @@
 # PaymentLinks
-(*payment_links*)
+(*.payment_links*)
 
 ### Available Operations
 
@@ -67,8 +67,8 @@ req = operations.CreatePaymentLinkRequest(
         link_id='string',
         link_meta=shared.LinkMetaEntity(),
         link_notes={
-            "key_2": 'value_2',
             "key_1": 'value_1',
+            "key_2": 'value_2',
         },
         link_notify=shared.LinkNotifyEntity(),
         link_purpose='string',
@@ -153,7 +153,7 @@ req = operations.GetPaymentLinkOrdersRequest(
 
 res = s.payment_links.get_payment_link_orders(req)
 
-if res.link_orders_responses is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

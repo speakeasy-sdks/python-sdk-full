@@ -1,5 +1,5 @@
 # Settlements
-(*settlements*)
+(*.settlements*)
 
 ### Available Operations
 

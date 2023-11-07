@@ -9,7 +9,7 @@ from typing import Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class FetchPGReconRequestFilters:
+class Filters:
     end_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('end_date') }})
     r"""Specify the end date till when you want the settlement reconciliation details."""
     start_date: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('start_date') }})
@@ -20,7 +20,7 @@ class FetchPGReconRequestFilters:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class FetchPGReconRequestPagination:
+class Pagination:
     r"""To fetch the next set of settlements, pass the cursor received in the response to the next API call.
      To receive the data for the first time, pass the cursor as null. 
      Limit would be number of settlements that you want to receive.
@@ -36,8 +36,8 @@ class FetchPGReconRequestPagination:
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class FetchPGReconRequest:
-    filters: FetchPGReconRequestFilters = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters') }})
-    pagination: FetchPGReconRequestPagination = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pagination') }})
+    filters: Filters = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters') }})
+    pagination: Pagination = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pagination') }})
     r"""To fetch the next set of settlements, pass the cursor received in the response to the next API call.
      To receive the data for the first time, pass the cursor as null. 
      Limit would be number of settlements that you want to receive.

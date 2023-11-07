@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import errorresponse as shared_errorresponse
-from ..shared import refundsentity as shared_refundsentity
+from ...models.shared import errorresponse as shared_errorresponse
+from ...models.shared import refundsentity as shared_refundsentity
 from typing import Dict, List, Optional
 
 
@@ -24,12 +24,12 @@ class GetallrefundsfororderResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    classes: Optional[List[shared_refundsentity.RefundsEntity]] = dataclasses.field(default=None)
+    r"""OK"""
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     r"""Any bad or invalid request will lead to following error object"""
     headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    refunds_entities: Optional[List[shared_refundsentity.RefundsEntity]] = dataclasses.field(default=None)
-    r"""OK"""
     
 

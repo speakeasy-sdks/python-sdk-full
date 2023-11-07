@@ -1,5 +1,5 @@
 # Offers
-(*offers*)
+(*.offers*)
 
 ### Available Operations
 
@@ -25,7 +25,7 @@ req = operations.CreateOfferRequest(
                 max_cashback_amount='string',
             ),
             discount_details=shared.DiscountDetails(
-                discount_type=shared.DiscountDetailsDiscountType.PERCENTAGE,
+                discount_type=shared.DiscountType.PERCENTAGE,
                 discount_value='string',
                 max_discount_amount='string',
             ),
@@ -39,7 +39,7 @@ req = operations.CreateOfferRequest(
             offer_title='Test Offer',
         ),
         offer_tnc=shared.OfferTnc(
-            offer_tnc_type=shared.OfferTncOfferTncType.POST,
+            offer_tnc_type=shared.OfferTncType.POST,
             offer_tnc_value='Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         ),
         offer_validations=shared.OfferValidations(

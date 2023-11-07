@@ -3,8 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import linkcancellederror as shared_linkcancellederror
-from ..shared import linkcancelledresponse as shared_linkcancelledresponse
+from ...models.shared import linkcancelledresponse as shared_linkcancelledresponse
 from typing import Dict, List, Optional
 
 
@@ -25,8 +24,6 @@ class CancelPaymentLinkResponse:
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
-    link_cancelled_error: Optional[shared_linkcancellederror.LinkCancelledError] = dataclasses.field(default=None)
-    r"""Cannot cancel Payment Link if status is not ACTIVE"""
     link_cancelled_response: Optional[shared_linkcancelledresponse.LinkCancelledResponse] = dataclasses.field(default=None)
     r"""Payment Link cancelled"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)

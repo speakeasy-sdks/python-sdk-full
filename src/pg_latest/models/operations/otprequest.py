@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import errorresponse as shared_errorresponse
-from ..shared import otprequest as shared_otprequest
-from ..shared import otpresponseentity as shared_otpresponseentity
+from ...models.shared import errorresponse as shared_errorresponse
+from ...models.shared import otprequest as shared_otprequest
+from ...models.shared import otpresponseentity as shared_otpresponseentity
 from typing import Dict, List, Optional
 
 

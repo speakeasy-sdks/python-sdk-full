@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import cardlessemiqueries as shared_cardlessemiqueries
+from .cardlessemiqueries import CardlessEMIQueries
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
 
@@ -10,6 +10,6 @@ from pg_latest import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class EligibilityCardlessEMIRequest:
-    queries: shared_cardlessemiqueries.CardlessEMIQueries = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('queries') }})
+    queries: CardlessEMIQueries = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('queries') }})
     
 

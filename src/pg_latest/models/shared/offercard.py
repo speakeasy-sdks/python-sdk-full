@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import cardoffer as shared_cardoffer
+from .cardoffer import CardOffer
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
 
@@ -10,6 +10,6 @@ from pg_latest import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class OfferCard:
-    card: shared_cardoffer.CardOffer = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('card') }})
+    card: CardOffer = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('card') }})
     
 

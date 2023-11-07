@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import createterminalrequest as shared_createterminalrequest
-from ..shared import terminalresponse as shared_terminalresponse
+from ...models.shared import createterminalrequest as shared_createterminalrequest
+from ...models.shared import terminalresponse as shared_terminalresponse
 from typing import Dict, List, Optional
 
 

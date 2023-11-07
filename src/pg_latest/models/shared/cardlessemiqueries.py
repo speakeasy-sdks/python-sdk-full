@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import customerdetailscardlessemi as shared_customerdetailscardlessemi
+from .customerdetailscardlessemi import CustomerDetailsCardlessEMI
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
 from typing import Optional
@@ -13,7 +13,7 @@ from typing import Optional
 class CardlessEMIQueries:
     amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('amount'), 'exclude': lambda f: f is None }})
     r"""Amount of the order. OrderId of the order. Either of `order_id` or `amount` is mandatory."""
-    customer_details: Optional[shared_customerdetailscardlessemi.CustomerDetailsCardlessEMI] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customer_details'), 'exclude': lambda f: f is None }})
+    customer_details: Optional[CustomerDetailsCardlessEMI] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customer_details'), 'exclude': lambda f: f is None }})
     r"""Details of the customer for whom eligibility is being checked."""
     order_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('order_id'), 'exclude': lambda f: f is None }})
     r"""OrderId of the order. Either of `order_id` or `amount` is mandatory."""

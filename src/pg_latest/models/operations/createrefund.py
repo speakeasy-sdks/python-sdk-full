@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import createrefundrequest as shared_createrefundrequest
-from ..shared import errorresponse as shared_errorresponse
-from ..shared import refundsentity as shared_refundsentity
+from ...models.shared import createrefundrequest as shared_createrefundrequest
+from ...models.shared import errorresponse as shared_errorresponse
+from ...models.shared import refundsentity as shared_refundsentity
 from typing import Dict, List, Optional
 
 

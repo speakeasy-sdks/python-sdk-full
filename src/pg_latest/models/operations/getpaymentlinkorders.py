@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import linkordersresponse as shared_linkordersresponse
+from ...models.shared import linkordersresponse as shared_linkordersresponse
 from typing import Dict, List, Optional
 
 
@@ -23,9 +23,9 @@ class GetPaymentLinkOrdersResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
-    link_orders_responses: Optional[List[shared_linkordersresponse.LinkOrdersResponse]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_linkordersresponse.LinkOrdersResponse]] = dataclasses.field(default=None)
     r"""OK"""
+    headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
     

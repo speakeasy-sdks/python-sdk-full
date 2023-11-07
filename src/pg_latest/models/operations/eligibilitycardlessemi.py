@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import eligibilitycardlessemirequest as shared_eligibilitycardlessemirequest
-from ..shared import eligiblecardlessemientity as shared_eligiblecardlessemientity
+from ...models.shared import eligibilitycardlessemirequest as shared_eligibilitycardlessemirequest
+from ...models.shared import eligiblecardlessemientity as shared_eligiblecardlessemientity
 from typing import Dict, List, Optional
 
 
@@ -24,7 +24,7 @@ class EligibilityCardlessEMIResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    eligible_cardless_emi_entities: Optional[List[shared_eligiblecardlessemientity.EligibleCardlessEMIEntity]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_eligiblecardlessemientity.EligibleCardlessEMIEntity]] = dataclasses.field(default=None)
     r"""OK"""
     headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)

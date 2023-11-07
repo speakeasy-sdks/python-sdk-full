@@ -1,5 +1,5 @@
 # EligibilityAPIs
-(*eligibility_ap_is*)
+(*.eligibility_ap_is*)
 
 ### Available Operations
 
@@ -35,7 +35,7 @@ req = operations.EligibilityCardlessEMIRequest(
 
 res = s.eligibility_ap_is.eligibility_cardless_emi(req)
 
-if res.eligible_cardless_emi_entities is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -82,7 +82,7 @@ req = operations.EligibilityOfferRequest(
 
 res = s.eligibility_ap_is.eligibility_offer(req)
 
-if res.eligible_offers_entities is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -127,7 +127,7 @@ req = operations.EligibilityPaylaterRequest(
 
 res = s.eligibility_ap_is.eligibility_paylater(req)
 
-if res.eligible_paylaters is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

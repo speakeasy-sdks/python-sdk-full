@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import errorresponse as shared_errorresponse
-from ..shared import settlementsentity as shared_settlementsentity
+from ...models.shared import errorresponse as shared_errorresponse
+from ...models.shared import settlementsentity as shared_settlementsentity
 from typing import Dict, List, Optional
 
 

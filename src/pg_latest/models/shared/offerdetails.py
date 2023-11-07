@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import cashbackdetails as shared_cashbackdetails
-from ..shared import discountdetails as shared_discountdetails
+from .cashbackdetails import CashbackDetails
+from .discountdetails import DiscountDetails
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pg_latest import utils
@@ -22,7 +22,7 @@ class OfferDetailsOfferType(str, Enum):
 class OfferDetails:
     offer_type: OfferDetailsOfferType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offer_type') }})
     r"""Offer Type for the Offer."""
-    cashback_details: Optional[shared_cashbackdetails.CashbackDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cashback_details'), 'exclude': lambda f: f is None }})
-    discount_details: Optional[shared_discountdetails.DiscountDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discount_details'), 'exclude': lambda f: f is None }})
+    cashback_details: Optional[CashbackDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cashback_details'), 'exclude': lambda f: f is None }})
+    discount_details: Optional[DiscountDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discount_details'), 'exclude': lambda f: f is None }})
     
 

@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import createlinkrequest as shared_createlinkrequest
-from ..shared import linkresponse as shared_linkresponse
+from ...models.shared import createlinkrequest as shared_createlinkrequest
+from ...models.shared import linkresponse as shared_linkresponse
 from typing import Dict, List, Optional
 
 

@@ -7,7 +7,7 @@ from enum import Enum
 from pg_latest import utils
 from typing import Optional
 
-class CashbackDetailsCashbackType(str, Enum):
+class CashbackType(str, Enum):
     r"""Type of discount"""
     FLAT = 'flat'
     PERCENTAGE = 'percentage'
@@ -18,7 +18,7 @@ class CashbackDetailsCashbackType(str, Enum):
 class CashbackDetails:
     max_cashback_amount: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max_cashback_amount') }})
     r"""Maximum Value of Cashback allowed."""
-    cashback_type: Optional[CashbackDetailsCashbackType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cashback_type'), 'exclude': lambda f: f is None }})
+    cashback_type: Optional[CashbackType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cashback_type'), 'exclude': lambda f: f is None }})
     r"""Type of discount"""
     cashback_value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cashback_value'), 'exclude': lambda f: f is None }})
     r"""Value of Discount."""

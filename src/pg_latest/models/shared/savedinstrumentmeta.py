@@ -8,7 +8,7 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class SavedInstrumentMetaCardTokenDetails:
+class CardTokenDetails:
     pass
 
 
@@ -21,7 +21,7 @@ class SavedInstrumentMeta:
     r"""Issuing country of saved card"""
     card_network: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('card_network'), 'exclude': lambda f: f is None }})
     r"""card scheme/network of the saved card"""
-    card_token_details: Optional[SavedInstrumentMetaCardTokenDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('card_token_details'), 'exclude': lambda f: f is None }})
+    card_token_details: Optional[CardTokenDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('card_token_details'), 'exclude': lambda f: f is None }})
     card_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('card_type'), 'exclude': lambda f: f is None }})
     r"""Type of saved card"""
     

@@ -3,21 +3,20 @@
 
 ```python
 import pg_latest
-from pg_latest.models import operations, shared
+from pg_latest.models import operations
 
 s = pg_latest.PGLatest()
 
-req = operations.OTPRequestRequest(
-    otp_request=shared.OTPRequest(
-        action=shared.OTPRequestAction.SUBMIT_OTP,
-        otp='string',
-    ),
-    payment_id='string',
+req = operations.DeleteSpecificSavedInstrumentRequest(
+    customer_id='string',
+    instrument_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
-res = s.authentication.otp_request(req)
+res = s.token_vault.delete_specific_saved_instrument(req)
 
-if res.otp_response_entity is not None:
+if res.fetch_all_saved_instruments is not None:
     # handle response
     pass
 ```

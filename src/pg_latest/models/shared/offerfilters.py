@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import offertype as shared_offertype
+from .offertype import OfferType
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
 from typing import List, Optional
@@ -11,7 +11,7 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class OfferFilters:
-    offer_type: Optional[List[shared_offertype.OfferType]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offer_type'), 'exclude': lambda f: f is None }})
+    offer_type: Optional[List[OfferType]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offer_type'), 'exclude': lambda f: f is None }})
     r"""Array of offer_type to be filtered."""
     
 

@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import offerfilters as shared_offerfilters
-from ..shared import offerqueries as shared_offerqueries
+from .offerfilters import OfferFilters
+from .offerqueries import OfferQueries
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
 from typing import Optional
@@ -12,7 +12,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class EligibilityOffersRequest:
-    queries: shared_offerqueries.OfferQueries = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('queries') }})
-    filters: Optional[shared_offerfilters.OfferFilters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters'), 'exclude': lambda f: f is None }})
+    queries: OfferQueries = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('queries') }})
+    filters: Optional[OfferFilters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filters'), 'exclude': lambda f: f is None }})
     
 

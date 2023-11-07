@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import paylateroffer as shared_paylateroffer
+from .paylateroffer import PaylaterOffer
 from dataclasses_json import Undefined, dataclass_json
 from pg_latest import utils
 
@@ -10,6 +10,6 @@ from pg_latest import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class OfferPaylater:
-    paylater: shared_paylateroffer.PaylaterOffer = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paylater') }})
+    paylater: PaylaterOffer = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paylater') }})
     
 

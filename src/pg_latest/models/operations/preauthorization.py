@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import authorizationrequest as shared_authorizationrequest
-from ..shared import errorresponse as shared_errorresponse
-from ..shared import paymentsentity as shared_paymentsentity
+from ...models.shared import authorizationrequest as shared_authorizationrequest
+from ...models.shared import errorresponse as shared_errorresponse
+from ...models.shared import paymentsentity as shared_paymentsentity
 from typing import Dict, List, Optional
 
 

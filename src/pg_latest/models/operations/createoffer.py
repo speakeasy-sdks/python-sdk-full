@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import createofferbackendrequest as shared_createofferbackendrequest
-from ..shared import offerentity as shared_offerentity
+from ...models.shared import createofferbackendrequest as shared_createofferbackendrequest
+from ...models.shared import offerentity as shared_offerentity
 from typing import Dict, List, Optional
 
 

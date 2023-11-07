@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import eligibilityoffersrequest as shared_eligibilityoffersrequest
-from ..shared import eligibleoffersentity as shared_eligibleoffersentity
+from ...models.shared import eligibilityoffersrequest as shared_eligibilityoffersrequest
+from ...models.shared import eligibleoffersentity as shared_eligibleoffersentity
 from typing import Dict, List, Optional
 
 
@@ -24,7 +24,7 @@ class EligibilityOfferResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    eligible_offers_entities: Optional[List[shared_eligibleoffersentity.EligibleOffersEntity]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_eligibleoffersentity.EligibleOffersEntity]] = dataclasses.field(default=None)
     r"""OK"""
     headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)

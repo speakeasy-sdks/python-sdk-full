@@ -1,5 +1,5 @@
 # Refunds
-(*refunds*)
+(*.refunds*)
 
 ### Available Operations
 
@@ -109,7 +109,7 @@ req = operations.GetallrefundsfororderRequest(
 
 res = s.refunds.getallrefundsfororder(req)
 
-if res.refunds_entities is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

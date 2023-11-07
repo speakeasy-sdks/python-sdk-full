@@ -3,12 +3,12 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import errorresponse as shared_errorresponse
-from ..shared import fetchallsavedinstruments as shared_fetchallsavedinstruments
+from ...models.shared import errorresponse as shared_errorresponse
+from ...models.shared import fetchallsavedinstruments as shared_fetchallsavedinstruments
 from enum import Enum
 from typing import Dict, List, Optional
 
-class FetchAllSavedInstrumentsInstrumentType(str, Enum):
+class InstrumentType(str, Enum):
     r"""type to instrument to query"""
     CARD = 'card'
 
@@ -16,7 +16,7 @@ class FetchAllSavedInstrumentsInstrumentType(str, Enum):
 @dataclasses.dataclass
 class FetchAllSavedInstrumentsRequest:
     customer_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'customer_id', 'style': 'simple', 'explode': False }})
-    instrument_type: FetchAllSavedInstrumentsInstrumentType = dataclasses.field(metadata={'query_param': { 'field_name': 'instrument_type', 'style': 'form', 'explode': True }})
+    instrument_type: InstrumentType = dataclasses.field(metadata={'query_param': { 'field_name': 'instrument_type', 'style': 'form', 'explode': True }})
     r"""type to instrument to query"""
     x_client_id: str = dataclasses.field(metadata={'header': { 'field_name': 'x-client-id', 'style': 'simple', 'explode': False }})
     x_client_secret: str = dataclasses.field(metadata={'header': { 'field_name': 'x-client-secret', 'style': 'simple', 'explode': False }})
@@ -31,10 +31,10 @@ class FetchAllSavedInstrumentsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    classes: Optional[List[shared_fetchallsavedinstruments.FetchAllSavedInstruments]] = dataclasses.field(default=None)
+    r"""OK"""
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     r"""Any bad or invalid request will lead to following error object"""
-    fetch_all_saved_instruments: Optional[List[shared_fetchallsavedinstruments.FetchAllSavedInstruments]] = dataclasses.field(default=None)
-    r"""OK"""
     headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

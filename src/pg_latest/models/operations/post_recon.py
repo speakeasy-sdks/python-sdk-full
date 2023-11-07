@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import errorresponse as shared_errorresponse
-from ..shared import fetchpgrecon as shared_fetchpgrecon
-from ..shared import fetchpgreconrequest as shared_fetchpgreconrequest
+from ...models.shared import errorresponse as shared_errorresponse
+from ...models.shared import fetchpgrecon as shared_fetchpgrecon
+from ...models.shared import fetchpgreconrequest as shared_fetchpgreconrequest
 from typing import Dict, List, Optional
 
 

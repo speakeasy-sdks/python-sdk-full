@@ -12,21 +12,20 @@ pip install git+https://github.com/speakeasy-sdks/python-sdk-full.git
 <!-- Start SDK Example Usage -->
 ```python
 import pg_latest
-from pg_latest.models import operations, shared
+from pg_latest.models import operations
 
 s = pg_latest.PGLatest()
 
-req = operations.OTPRequestRequest(
-    otp_request=shared.OTPRequest(
-        action=shared.OTPRequestAction.SUBMIT_OTP,
-        otp='string',
-    ),
-    payment_id='string',
+req = operations.DeleteSpecificSavedInstrumentRequest(
+    customer_id='string',
+    instrument_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
-res = s.authentication.otp_request(req)
+res = s.token_vault.delete_specific_saved_instrument(req)
 
-if res.otp_response_entity is not None:
+if res.fetch_all_saved_instruments is not None:
     # handle response
     pass
 ```
@@ -36,64 +35,64 @@ if res.otp_response_entity is not None:
 ## Available Resources and Operations
 
 
-### [authentication](docs/sdks/authentication/README.md)
-
-* [otp_request](docs/sdks/authentication/README.md#otp_request) - Submit or Resend OTP
-
-### [eligibility_ap_is](docs/sdks/eligibilityapis/README.md)
-
-* [eligibility_cardless_emi](docs/sdks/eligibilityapis/README.md#eligibility_cardless_emi) - Get eligible Cardless EMI
-* [eligibility_offer](docs/sdks/eligibilityapis/README.md#eligibility_offer) - Get eligible Offers
-* [eligibility_paylater](docs/sdks/eligibilityapis/README.md#eligibility_paylater) - Get eligible Paylater
-
-### [offers](docs/sdks/offers/README.md)
-
-* [create_offer](docs/sdks/offers/README.md#create_offer) - Create Offer
-* [get_offer](docs/sdks/offers/README.md#get_offer) - Get Offer by ID
-
-### [orders](docs/sdks/orders/README.md)
-
-* [create_order](docs/sdks/orders/README.md#create_order) - Create Order
-* [get_order](docs/sdks/orders/README.md#get_order) - Get Order
-* [order_pay](docs/sdks/orders/README.md#order_pay) - Order Pay
-* [preauthorization](docs/sdks/orders/README.md#preauthorization) - Preauthorization
-
-### [payment_links](docs/sdks/paymentlinks/README.md)
-
-* [cancel_payment_link](docs/sdks/paymentlinks/README.md#cancel_payment_link) - Cancel Payment Link
-* [create_payment_link](docs/sdks/paymentlinks/README.md#create_payment_link) - Create Payment Link
-* [get_payment_link_details](docs/sdks/paymentlinks/README.md#get_payment_link_details) - Fetch Payment Link Details
-* [get_payment_link_orders](docs/sdks/paymentlinks/README.md#get_payment_link_orders) - Get Orders for a Payment Link
-
-### [payments](docs/sdks/payments/README.md)
-
-* [get_paymentby_id](docs/sdks/payments/README.md#get_paymentby_id) - Get Payment by ID
-* [get_paymentsfororder](docs/sdks/payments/README.md#get_paymentsfororder) - Get Payments for an Order
-
-### [reconciliation](docs/sdks/reconciliation/README.md)
-
-* [post_recon](docs/sdks/reconciliation/README.md#post_recon) - PG Reconciliation
-* [post_settlement_recon](docs/sdks/reconciliation/README.md#post_settlement_recon) - Settlement Reconciliation
-
-### [refunds](docs/sdks/refunds/README.md)
-
-* [createrefund](docs/sdks/refunds/README.md#createrefund) - Create Refund
-* [get_refund](docs/sdks/refunds/README.md#get_refund) - Get Refund
-* [getallrefundsfororder](docs/sdks/refunds/README.md#getallrefundsfororder) - Get All Refunds for an Order
-
-### [settlements](docs/sdks/settlements/README.md)
-
-* [getsettlements](docs/sdks/settlements/README.md#getsettlements) - Get Settlements by Order ID
-* [post_settlements](docs/sdks/settlements/README.md#post_settlements) - Get All Settlements
-
-### [token_vault](docs/sdks/tokenvault/README.md)
+### [.token_vault](docs/sdks/tokenvault/README.md)
 
 * [delete_specific_saved_instrument](docs/sdks/tokenvault/README.md#delete_specific_saved_instrument) - Delete Saved Instrument
 * [fetch_all_saved_instruments](docs/sdks/tokenvault/README.md#fetch_all_saved_instruments) - Fetch All Saved Instruments
 * [fetch_cryptogram](docs/sdks/tokenvault/README.md#fetch_cryptogram) - Fetch cryptogram for saved instrument
 * [fetch_specific_saved_instrument](docs/sdks/tokenvault/README.md#fetch_specific_saved_instrument) - Fetch Single Saved Instrument
 
-### [soft_pos](docs/sdks/softpos/README.md)
+### [.eligibility_ap_is](docs/sdks/eligibilityapis/README.md)
+
+* [eligibility_cardless_emi](docs/sdks/eligibilityapis/README.md#eligibility_cardless_emi) - Get eligible Cardless EMI
+* [eligibility_offer](docs/sdks/eligibilityapis/README.md#eligibility_offer) - Get eligible Offers
+* [eligibility_paylater](docs/sdks/eligibilityapis/README.md#eligibility_paylater) - Get eligible Paylater
+
+### [.payment_links](docs/sdks/paymentlinks/README.md)
+
+* [cancel_payment_link](docs/sdks/paymentlinks/README.md#cancel_payment_link) - Cancel Payment Link
+* [create_payment_link](docs/sdks/paymentlinks/README.md#create_payment_link) - Create Payment Link
+* [get_payment_link_details](docs/sdks/paymentlinks/README.md#get_payment_link_details) - Fetch Payment Link Details
+* [get_payment_link_orders](docs/sdks/paymentlinks/README.md#get_payment_link_orders) - Get Orders for a Payment Link
+
+### [.offers](docs/sdks/offers/README.md)
+
+* [create_offer](docs/sdks/offers/README.md#create_offer) - Create Offer
+* [get_offer](docs/sdks/offers/README.md#get_offer) - Get Offer by ID
+
+### [.orders](docs/sdks/orders/README.md)
+
+* [create_order](docs/sdks/orders/README.md#create_order) - Create Order
+* [get_order](docs/sdks/orders/README.md#get_order) - Get Order
+* [order_pay](docs/sdks/orders/README.md#order_pay) - Order Pay
+* [preauthorization](docs/sdks/orders/README.md#preauthorization) - Preauthorization
+
+### [.authentication](docs/sdks/authentication/README.md)
+
+* [otp_request](docs/sdks/authentication/README.md#otp_request) - Submit or Resend OTP
+
+### [.payments](docs/sdks/payments/README.md)
+
+* [get_paymentby_id](docs/sdks/payments/README.md#get_paymentby_id) - Get Payment by ID
+* [get_paymentsfororder](docs/sdks/payments/README.md#get_paymentsfororder) - Get Payments for an Order
+
+### [.refunds](docs/sdks/refunds/README.md)
+
+* [createrefund](docs/sdks/refunds/README.md#createrefund) - Create Refund
+* [get_refund](docs/sdks/refunds/README.md#get_refund) - Get Refund
+* [getallrefundsfororder](docs/sdks/refunds/README.md#getallrefundsfororder) - Get All Refunds for an Order
+
+### [.settlements](docs/sdks/settlements/README.md)
+
+* [getsettlements](docs/sdks/settlements/README.md#getsettlements) - Get Settlements by Order ID
+* [post_settlements](docs/sdks/settlements/README.md#post_settlements) - Get All Settlements
+
+### [.reconciliation](docs/sdks/reconciliation/README.md)
+
+* [post_recon](docs/sdks/reconciliation/README.md#post_recon) - PG Reconciliation
+* [post_settlement_recon](docs/sdks/reconciliation/README.md#post_settlement_recon) - Settlement Reconciliation
+
+### [.soft_pos](docs/sdks/softpos/README.md)
 
 * [create_terminals](docs/sdks/softpos/README.md#create_terminals) - Create Terminal
 * [get_terminal_by_mobile_number](docs/sdks/softpos/README.md#get_terminal_by_mobile_number) - Get terminal status using phone number
@@ -125,6 +124,32 @@ Here's an example of one such pagination call:
 Handling errors in your SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
 
 
+## Example
+
+```python
+import pg_latest
+from pg_latest.models import operations
+
+s = pg_latest.PGLatest()
+
+req = operations.CancelPaymentLinkRequest(
+    link_id='string',
+    x_client_id='string',
+    x_client_secret='string',
+)
+
+res = None
+try:
+    res = s.payment_links.cancel_payment_link(req)
+
+except (LinkCancelledError) as e:
+    print(e) # handle exception
+
+
+if res.link_cancelled_response is not None:
+    # handle response
+    pass
+```
 <!-- End Error Handling -->
 
 
@@ -143,26 +168,24 @@ You can override the default server globally by passing a server index to the `s
 
 For example:
 
-
 ```python
 import pg_latest
-from pg_latest.models import operations, shared
+from pg_latest.models import operations
 
 s = pg_latest.PGLatest(
-    server_idx=1
+    server_idx=1,
 )
 
-req = operations.OTPRequestRequest(
-    otp_request=shared.OTPRequest(
-        action=shared.OTPRequestAction.SUBMIT_OTP,
-        otp='string',
-    ),
-    payment_id='string',
+req = operations.DeleteSpecificSavedInstrumentRequest(
+    customer_id='string',
+    instrument_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
-res = s.authentication.otp_request(req)
+res = s.token_vault.delete_specific_saved_instrument(req)
 
-if res.otp_response_entity is not None:
+if res.fetch_all_saved_instruments is not None:
     # handle response
     pass
 ```
@@ -172,26 +195,24 @@ if res.otp_response_entity is not None:
 
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 
-
 ```python
 import pg_latest
-from pg_latest.models import operations, shared
+from pg_latest.models import operations
 
 s = pg_latest.PGLatest(
-    server_url="https://sandbox.cashfree.com/pg"
+    server_url="https://sandbox.cashfree.com/pg",
 )
 
-req = operations.OTPRequestRequest(
-    otp_request=shared.OTPRequest(
-        action=shared.OTPRequestAction.SUBMIT_OTP,
-        otp='string',
-    ),
-    payment_id='string',
+req = operations.DeleteSpecificSavedInstrumentRequest(
+    customer_id='string',
+    instrument_id='string',
+    x_client_id='string',
+    x_client_secret='string',
 )
 
-res = s.authentication.otp_request(req)
+res = s.token_vault.delete_specific_saved_instrument(req)
 
-if res.otp_response_entity is not None:
+if res.fetch_all_saved_instruments is not None:
     # handle response
     pass
 ```
@@ -215,8 +236,6 @@ http_client = requests.Session()
 http_client.headers.update({'x-custom-header': 'someValue'})
 s = pg_latest.PGLatest(client: http_client)
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->

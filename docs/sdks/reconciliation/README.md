@@ -1,5 +1,5 @@
 # Reconciliation
-(*reconciliation*)
+(*.reconciliation*)
 
 ### Available Operations
 
@@ -20,11 +20,11 @@ s = pg_latest.PGLatest()
 
 req = operations.PostReconRequest(
     fetch_pg_recon_request=shared.FetchPGReconRequest(
-        filters=shared.FetchPGReconRequestFilters(
+        filters=shared.Filters(
             end_date='string',
             start_date='string',
         ),
-        pagination=shared.FetchPGReconRequestPagination(
+        pagination=shared.Pagination(
             limit=85382,
         ),
     ),

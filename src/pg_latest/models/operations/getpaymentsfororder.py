@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import errorresponse as shared_errorresponse
-from ..shared import paymentsentity as shared_paymentsentity
+from ...models.shared import errorresponse as shared_errorresponse
+from ...models.shared import paymentsentity as shared_paymentsentity
 from typing import Dict, List, Optional, Union
 
 
@@ -19,7 +19,7 @@ class GetPaymentsfororderRequest:
 
 
 @dataclasses.dataclass
-class GetPaymentsfororder200ApplicationJSON:
+class GetPaymentsfororderResponseBody:
     r"""OK"""
     
 
@@ -33,9 +33,9 @@ class GetPaymentsfororderResponse:
     r"""HTTP response status code for this operation"""
     error_response: Optional[shared_errorresponse.ErrorResponse] = dataclasses.field(default=None)
     r"""Any bad or invalid request will lead to following error object"""
-    get_paymentsfororder_200_application_json_one_of: Optional[Union[shared_paymentsentity.PaymentsEntity]] = dataclasses.field(default=None)
-    r"""OK"""
     headers: Optional[Dict[str, List[str]]] = dataclasses.field(default=None)
+    one_of: Optional[Union[shared_paymentsentity.PaymentsEntity]] = dataclasses.field(default=None)
+    r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
     

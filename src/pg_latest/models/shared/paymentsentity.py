@@ -2,15 +2,15 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import authorizationinpaymentsentity as shared_authorizationinpaymentsentity
-from ..shared import errordetailsinpaymentsentity as shared_errordetailsinpaymentsentity
-from ..shared import paymentmethodinpaymentsentity as shared_paymentmethodinpaymentsentity
+from .authorizationinpaymentsentity import AuthorizationInPaymentsEntity
+from .errordetailsinpaymentsentity import ErrorDetailsInPaymentsEntity
+from .paymentmethodinpaymentsentity import PaymentMethodInPaymentsEntity
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pg_latest import utils
 from typing import Optional
 
-class PaymentsEntityPaymentStatus(str, Enum):
+class PaymentStatus(str, Enum):
     r"""The transaction status can be one of  [\\"SUCCESS\\", \\"NOT_ATTEMPTED\\", \\"FAILED\\", \\"USER_DROPPED\\", \\"VOID\\", \\"CANCELLED\\", \\"PENDING\\"]"""
     SUCCESS = 'SUCCESS'
     NOT_ATTEMPTED = 'NOT_ATTEMPTED'
@@ -25,12 +25,12 @@ class PaymentsEntityPaymentStatus(str, Enum):
 @dataclasses.dataclass
 class PaymentsEntity:
     auth_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth_id'), 'exclude': lambda f: f is None }})
-    authorization: Optional[shared_authorizationinpaymentsentity.AuthorizationInPaymentsEntity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('authorization'), 'exclude': lambda f: f is None }})
+    authorization: Optional[AuthorizationInPaymentsEntity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('authorization'), 'exclude': lambda f: f is None }})
     r"""The authorization details are present for payments which go through the preauthorization workflow. Or else this parameter will be null."""
     bank_reference: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bank_reference'), 'exclude': lambda f: f is None }})
     cf_payment_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cf_payment_id'), 'exclude': lambda f: f is None }})
     entity: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('entity'), 'exclude': lambda f: f is None }})
-    error_details: Optional[shared_errordetailsinpaymentsentity.ErrorDetailsInPaymentsEntity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error_details'), 'exclude': lambda f: f is None }})
+    error_details: Optional[ErrorDetailsInPaymentsEntity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error_details'), 'exclude': lambda f: f is None }})
     r"""The error details are present only for failed payments"""
     is_captured: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_captured'), 'exclude': lambda f: f is None }})
     order_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('order_amount'), 'exclude': lambda f: f is None }})
@@ -43,8 +43,8 @@ class PaymentsEntity:
     payment_group: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_group'), 'exclude': lambda f: f is None }})
     r"""Type of payment group. One of ['upi', 'card', 'app', 'netbanking', 'paylater', 'cardless_emi']"""
     payment_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_message'), 'exclude': lambda f: f is None }})
-    payment_method: Optional[shared_paymentmethodinpaymentsentity.PaymentMethodInPaymentsEntity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_method'), 'exclude': lambda f: f is None }})
-    payment_status: Optional[PaymentsEntityPaymentStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_status'), 'exclude': lambda f: f is None }})
+    payment_method: Optional[PaymentMethodInPaymentsEntity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_method'), 'exclude': lambda f: f is None }})
+    payment_status: Optional[PaymentStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_status'), 'exclude': lambda f: f is None }})
     r"""The transaction status can be one of  [\\"SUCCESS\\", \\"NOT_ATTEMPTED\\", \\"FAILED\\", \\"USER_DROPPED\\", \\"VOID\\", \\"CANCELLED\\", \\"PENDING\\"]"""
     payment_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_time'), 'exclude': lambda f: f is None }})
     r"""This is the time when the payment was initiated"""

@@ -1,5 +1,5 @@
 # SoftPOS
-(*soft_pos*)
+(*.soft_pos*)
 
 ## Overview
 

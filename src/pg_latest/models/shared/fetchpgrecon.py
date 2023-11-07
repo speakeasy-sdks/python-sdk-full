@@ -9,7 +9,7 @@ from typing import List, Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class FetchPGReconData:
+class Data:
     adjustment: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('adjustment'), 'exclude': lambda f: f is None }})
     r"""Amount that is adjusted from the settlement amount because of any credit/debit event such as refund, refund_reverse etc."""
     adjustment_remarks: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('adjustment_remarks'), 'exclude': lambda f: f is None }})
@@ -113,7 +113,7 @@ class FetchPGReconData:
 class FetchPGRecon:
     cursor: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cursor'), 'exclude': lambda f: f is None }})
     r"""Specifies from where the next set of settlement details should be fetched."""
-    data: Optional[List[FetchPGReconData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
+    data: Optional[List[Data]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
     limit: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('limit'), 'exclude': lambda f: f is None }})
     r"""Number of settlements you want to fetch in the next iteration."""
     

@@ -7,12 +7,12 @@ from enum import Enum
 from pg_latest import utils
 from typing import Optional
 
-class AuthorizationInPaymentsEntityAction(str, Enum):
+class Action(str, Enum):
     r"""One of CAPTURE or VOID"""
     CAPTURE = 'CAPTURE'
     VOID = 'VOID'
 
-class AuthorizationInPaymentsEntityStatus(str, Enum):
+class Status(str, Enum):
     r"""One of SUCCESS or PENDING"""
     SUCCESS = 'SUCCESS'
     PENDING = 'PENDING'
@@ -22,7 +22,7 @@ class AuthorizationInPaymentsEntityStatus(str, Enum):
 @dataclasses.dataclass
 class AuthorizationInPaymentsEntity:
     r"""The authorization details are present for payments which go through the preauthorization workflow. Or else this parameter will be null."""
-    action: Optional[AuthorizationInPaymentsEntityAction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})
+    action: Optional[Action] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})
     r"""One of CAPTURE or VOID"""
     action_reference: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action_reference'), 'exclude': lambda f: f is None }})
     r"""CAPTURE or VOID reference number based on action"""
@@ -36,7 +36,7 @@ class AuthorizationInPaymentsEntity:
     r"""End time of this authorization hold (only for UPI)"""
     start_time: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('start_time'), 'exclude': lambda f: f is None }})
     r"""Start time of this authorization hold (only for UPI)"""
-    status: Optional[AuthorizationInPaymentsEntityStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[Status] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     r"""One of SUCCESS or PENDING"""
     
 

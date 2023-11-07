@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import errorresponse as shared_errorresponse
-from ..shared import fetchsettlement as shared_fetchsettlement
-from ..shared import fetchsettlementreconrequest as shared_fetchsettlementreconrequest
+from ...models.shared import errorresponse as shared_errorresponse
+from ...models.shared import fetchsettlement as shared_fetchsettlement
+from ...models.shared import fetchsettlementreconrequest as shared_fetchsettlementreconrequest
 from typing import Dict, List, Optional
 
 

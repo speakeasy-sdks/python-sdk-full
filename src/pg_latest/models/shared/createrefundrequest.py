@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import vendorsplit as shared_vendorsplit
+from .vendorsplit import VendorSplit
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pg_latest import utils
@@ -25,6 +25,6 @@ class CreateRefundRequest:
     r"""A refund note for your reference."""
     refund_speed: Optional[CreateRefundRequestRefundSpeed] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_speed'), 'exclude': lambda f: f is None }})
     r"""Speed at which the refund is processed. It's an optional field with default being STANDARD"""
-    refund_splits: Optional[List[shared_vendorsplit.VendorSplit]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_splits'), 'exclude': lambda f: f is None }})
+    refund_splits: Optional[List[VendorSplit]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_splits'), 'exclude': lambda f: f is None }})
     
 

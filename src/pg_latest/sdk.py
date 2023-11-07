@@ -17,18 +17,18 @@ from pg_latest import utils
 from typing import Dict
 
 class PGLatest:
-    authentication: Authentication
-    r"""The Authentication API allows merchants to show a native screen and capture OTP on their own page and submit to Cashfree. This feature is only available on request."""
-    eligibility_ap_is: EligibilityAPIs
-    offers: Offers
-    orders: Orders
-    payment_links: PaymentLinks
-    payments: Payments
-    reconciliation: Reconciliation
-    refunds: Refunds
-    settlements: Settlements
     token_vault: TokenVault
     r"""Cashfree's token Vault helps you save cards and tokenize them in a PCI complaint manner. We support creation of network tokens which can be used across acquiring banks"""
+    eligibility_ap_is: EligibilityAPIs
+    payment_links: PaymentLinks
+    offers: Offers
+    orders: Orders
+    authentication: Authentication
+    r"""The Authentication API allows merchants to show a native screen and capture OTP on their own page and submit to Cashfree. This feature is only available on request."""
+    payments: Payments
+    refunds: Refunds
+    settlements: Settlements
+    reconciliation: Reconciliation
     soft_pos: SoftPOS
     r"""softPOS' agent and order management system now supported by APIs"""
 
@@ -68,15 +68,15 @@ class PGLatest:
         self._init_sdks()
     
     def _init_sdks(self):
-        self.authentication = Authentication(self.sdk_configuration)
+        self.token_vault = TokenVault(self.sdk_configuration)
         self.eligibility_ap_is = EligibilityAPIs(self.sdk_configuration)
+        self.payment_links = PaymentLinks(self.sdk_configuration)
         self.offers = Offers(self.sdk_configuration)
         self.orders = Orders(self.sdk_configuration)
-        self.payment_links = PaymentLinks(self.sdk_configuration)
+        self.authentication = Authentication(self.sdk_configuration)
         self.payments = Payments(self.sdk_configuration)
-        self.reconciliation = Reconciliation(self.sdk_configuration)
         self.refunds = Refunds(self.sdk_configuration)
         self.settlements = Settlements(self.sdk_configuration)
-        self.token_vault = TokenVault(self.sdk_configuration)
+        self.reconciliation = Reconciliation(self.sdk_configuration)
         self.soft_pos = SoftPOS(self.sdk_configuration)
     

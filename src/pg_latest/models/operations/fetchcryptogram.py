@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import cryptogram as shared_cryptogram
-from ..shared import errorresponse as shared_errorresponse
+from ...models.shared import cryptogram as shared_cryptogram
+from ...models.shared import errorresponse as shared_errorresponse
 from typing import Dict, List, Optional
 
 

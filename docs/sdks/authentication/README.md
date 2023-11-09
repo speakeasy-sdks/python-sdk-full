@@ -1,5 +1,5 @@
 # Authentication
-(*.authentication*)
+(*authentication*)
 
 ## Overview
 
@@ -46,4 +46,8 @@ if res.otp_response_entity is not None:
 ### Response
 
 **[operations.OTPRequestResponse](../../models/operations/otprequestresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -13,6 +13,7 @@ class Authentication:
         self.sdk_configuration = sdk_config
         
     
+    
     def otp_request(self, request: operations.OTPRequestRequest) -> operations.OTPRequestResponse:
         r"""Submit or Resend OTP
         If you accept OTP on your own page, you can use the below API to send OTP to Cashfree.

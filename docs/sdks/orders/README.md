@@ -1,5 +1,5 @@
 # Orders
-(*.orders*)
+(*orders*)
 
 ### Available Operations
 
@@ -64,7 +64,14 @@ if res.orders_entity is not None:
 ### Response
 
 **[operations.CreateOrderResponse](../../models/operations/createorderresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.AuthenticationError | 401                        | application/json           |
+| errors.RateLimitError      | 429                        | application/json           |
+| errors.APIError            | 500                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_order
 
@@ -101,7 +108,11 @@ if res.orders_entity is not None:
 ### Response
 
 **[operations.GetOrderResponse](../../models/operations/getorderresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## order_pay
 
@@ -143,7 +154,13 @@ if res.order_pay_response is not None:
 ### Response
 
 **[operations.OrderPayResponse](../../models/operations/orderpayresponse.md)**
+### Errors
 
+| Error Object          | Status Code           | Content Type          |
+| --------------------- | --------------------- | --------------------- |
+| errors.RateLimitError | 429                   | application/json      |
+| errors.APIError       | 500                   | application/json      |
+| errors.SDKError       | 400-600               | */*                   |
 
 ## preauthorization
 
@@ -181,4 +198,8 @@ if res.payments_entity is not None:
 ### Response
 
 **[operations.PreauthorizationResponse](../../models/operations/preauthorizationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

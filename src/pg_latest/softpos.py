@@ -13,6 +13,7 @@ class SoftPOS:
         self.sdk_configuration = sdk_config
         
     
+    
     def create_terminals(self, request: operations.CreateTerminalsRequest) -> operations.CreateTerminalsResponse:
         r"""Create Terminal
         Use this API to create new terminals to use softPOS.
@@ -47,6 +48,7 @@ class SoftPOS:
 
         return res
 
+    
     
     def get_terminal_by_mobile_number(self, request: operations.GetTerminalByMobileNumberRequest) -> operations.GetTerminalByMobileNumberResponse:
         r"""Get terminal status using phone number

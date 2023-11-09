@@ -35,64 +35,64 @@ if res.fetch_all_saved_instruments is not None:
 ## Available Resources and Operations
 
 
-### [.token_vault](docs/sdks/tokenvault/README.md)
+### [token_vault](docs/sdks/tokenvault/README.md)
 
 * [delete_specific_saved_instrument](docs/sdks/tokenvault/README.md#delete_specific_saved_instrument) - Delete Saved Instrument
 * [fetch_all_saved_instruments](docs/sdks/tokenvault/README.md#fetch_all_saved_instruments) - Fetch All Saved Instruments
 * [fetch_cryptogram](docs/sdks/tokenvault/README.md#fetch_cryptogram) - Fetch cryptogram for saved instrument
 * [fetch_specific_saved_instrument](docs/sdks/tokenvault/README.md#fetch_specific_saved_instrument) - Fetch Single Saved Instrument
 
-### [.eligibility_ap_is](docs/sdks/eligibilityapis/README.md)
+### [eligibility_ap_is](docs/sdks/eligibilityapis/README.md)
 
 * [eligibility_cardless_emi](docs/sdks/eligibilityapis/README.md#eligibility_cardless_emi) - Get eligible Cardless EMI
 * [eligibility_offer](docs/sdks/eligibilityapis/README.md#eligibility_offer) - Get eligible Offers
 * [eligibility_paylater](docs/sdks/eligibilityapis/README.md#eligibility_paylater) - Get eligible Paylater
 
-### [.payment_links](docs/sdks/paymentlinks/README.md)
+### [payment_links](docs/sdks/paymentlinks/README.md)
 
 * [cancel_payment_link](docs/sdks/paymentlinks/README.md#cancel_payment_link) - Cancel Payment Link
 * [create_payment_link](docs/sdks/paymentlinks/README.md#create_payment_link) - Create Payment Link
 * [get_payment_link_details](docs/sdks/paymentlinks/README.md#get_payment_link_details) - Fetch Payment Link Details
 * [get_payment_link_orders](docs/sdks/paymentlinks/README.md#get_payment_link_orders) - Get Orders for a Payment Link
 
-### [.offers](docs/sdks/offers/README.md)
+### [offers](docs/sdks/offers/README.md)
 
 * [create_offer](docs/sdks/offers/README.md#create_offer) - Create Offer
 * [get_offer](docs/sdks/offers/README.md#get_offer) - Get Offer by ID
 
-### [.orders](docs/sdks/orders/README.md)
+### [orders](docs/sdks/orders/README.md)
 
 * [create_order](docs/sdks/orders/README.md#create_order) - Create Order
 * [get_order](docs/sdks/orders/README.md#get_order) - Get Order
 * [order_pay](docs/sdks/orders/README.md#order_pay) - Order Pay
 * [preauthorization](docs/sdks/orders/README.md#preauthorization) - Preauthorization
 
-### [.authentication](docs/sdks/authentication/README.md)
+### [authentication](docs/sdks/authentication/README.md)
 
 * [otp_request](docs/sdks/authentication/README.md#otp_request) - Submit or Resend OTP
 
-### [.payments](docs/sdks/payments/README.md)
+### [payments](docs/sdks/payments/README.md)
 
 * [get_paymentby_id](docs/sdks/payments/README.md#get_paymentby_id) - Get Payment by ID
 * [get_paymentsfororder](docs/sdks/payments/README.md#get_paymentsfororder) - Get Payments for an Order
 
-### [.refunds](docs/sdks/refunds/README.md)
+### [refunds](docs/sdks/refunds/README.md)
 
 * [createrefund](docs/sdks/refunds/README.md#createrefund) - Create Refund
 * [get_refund](docs/sdks/refunds/README.md#get_refund) - Get Refund
 * [getallrefundsfororder](docs/sdks/refunds/README.md#getallrefundsfororder) - Get All Refunds for an Order
 
-### [.settlements](docs/sdks/settlements/README.md)
+### [settlements](docs/sdks/settlements/README.md)
 
 * [getsettlements](docs/sdks/settlements/README.md#getsettlements) - Get Settlements by Order ID
 * [post_settlements](docs/sdks/settlements/README.md#post_settlements) - Get All Settlements
 
-### [.reconciliation](docs/sdks/reconciliation/README.md)
+### [reconciliation](docs/sdks/reconciliation/README.md)
 
 * [post_recon](docs/sdks/reconciliation/README.md#post_recon) - PG Reconciliation
 * [post_settlement_recon](docs/sdks/reconciliation/README.md#post_settlement_recon) - Settlement Reconciliation
 
-### [.soft_pos](docs/sdks/softpos/README.md)
+### [soft_pos](docs/sdks/softpos/README.md)
 
 * [create_terminals](docs/sdks/softpos/README.md#create_terminals) - Create Terminal
 * [get_terminal_by_mobile_number](docs/sdks/softpos/README.md#get_terminal_by_mobile_number) - Get terminal status using phone number
@@ -121,7 +121,12 @@ Here's an example of one such pagination call:
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
+
+| Error Object              | Status Code               | Content Type              |
+| ------------------------- | ------------------------- | ------------------------- |
+| errors.LinkCancelledError | 400                       | application/json          |
+| errors.SDKError           | 400-600                   | */*                       |
 
 
 ## Example
@@ -141,8 +146,10 @@ req = operations.CancelPaymentLinkRequest(
 res = None
 try:
     res = s.payment_links.cancel_payment_link(req)
+except (errors.LinkCancelledError) as e:
+    print(e) # handle exception
 
-except (LinkCancelledError) as e:
+except (errors.SDKError) as e:
     print(e) # handle exception
 
 
@@ -226,7 +233,7 @@ if res.fetch_all_saved_instruments is not None:
 The Python SDK makes API calls using the (requests)[https://pypi.org/project/requests/] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `requests.Session` object.
 
 
-For example, you could specify a header for every request that your sdk makes as follows:
+For example, you could specify a header for every request that this sdk makes as follows:
 
 ```python
 import pg_latest

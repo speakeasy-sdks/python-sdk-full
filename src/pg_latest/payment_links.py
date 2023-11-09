@@ -12,6 +12,7 @@ class PaymentLinks:
         self.sdk_configuration = sdk_config
         
     
+    
     def cancel_payment_link(self, request: operations.CancelPaymentLinkRequest) -> operations.CancelPaymentLinkResponse:
         r"""Cancel Payment Link
         Use this API to cancel a payment link. No further payments can be done against a cancelled link. Only a link in ACTIVE status can be cancelled.
@@ -53,6 +54,7 @@ class PaymentLinks:
         return res
 
     
+    
     def create_payment_link(self, request: operations.CreatePaymentLinkRequest) -> operations.CreatePaymentLinkResponse:
         r"""Create Payment Link
         Use this API to create a new payment link. The created payment link url will be available in the API response parameter link_url.
@@ -88,6 +90,7 @@ class PaymentLinks:
         return res
 
     
+    
     def get_payment_link_details(self, request: operations.GetPaymentLinkDetailsRequest) -> operations.GetPaymentLinkDetailsResponse:
         r"""Fetch Payment Link Details
         Use this API to view all details and status of a payment link.
@@ -119,6 +122,7 @@ class PaymentLinks:
 
         return res
 
+    
     
     def get_payment_link_orders(self, request: operations.GetPaymentLinkOrdersRequest) -> operations.GetPaymentLinkOrdersResponse:
         r"""Get Orders for a Payment Link

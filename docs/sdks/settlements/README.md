@@ -1,5 +1,5 @@
 # Settlements
-(*.settlements*)
+(*settlements*)
 
 ### Available Operations
 
@@ -41,7 +41,11 @@ if res.settlements_entity is not None:
 ### Response
 
 **[operations.GetsettlementsResponse](../../models/operations/getsettlementsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_settlements
 
@@ -90,4 +94,8 @@ if res.fetch_settlement is not None:
 ### Response
 
 **[operations.PostSettlementsResponse](../../models/operations/postsettlementsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

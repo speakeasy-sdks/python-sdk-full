@@ -13,6 +13,7 @@ class TokenVault:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_specific_saved_instrument(self, request: operations.DeleteSpecificSavedInstrumentRequest) -> operations.DeleteSpecificSavedInstrumentResponse:
         r"""Delete Saved Instrument
         To delete a saved instrument for a customer id and instrument id
@@ -52,6 +53,7 @@ class TokenVault:
 
         return res
 
+    
     
     def fetch_all_saved_instruments(self, request: operations.FetchAllSavedInstrumentsRequest) -> operations.FetchAllSavedInstrumentsResponse:
         r"""Fetch All Saved Instruments
@@ -94,6 +96,7 @@ class TokenVault:
         return res
 
     
+    
     def fetch_cryptogram(self, request: operations.FetchCryptogramRequest) -> operations.FetchCryptogramResponse:
         r"""Fetch cryptogram for saved instrument
         To get the card network token, token expiry and cryptogram for a saved instrument using instrument id
@@ -133,6 +136,7 @@ class TokenVault:
 
         return res
 
+    
     
     def fetch_specific_saved_instrument(self, request: operations.FetchSpecificSavedInstrumentRequest) -> operations.FetchSpecificSavedInstrumentResponse:
         r"""Fetch Single Saved Instrument

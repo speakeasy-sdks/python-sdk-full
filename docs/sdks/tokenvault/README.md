@@ -1,5 +1,5 @@
 # TokenVault
-(*.token_vault*)
+(*token_vault*)
 
 ## Overview
 
@@ -48,7 +48,11 @@ if res.fetch_all_saved_instruments is not None:
 ### Response
 
 **[operations.DeleteSpecificSavedInstrumentResponse](../../models/operations/deletespecificsavedinstrumentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## fetch_all_saved_instruments
 
@@ -86,7 +90,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.FetchAllSavedInstrumentsResponse](../../models/operations/fetchallsavedinstrumentsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## fetch_cryptogram
 
@@ -124,7 +132,11 @@ if res.cryptogram is not None:
 ### Response
 
 **[operations.FetchCryptogramResponse](../../models/operations/fetchcryptogramresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## fetch_specific_saved_instrument
 
@@ -162,4 +174,8 @@ if res.fetch_all_saved_instruments is not None:
 ### Response
 
 **[operations.FetchSpecificSavedInstrumentResponse](../../models/operations/fetchspecificsavedinstrumentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

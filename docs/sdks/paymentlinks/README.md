@@ -1,5 +1,5 @@
 # PaymentLinks
-(*.payment_links*)
+(*payment_links*)
 
 ### Available Operations
 
@@ -43,7 +43,12 @@ if res.link_cancelled_response is not None:
 ### Response
 
 **[operations.CancelPaymentLinkResponse](../../models/operations/cancelpaymentlinkresponse.md)**
+### Errors
 
+| Error Object              | Status Code               | Content Type              |
+| ------------------------- | ------------------------- | ------------------------- |
+| errors.LinkCancelledError | 400                       | application/json          |
+| errors.SDKError           | 400-600                   | */*                       |
 
 ## create_payment_link
 
@@ -94,7 +99,11 @@ if res.link_response is not None:
 ### Response
 
 **[operations.CreatePaymentLinkResponse](../../models/operations/createpaymentlinkresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_payment_link_details
 
@@ -131,7 +140,11 @@ if res.link_response is not None:
 ### Response
 
 **[operations.GetPaymentLinkDetailsResponse](../../models/operations/getpaymentlinkdetailsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_payment_link_orders
 
@@ -168,4 +181,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetPaymentLinkOrdersResponse](../../models/operations/getpaymentlinkordersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

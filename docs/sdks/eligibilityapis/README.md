@@ -1,5 +1,5 @@
 # EligibilityAPIs
-(*.eligibility_ap_is*)
+(*eligibility_ap_is*)
 
 ### Available Operations
 
@@ -50,7 +50,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.EligibilityCardlessEMIResponse](../../models/operations/eligibilitycardlessemiresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## eligibility_offer
 
@@ -97,7 +101,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.EligibilityOfferResponse](../../models/operations/eligibilityofferresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## eligibility_paylater
 
@@ -142,4 +150,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.EligibilityPaylaterResponse](../../models/operations/eligibilitypaylaterresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

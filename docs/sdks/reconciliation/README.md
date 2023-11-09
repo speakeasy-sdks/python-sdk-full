@@ -1,5 +1,5 @@
 # Reconciliation
-(*.reconciliation*)
+(*reconciliation*)
 
 ### Available Operations
 
@@ -49,7 +49,11 @@ if res.fetch_pg_recon is not None:
 ### Response
 
 **[operations.PostReconResponse](../../models/operations/postreconresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_settlement_recon
 
@@ -98,4 +102,8 @@ if res.fetch_settlement_recon is not None:
 ### Response
 
 **[operations.PostSettlementReconResponse](../../models/operations/postsettlementreconresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

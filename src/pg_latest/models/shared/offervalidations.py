@@ -14,11 +14,6 @@ from pg_latest import utils
 from typing import Optional, Union
 
 
-@dataclasses.dataclass
-class PaymentMethod:
-    pass
-
-
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class OfferValidations:

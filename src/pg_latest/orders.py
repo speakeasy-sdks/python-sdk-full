@@ -12,6 +12,7 @@ class Orders:
         self.sdk_configuration = sdk_config
         
     
+    
     def create_order(self, request: operations.CreateOrderRequest) -> operations.CreateOrderResponse:
         r"""Create Order
         Use this API to create orders with Cashfree from your backend and get the payment link. To use this API S2S flag needs to be enabled from the backend. In case you want to use the cards payment option the PCI DSS flag is required, for more information email us at \"care@cashfree.com\".
@@ -82,6 +83,7 @@ class Orders:
         return res
 
     
+    
     def get_order(self, request: operations.GetOrderRequest) -> operations.GetOrderResponse:
         r"""Get Order
         Use this API to view all details of an order.
@@ -121,6 +123,7 @@ class Orders:
 
         return res
 
+    
     
     def order_pay(self, request: operations.OrderPayRequest) -> operations.OrderPayResponse:
         r"""Order Pay
@@ -182,6 +185,7 @@ class Orders:
 
         return res
 
+    
     
     def preauthorization(self, request: operations.PreauthorizationRequest) -> operations.PreauthorizationResponse:
         r"""Preauthorization

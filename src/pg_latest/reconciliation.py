@@ -12,6 +12,7 @@ class Reconciliation:
         self.sdk_configuration = sdk_config
         
     
+    
     def post_recon(self, request: operations.PostReconRequest) -> operations.PostReconResponse:
         r"""PG Reconciliation
         Use this API to get the payment gateway reconciliation details with date range.
@@ -54,6 +55,7 @@ class Reconciliation:
 
         return res
 
+    
     
     def post_settlement_recon(self, request: operations.PostSettlementReconRequest) -> operations.PostSettlementReconResponse:
         r"""Settlement Reconciliation

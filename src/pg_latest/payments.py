@@ -12,6 +12,7 @@ class Payments:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_paymentby_id(self, request: operations.GetPaymentbyIDRequest) -> operations.GetPaymentbyIDResponse:
         r"""Get Payment by ID
         Use this API to view payment details of an order for a payment ID.
@@ -51,6 +52,7 @@ class Payments:
 
         return res
 
+    
     
     def get_paymentsfororder(self, request: operations.GetPaymentsfororderRequest) -> operations.GetPaymentsfororderResponse:
         r"""Get Payments for an Order

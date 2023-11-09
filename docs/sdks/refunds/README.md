@@ -1,5 +1,5 @@
 # Refunds
-(*.refunds*)
+(*refunds*)
 
 ### Available Operations
 
@@ -49,7 +49,11 @@ if res.refunds_entity is not None:
 ### Response
 
 **[operations.CreaterefundResponse](../../models/operations/createrefundresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_refund
 
@@ -87,7 +91,11 @@ if res.refunds_entity is not None:
 ### Response
 
 **[operations.GetRefundResponse](../../models/operations/getrefundresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getallrefundsfororder
 
@@ -124,4 +132,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetallrefundsfororderResponse](../../models/operations/getallrefundsfororderresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

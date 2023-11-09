@@ -12,6 +12,7 @@ class Offers:
         self.sdk_configuration = sdk_config
         
     
+    
     def create_offer(self, request: operations.CreateOfferRequest) -> operations.CreateOfferResponse:
         r"""Create Offer
         Use this API to create offers with Cashfree from your backend
@@ -46,6 +47,7 @@ class Offers:
 
         return res
 
+    
     
     def get_offer(self, request: operations.GetOfferRequest) -> operations.GetOfferResponse:
         r"""Get Offer by ID

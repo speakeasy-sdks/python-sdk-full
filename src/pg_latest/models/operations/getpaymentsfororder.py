@@ -19,13 +19,6 @@ class GetPaymentsfororderRequest:
 
 
 @dataclasses.dataclass
-class GetPaymentsfororderResponseBody:
-    r"""OK"""
-    
-
-
-
-@dataclasses.dataclass
 class GetPaymentsfororderResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""

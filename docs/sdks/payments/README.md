@@ -1,5 +1,5 @@
 # Payments
-(*.payments*)
+(*payments*)
 
 ### Available Operations
 
@@ -42,7 +42,11 @@ if res.payments_entity is not None:
 ### Response
 
 **[operations.GetPaymentbyIDResponse](../../models/operations/getpaymentbyidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_paymentsfororder
 
@@ -79,4 +83,8 @@ if res.one_of is not None:
 ### Response
 
 **[operations.GetPaymentsfororderResponse](../../models/operations/getpaymentsfororderresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -12,6 +12,7 @@ class Settlements:
         self.sdk_configuration = sdk_config
         
     
+    
     def getsettlements(self, request: operations.GetsettlementsRequest) -> operations.GetsettlementsResponse:
         r"""Get Settlements by Order ID
         Use this API to view all the settlements of a particular order.
@@ -51,6 +52,7 @@ class Settlements:
 
         return res
 
+    
     
     def post_settlements(self, request: operations.PostSettlementsRequest) -> operations.PostSettlementsResponse:
         r"""Get All Settlements

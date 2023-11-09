@@ -1,5 +1,5 @@
 # Offers
-(*.offers*)
+(*offers*)
 
 ### Available Operations
 
@@ -73,7 +73,11 @@ if res.offer_entity is not None:
 ### Response
 
 **[operations.CreateOfferResponse](../../models/operations/createofferresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_offer
 
@@ -110,4 +114,8 @@ if res.offer_entity is not None:
 ### Response
 
 **[operations.GetOfferResponse](../../models/operations/getofferresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

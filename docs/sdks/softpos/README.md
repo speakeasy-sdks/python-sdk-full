@@ -1,5 +1,5 @@
 # SoftPOS
-(*.soft_pos*)
+(*soft_pos*)
 
 ## Overview
 
@@ -48,7 +48,11 @@ if res.terminal_response is not None:
 ### Response
 
 **[operations.CreateTerminalsResponse](../../models/operations/createterminalsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_terminal_by_mobile_number
 
@@ -85,4 +89,8 @@ if res.terminal_details is not None:
 ### Response
 
 **[operations.GetTerminalByMobileNumberResponse](../../models/operations/getterminalbymobilenumberresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

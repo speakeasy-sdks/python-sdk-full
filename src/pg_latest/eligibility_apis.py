@@ -12,6 +12,7 @@ class EligibilityAPIs:
         self.sdk_configuration = sdk_config
         
     
+    
     def eligibility_cardless_emi(self, request: operations.EligibilityCardlessEMIRequest) -> operations.EligibilityCardlessEMIResponse:
         r"""Get eligible Cardless EMI
         Use this API to get eligible Cardless EMI Payment Methods for a customer on an order.
@@ -47,6 +48,7 @@ class EligibilityAPIs:
         return res
 
     
+    
     def eligibility_offer(self, request: operations.EligibilityOfferRequest) -> operations.EligibilityOfferResponse:
         r"""Get eligible Offers
         Use this API to get eligible offers for an order or amount.
@@ -81,6 +83,7 @@ class EligibilityAPIs:
 
         return res
 
+    
     
     def eligibility_paylater(self, request: operations.EligibilityPaylaterRequest) -> operations.EligibilityPaylaterResponse:
         r"""Get eligible Paylater

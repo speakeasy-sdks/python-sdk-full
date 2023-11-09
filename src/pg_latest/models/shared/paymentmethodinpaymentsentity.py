@@ -13,11 +13,6 @@ from pg_latest import utils
 from typing import Optional, Union
 
 
-@dataclasses.dataclass
-class PaymentMethodInPaymentsEntityPaymentMethod:
-    pass
-
-
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class PaymentMethodInPaymentsEntity:

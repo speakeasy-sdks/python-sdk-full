@@ -18,6 +18,7 @@ src/pg_latest/utils/__init__.py
 src/pg_latest/utils/retries.py
 src/pg_latest/utils/utils.py
 src/pg_latest/models/errors/sdkerror.py
+tests/helpers.py
 src/pg_latest/models/operations/deletespecificsavedinstrument.py
 src/pg_latest/models/operations/fetchallsavedinstruments.py
 src/pg_latest/models/operations/fetchcryptogram.py
@@ -227,7 +228,7 @@ docs/models/shared/instrumenttype.md
 docs/models/shared/fetchallsavedinstruments.md
 docs/models/shared/cardtokendetails.md
 docs/models/shared/savedinstrumentmeta.md
-docs/models/shared/errorresponsetype.md
+docs/models/shared/type.md
 docs/models/shared/errorresponse.md
 docs/models/shared/cryptogram.md
 docs/models/shared/eligiblecardlessemientity.md

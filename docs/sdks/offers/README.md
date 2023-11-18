@@ -45,11 +45,11 @@ req = operations.CreateOfferRequest(
         offer_validations=shared.OfferValidations(
             max_allowed='10',
             min_amount='1',
-            shared.OfferNB(
-                netbanking=shared.NBOffer(
-                    bank_name='all',
-                ),
+            payment_method=shared.OfferNB(
+            netbanking=shared.NBOffer(
+                bank_name='all',
             ),
+        ),
         ),
     ),
     x_client_id='string',

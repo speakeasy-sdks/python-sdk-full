@@ -72,8 +72,8 @@ req = operations.CreatePaymentLinkRequest(
         link_id='string',
         link_meta=shared.LinkMetaEntity(),
         link_notes={
-            "key_2": 'value_2',
             "key_1": 'value_1',
+            "key_2": 'value_2',
         },
         link_notify=shared.LinkNotifyEntity(),
         link_purpose='string',

@@ -1,4 +1,4 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```python
 import pg_latest
 from pg_latest.models import operations
@@ -18,4 +18,4 @@ if res.fetch_all_saved_instruments is not None:
     # handle response
     pass
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

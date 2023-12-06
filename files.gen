@@ -162,7 +162,6 @@ src/pg_latest/models/errors/__init__.py
 src/pg_latest/models/operations/__init__.py
 src/pg_latest/models/shared/__init__.py
 src/pg_latest/models/callbacks/__init__.py
-USAGE.md
 docs/models/operations/deletespecificsavedinstrumentrequest.md
 docs/models/operations/deletespecificsavedinstrumentresponse.md
 docs/models/operations/instrumenttype.md
@@ -389,4 +388,5 @@ docs/sdks/refunds/README.md
 docs/sdks/settlements/README.md
 docs/sdks/reconciliation/README.md
 docs/sdks/softpos/README.md
+USAGE.md
 .gitattributes

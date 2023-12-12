@@ -21,7 +21,7 @@ class Reconciliation:
         
         url = base_url + '/recon'
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "fetch_pg_recon_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PostReconRequest, "fetch_pg_recon_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -65,7 +65,7 @@ class Reconciliation:
         
         url = base_url + '/settlement/recon'
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "fetch_settlement_recon_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PostSettlementReconRequest, "fetch_settlement_recon_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

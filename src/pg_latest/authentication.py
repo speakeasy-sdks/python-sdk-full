@@ -22,7 +22,7 @@ class Authentication:
         
         url = utils.generate_url(operations.OTPRequestRequest, base_url, '/orders/pay/authenticate/{payment_id}', request)
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "otp_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.OTPRequestRequest, "otp_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

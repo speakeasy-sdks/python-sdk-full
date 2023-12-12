@@ -21,7 +21,7 @@ class Refunds:
         
         url = utils.generate_url(operations.CreaterefundRequest, base_url, '/orders/{order_id}/refunds', request)
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "create_refund_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreaterefundRequest, "create_refund_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

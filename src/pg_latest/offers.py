@@ -21,7 +21,7 @@ class Offers:
         
         url = base_url + '/offers'
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "create_offer_backend_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateOfferRequest, "create_offer_backend_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

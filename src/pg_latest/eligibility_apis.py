@@ -21,7 +21,7 @@ class EligibilityAPIs:
         
         url = base_url + '/eligibility/cardlessemi'
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "eligibility_cardless_emi_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.EligibilityCardlessEMIRequest, "eligibility_cardless_emi_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -57,7 +57,7 @@ class EligibilityAPIs:
         
         url = base_url + '/eligibility/offers'
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "eligibility_offers_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.EligibilityOfferRequest, "eligibility_offers_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -93,7 +93,7 @@ class EligibilityAPIs:
         
         url = base_url + '/eligibility/paylater'
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "eligibility_cardless_emi_request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.EligibilityPaylaterRequest, "eligibility_cardless_emi_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

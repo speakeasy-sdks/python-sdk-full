@@ -71,7 +71,7 @@ if res.orders_entity is not None:
 | errors.AuthenticationError | 401                        | application/json           |
 | errors.RateLimitError      | 429                        | application/json           |
 | errors.APIError            | 500                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## get_order
 
@@ -112,7 +112,7 @@ if res.orders_entity is not None:
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## order_pay
 
@@ -160,7 +160,7 @@ if res.order_pay_response is not None:
 | --------------------- | --------------------- | --------------------- |
 | errors.RateLimitError | 429                   | application/json      |
 | errors.APIError       | 500                   | application/json      |
-| errors.SDKError       | 400-600               | */*                   |
+| errors.SDKError       | 4x-5xx                | */*                   |
 
 ## preauthorization
 
@@ -202,4 +202,4 @@ if res.payments_entity is not None:
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4x-5xx          | */*             |

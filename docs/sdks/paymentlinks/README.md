@@ -48,7 +48,7 @@ if res.link_cancelled_response is not None:
 | Error Object              | Status Code               | Content Type              |
 | ------------------------- | ------------------------- | ------------------------- |
 | errors.LinkCancelledError | 400                       | application/json          |
-| errors.SDKError           | 400-600                   | */*                       |
+| errors.SDKError           | 4x-5xx                    | */*                       |
 
 ## create_payment_link
 
@@ -103,7 +103,7 @@ if res.link_response is not None:
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_payment_link_details
 
@@ -144,7 +144,7 @@ if res.link_response is not None:
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_payment_link_orders
 
@@ -185,4 +185,4 @@ if res.classes is not None:
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4x-5xx          | */*             |

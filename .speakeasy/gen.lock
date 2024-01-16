@@ -4,7 +4,7 @@ management:
   docChecksum: 279157cb6e58c32a08b11d9e8f6f02be
   docVersion: "2022-09-01"
   speakeasyVersion: internal
-  generationVersion: 2.228.1
+  generationVersion: 2.233.2
   releaseVersion: 3.1.2
   configChecksum: 904afb2c3e0284b82bb502334ff56365
   repoURL: https://github.com/speakeasy-sdks/python-sdk-full.git

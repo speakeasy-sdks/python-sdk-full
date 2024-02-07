@@ -60,6 +60,8 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.PostSettlementsRequest(
+    x_client_id='string',
+    x_client_secret='string',
     fetch_settlement_recon_request=shared.FetchSettlementReconRequest(
         filters=shared.FetchSettlementReconRequestFilters(
             cf_settlement_ids=[
@@ -73,8 +75,6 @@ req = operations.PostSettlementsRequest(
             limit=116172,
         ),
     ),
-    x_client_id='string',
-    x_client_secret='string',
 )
 
 res = s.settlements.post_settlements(req)

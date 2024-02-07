@@ -63,6 +63,8 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.CreatePaymentLinkRequest(
+    x_client_id='string',
+    x_client_secret='string',
     create_link_request=shared.CreateLinkRequest(
         customer_details=shared.LinkCustomerDetailsEntity(
             customer_phone='string',
@@ -70,16 +72,14 @@ req = operations.CreatePaymentLinkRequest(
         link_amount=5411.24,
         link_currency='string',
         link_id='string',
+        link_purpose='string',
         link_meta=shared.LinkMetaEntity(),
         link_notes={
             'key_1': 'value_1',
             'key_2': 'value_2',
         },
         link_notify=shared.LinkNotifyEntity(),
-        link_purpose='string',
     ),
-    x_client_id='string',
-    x_client_secret='string',
 )
 
 res = s.payment_links.create_payment_link(req)

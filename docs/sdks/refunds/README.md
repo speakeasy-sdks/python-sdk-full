@@ -20,6 +20,9 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.CreaterefundRequest(
+    order_id='string',
+    x_client_id='string',
+    x_client_secret='string',
     create_refund_request=shared.CreateRefundRequest(
         refund_amount=567.71,
         refund_id='string',
@@ -27,9 +30,6 @@ req = operations.CreaterefundRequest(
             shared.VendorSplit(),
         ],
     ),
-    order_id='string',
-    x_client_id='string',
-    x_client_secret='string',
 )
 
 res = s.refunds.createrefund(req)

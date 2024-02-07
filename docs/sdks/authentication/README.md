@@ -22,11 +22,11 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.OTPRequestRequest(
+    payment_id='string',
     otp_request=shared.OTPRequest(
         action=shared.OTPRequestAction.SUBMIT_OTP,
         otp='string',
     ),
-    payment_id='string',
 )
 
 res = s.authentication.otp_request(req)

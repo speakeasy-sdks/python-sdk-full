@@ -19,8 +19,11 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.CreateOfferRequest(
+    x_client_id='string',
+    x_client_secret='string',
     create_offer_backend_request=shared.CreateOfferBackendRequest(
         offer_details=shared.OfferDetails(
+            offer_type=shared.OfferDetailsOfferType.DISCOUNT_AND_CASHBACK,
             cashback_details=shared.CashbackDetails(
                 max_cashback_amount='string',
             ),
@@ -29,7 +32,6 @@ req = operations.CreateOfferRequest(
                 discount_value='string',
                 max_discount_amount='string',
             ),
-            offer_type=shared.OfferDetailsOfferType.DISCOUNT_AND_CASHBACK,
         ),
         offer_meta=shared.OfferMeta(
             offer_code='CFTESTOFFER',
@@ -44,16 +46,14 @@ req = operations.CreateOfferRequest(
         ),
         offer_validations=shared.OfferValidations(
             max_allowed='10',
-            min_amount='1',
             payment_method=shared.OfferNB(
             netbanking=shared.NBOffer(
                 bank_name='all',
             ),
         ),
+            min_amount='1',
         ),
     ),
-    x_client_id='string',
-    x_client_secret='string',
 )
 
 res = s.offers.create_offer(req)

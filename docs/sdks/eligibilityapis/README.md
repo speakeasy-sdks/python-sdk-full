@@ -20,6 +20,8 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.EligibilityCardlessEMIRequest(
+    x_client_id='string',
+    x_client_secret='string',
     eligibility_cardless_emi_request=shared.EligibilityCardlessEMIRequest(
         queries=shared.CardlessEMIQueries(
             amount=100,
@@ -29,8 +31,6 @@ req = operations.EligibilityCardlessEMIRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_client_id='string',
-    x_client_secret='string',
 )
 
 res = s.eligibility_ap_is.eligibility_cardless_emi(req)
@@ -69,19 +69,19 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.EligibilityOfferRequest(
+    x_client_id='string',
+    x_client_secret='string',
     eligibility_offers_request=shared.EligibilityOffersRequest(
+        queries=shared.OfferQueries(
+            amount=100,
+            order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
+        ),
         filters=shared.OfferFilters(
             offer_type=[
                 shared.OfferType.CASHBACK,
             ],
         ),
-        queries=shared.OfferQueries(
-            amount=100,
-            order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
-        ),
     ),
-    x_client_id='string',
-    x_client_secret='string',
 )
 
 res = s.eligibility_ap_is.eligibility_offer(req)
@@ -120,6 +120,8 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.EligibilityPaylaterRequest(
+    x_client_id='string',
+    x_client_secret='string',
     eligibility_cardless_emi_request=shared.EligibilityCardlessEMIRequest(
         queries=shared.CardlessEMIQueries(
             amount=100,
@@ -129,8 +131,6 @@ req = operations.EligibilityPaylaterRequest(
             order_id='order_413462PK1RI1IwYB1X69LgzUQWiSxYDF',
         ),
     ),
-    x_client_id='string',
-    x_client_secret='string',
 )
 
 res = s.eligibility_ap_is.eligibility_paylater(req)

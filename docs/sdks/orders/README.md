@@ -21,6 +21,8 @@ from pg_latest.models import callbacks, operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.CreateOrderRequest(
+    x_client_id='string',
+    x_client_secret='string',
     create_order_backend_request=shared.CreateOrderBackendRequest(
         customer_details=shared.CustomerDetails(
             customer_id='string',
@@ -43,8 +45,6 @@ req = operations.CreateOrderRequest(
             terminal_type='string',
         ),
     ),
-    x_client_id='string',
-    x_client_secret='string',
 )
 
 res = s.orders.create_order(req)
@@ -127,14 +127,14 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.OrderPayRequest(
+    x_api_version='string',
     order_pay_request=shared.OrderPayRequest(
-        offer_id='faa6cc05-d1e2-401c-b0cf-0c9db3ff0f0b',
         payment_method=shared.CardlessEMIPaymentMethod(
         cardless_emi=shared.CardlessEMI(),
     ),
         payment_session_id='session__CvcEmNKDkmERQrxnx39ibhJ3Ii034pjc8ZVxf3qcgEXCWlgDDlHRgz2XYZCqpajDQSXMMtCusPgOIxYP2LZx0-05p39gC2Vgmq1RAj--gcn',
+        offer_id='faa6cc05-d1e2-401c-b0cf-0c9db3ff0f0b',
     ),
-    x_api_version='string',
 )
 
 res = s.orders.order_pay(req)
@@ -175,10 +175,10 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.PreauthorizationRequest(
-    authorization_request=shared.AuthorizationRequest(),
     order_id='string',
     x_client_id='string',
     x_client_secret='string',
+    authorization_request=shared.AuthorizationRequest(),
 )
 
 res = s.orders.preauthorization(req)

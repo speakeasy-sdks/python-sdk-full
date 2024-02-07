@@ -19,6 +19,8 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.PostReconRequest(
+    x_client_id='string',
+    x_client_secret='string',
     fetch_pg_recon_request=shared.FetchPGReconRequest(
         filters=shared.Filters(
             end_date='string',
@@ -28,8 +30,6 @@ req = operations.PostReconRequest(
             limit=85382,
         ),
     ),
-    x_client_id='string',
-    x_client_secret='string',
 )
 
 res = s.reconciliation.post_recon(req)
@@ -68,6 +68,8 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.PostSettlementReconRequest(
+    x_client_id='string',
+    x_client_secret='string',
     fetch_settlement_recon_request=shared.FetchSettlementReconRequest(
         filters=shared.FetchSettlementReconRequestFilters(
             cf_settlement_ids=[
@@ -81,8 +83,6 @@ req = operations.PostSettlementReconRequest(
             limit=71166,
         ),
     ),
-    x_client_id='string',
-    x_client_secret='string',
 )
 
 res = s.reconciliation.post_settlement_recon(req)

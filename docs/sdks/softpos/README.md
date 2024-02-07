@@ -23,12 +23,12 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.CreateTerminalsRequest(
+    x_client_id='string',
+    x_client_secret='string',
     create_terminal_request=shared.CreateTerminalRequest(
         terminal_name='string',
         terminal_phone_no='string',
     ),
-    x_client_id='string',
-    x_client_secret='string',
 )
 
 res = s.soft_pos.create_terminals(req)

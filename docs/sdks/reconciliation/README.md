@@ -23,11 +23,12 @@ req = operations.PostReconRequest(
     x_client_secret='string',
     fetch_pg_recon_request=shared.FetchPGReconRequest(
         filters=shared.Filters(
-            end_date='string',
-            start_date='string',
+            end_date='2022-07-21T23:59:59Z',
+            start_date='2022-07-20T00:00:00Z',
         ),
         pagination=shared.Pagination(
-            limit=85382,
+            limit=10,
+            cursor='eyJzZWFyY2hBZnRlciI6eyJsaXN0IjpbMTg4NjcxNDVdLCJlbXB0eSI6ZmFsc2V9LCJyZWNvbkFQSVR5cGUiOiJMRURHRVIifQ==',
         ),
     ),
 )
@@ -73,14 +74,18 @@ req = operations.PostSettlementReconRequest(
     fetch_settlement_recon_request=shared.FetchSettlementReconRequest(
         filters=shared.FetchSettlementReconRequestFilters(
             cf_settlement_ids=[
-                956121,
+                4234233,
             ],
+            end_date='2022-07-21T23:59:59Z',
             settlement_utrs=[
-                'string',
+                'utr1',
+                'utr2',
             ],
+            start_date='2022-07-20T00:00:00Z',
         ),
         pagination=shared.FetchSettlementReconRequestPagination(
-            limit=71166,
+            limit=10,
+            cursor='eyJzZWFyY2hBZnRlciI6eyJsaXN0IjpbMTg4NjcxNDVdLCJlbXB0eSI6ZmFsc2V9LCJyZWNvbkFQSVR5cGUiOiJMRURHRVIifQ==',
         ),
     ),
 )

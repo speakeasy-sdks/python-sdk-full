@@ -26,8 +26,9 @@ req = operations.CreateTerminalsRequest(
     x_client_id='string',
     x_client_secret='string',
     create_terminal_request=shared.CreateTerminalRequest(
-        terminal_name='string',
-        terminal_phone_no='string',
+        terminal_name='Jane Doe',
+        terminal_phone_no='9876543210',
+        terminal_id='1',
     ),
 )
 

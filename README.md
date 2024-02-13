@@ -120,7 +120,7 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 ```python
 import pg_latest
-from pg_latest.models import operations
+from pg_latest.models import errors, operations
 
 s = pg_latest.PGLatest()
 
@@ -134,10 +134,10 @@ res = None
 try:
     res = s.payment_links.cancel_payment_link(req)
 except errors.LinkCancelledError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 except errors.SDKError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 
 if res.link_cancelled_response is not None:

@@ -17,16 +17,12 @@ If you accept OTP on your own page, you can use the below API to send OTP to Cas
 
 ```python
 import pg_latest
-from pg_latest.models import operations, shared
+from pg_latest.models import operations
 
 s = pg_latest.PGLatest()
 
 req = operations.OTPRequestRequest(
     payment_id='string',
-    otp_request=shared.OTPRequest(
-        action=shared.OTPRequestAction.SUBMIT_OTP,
-        otp='string',
-    ),
 )
 
 res = s.authentication.otp_request(req)

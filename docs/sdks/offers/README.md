@@ -14,46 +14,13 @@ Use this API to create offers with Cashfree from your backend
 
 ```python
 import pg_latest
-from pg_latest.models import operations, shared
+from pg_latest.models import operations
 
 s = pg_latest.PGLatest()
 
 req = operations.CreateOfferRequest(
     x_client_id='string',
     x_client_secret='string',
-    create_offer_backend_request=shared.CreateOfferBackendRequest(
-        offer_details=shared.OfferDetails(
-            offer_type=shared.OfferDetailsOfferType.DISCOUNT_AND_CASHBACK,
-            cashback_details=shared.CashbackDetails(
-                max_cashback_amount='string',
-            ),
-            discount_details=shared.DiscountDetails(
-                discount_type=shared.DiscountType.PERCENTAGE,
-                discount_value='string',
-                max_discount_amount='string',
-            ),
-        ),
-        offer_meta=shared.OfferMeta(
-            offer_code='CFTESTOFFER',
-            offer_description='Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-            offer_end_time='2023-03-29T08:09:51Z',
-            offer_start_time='2023-03-21T08:09:51Z',
-            offer_title='Test Offer',
-        ),
-        offer_tnc=shared.OfferTnc(
-            offer_tnc_type=shared.OfferTncType.POST,
-            offer_tnc_value='Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        ),
-        offer_validations=shared.OfferValidations(
-            max_allowed='10',
-            payment_method=shared.OfferNB(
-            netbanking=shared.NBOffer(
-                bank_name='all',
-            ),
-        ),
-            min_amount='1',
-        ),
-    ),
 )
 
 res = s.offers.create_offer(req)

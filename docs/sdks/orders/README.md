@@ -16,35 +16,13 @@ Use this API to create orders with Cashfree from your backend and get the paymen
 
 ```python
 import pg_latest
-from pg_latest.models import callbacks, operations, shared
+from pg_latest.models import operations
 
 s = pg_latest.PGLatest()
 
 req = operations.CreateOrderRequest(
     x_client_id='string',
     x_client_secret='string',
-    create_order_backend_request=shared.CreateOrderBackendRequest(
-        customer_details=shared.CustomerDetails(
-            customer_id='string',
-            customer_phone='string',
-        ),
-        order_amount=10.15,
-        order_currency='INR',
-        order_expiry_time='2021-07-29T00:00:00Z',
-        order_meta=shared.OrderMeta(),
-        order_note='Test order',
-        order_splits=[
-            shared.VendorSplit(),
-        ],
-        order_tags={
-            'key': 'string',
-        },
-        terminal=shared.TerminalDetails(
-            terminal_id='string',
-            terminal_phone_no='string',
-            terminal_type='string',
-        ),
-    ),
 )
 
 res = s.orders.create_order(req)
@@ -122,19 +100,12 @@ Use this API when you have already created the orders and want Cashfree to proce
 
 ```python
 import pg_latest
-from pg_latest.models import operations, shared
+from pg_latest.models import operations
 
 s = pg_latest.PGLatest()
 
 req = operations.OrderPayRequest(
     x_api_version='string',
-    order_pay_request=shared.OrderPayRequest(
-        payment_method=shared.CardlessEMIPaymentMethod(
-        cardless_emi=shared.CardlessEMI(),
-    ),
-        payment_session_id='session__CvcEmNKDkmERQrxnx39ibhJ3Ii034pjc8ZVxf3qcgEXCWlgDDlHRgz2XYZCqpajDQSXMMtCusPgOIxYP2LZx0-05p39gC2Vgmq1RAj--gcn',
-        offer_id='faa6cc05-d1e2-401c-b0cf-0c9db3ff0f0b',
-    ),
 )
 
 res = s.orders.order_pay(req)
@@ -178,7 +149,10 @@ req = operations.PreauthorizationRequest(
     order_id='string',
     x_client_id='string',
     x_client_secret='string',
-    authorization_request=shared.AuthorizationRequest(),
+    authorization_request=shared.AuthorizationRequest(
+        action=shared.AuthorizationRequestAction.CAPTURE,
+        amount=100,
+    ),
 )
 
 res = s.orders.preauthorization(req)

@@ -65,14 +65,18 @@ req = operations.PostSettlementsRequest(
     fetch_settlement_recon_request=shared.FetchSettlementReconRequest(
         filters=shared.FetchSettlementReconRequestFilters(
             cf_settlement_ids=[
-                297769,
+                4234233,
             ],
+            end_date='2022-07-21T23:59:59Z',
             settlement_utrs=[
-                'string',
+                'utr1',
+                'utr2',
             ],
+            start_date='2022-07-20T00:00:00Z',
         ),
         pagination=shared.FetchSettlementReconRequestPagination(
-            limit=116172,
+            limit=10,
+            cursor='eyJzZWFyY2hBZnRlciI6eyJsaXN0IjpbMTg4NjcxNDVdLCJlbXB0eSI6ZmFsc2V9LCJyZWNvbkFQSVR5cGUiOiJMRURHRVIifQ==',
         ),
     ),
 )

@@ -24,11 +24,10 @@ req = operations.CreaterefundRequest(
     x_client_id='string',
     x_client_secret='string',
     create_refund_request=shared.CreateRefundRequest(
-        refund_amount=567.71,
-        refund_id='string',
-        refund_splits=[
-            shared.VendorSplit(),
-        ],
+        refund_amount=1,
+        refund_id='refund_00912',
+        refund_note='refund note for reference',
+        refund_speed=shared.CreateRefundRequestRefundSpeed.STANDARD,
     ),
 )
 

@@ -69,16 +69,19 @@ req = operations.CreatePaymentLinkRequest(
         customer_details=shared.LinkCustomerDetailsEntity(
             customer_phone='string',
         ),
-        link_amount=5411.24,
-        link_currency='string',
-        link_id='string',
-        link_purpose='string',
+        link_amount=100,
+        link_currency='INR',
+        link_id='my_link_id',
+        link_purpose='Payment for PlayStation 11',
+        link_auto_reminders=True,
+        link_expiry_time='2021-10-14T15:04:05+05:30',
         link_meta=shared.LinkMetaEntity(),
+        link_minimum_partial_amount=20,
         link_notes={
-            'key_1': 'value_1',
-            'key_2': 'value_2',
+            '$ref': '#/components/schemas/LinkNotesEntity/example',
         },
         link_notify=shared.LinkNotifyEntity(),
+        link_partial_payments=True,
     ),
 )
 

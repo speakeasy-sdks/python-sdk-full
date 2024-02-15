@@ -19,9 +19,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetsettlementsRequest(
-    order_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    order_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.settlements.getsettlements(req)
@@ -60,8 +60,8 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.PostSettlementsRequest(
-    x_client_id='string',
-    x_client_secret='string',
+    x_client_id='<value>',
+    x_client_secret='<value>',
     fetch_settlement_recon_request=shared.FetchSettlementReconRequest(
         filters=shared.FetchSettlementReconRequestFilters(
             cf_settlement_ids=[

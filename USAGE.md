@@ -6,10 +6,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.DeleteSpecificSavedInstrumentRequest(
-    customer_id='string',
-    instrument_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    customer_id='<value>',
+    instrument_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.token_vault.delete_specific_saved_instrument(req)

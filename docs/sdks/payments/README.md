@@ -20,9 +20,9 @@ s = pg_latest.PGLatest()
 
 req = operations.GetPaymentbyIDRequest(
     cf_payment_id=310675,
-    order_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    order_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.payments.get_paymentby_id(req)
@@ -61,9 +61,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetPaymentsfororderRequest(
-    order_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    order_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.payments.get_paymentsfororder(req)

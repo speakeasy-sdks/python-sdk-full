@@ -21,9 +21,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.CancelPaymentLinkRequest(
-    link_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    link_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.payment_links.cancel_payment_link(req)
@@ -63,11 +63,11 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.CreatePaymentLinkRequest(
-    x_client_id='string',
-    x_client_secret='string',
+    x_client_id='<value>',
+    x_client_secret='<value>',
     create_link_request=shared.CreateLinkRequest(
         customer_details=shared.LinkCustomerDetailsEntity(
-            customer_phone='string',
+            customer_phone='<value>',
         ),
         link_amount=100,
         link_currency='INR',
@@ -121,9 +121,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetPaymentLinkDetailsRequest(
-    link_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    link_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.payment_links.get_payment_link_details(req)
@@ -162,9 +162,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetPaymentLinkOrdersRequest(
-    link_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    link_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.payment_links.get_payment_link_orders(req)

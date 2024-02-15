@@ -20,9 +20,9 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.CreaterefundRequest(
-    order_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    order_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
     create_refund_request=shared.CreateRefundRequest(
         refund_amount=1,
         refund_id='refund_00912',
@@ -67,10 +67,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetRefundRequest(
-    order_id='string',
-    refund_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    order_id='<value>',
+    refund_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.refunds.get_refund(req)
@@ -109,9 +109,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetallrefundsfororderRequest(
-    order_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    order_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.refunds.getallrefundsfororder(req)

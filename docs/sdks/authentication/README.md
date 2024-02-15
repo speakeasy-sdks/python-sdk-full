@@ -22,7 +22,7 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.OTPRequestRequest(
-    payment_id='string',
+    payment_id='<value>',
 )
 
 res = s.authentication.otp_request(req)

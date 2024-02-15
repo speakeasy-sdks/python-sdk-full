@@ -20,8 +20,8 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.EligibilityCardlessEMIRequest(
-    x_client_id='string',
-    x_client_secret='string',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.eligibility_ap_is.eligibility_cardless_emi(req)
@@ -60,8 +60,8 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.EligibilityOfferRequest(
-    x_client_id='string',
-    x_client_secret='string',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.eligibility_ap_is.eligibility_offer(req)
@@ -100,8 +100,8 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.EligibilityPaylaterRequest(
-    x_client_id='string',
-    x_client_secret='string',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.eligibility_ap_is.eligibility_paylater(req)

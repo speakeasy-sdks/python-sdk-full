@@ -20,10 +20,10 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.DeleteSpecificSavedInstrumentRequest(
-    customer_id='string',
-    instrument_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    customer_id='<value>',
+    instrument_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.token_vault.delete_specific_saved_instrument(req)
@@ -125,9 +125,9 @@ from pg_latest.models import errors, operations
 s = pg_latest.PGLatest()
 
 req = operations.CancelPaymentLinkRequest(
-    link_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    link_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = None
@@ -171,10 +171,10 @@ s = pg_latest.PGLatest(
 )
 
 req = operations.DeleteSpecificSavedInstrumentRequest(
-    customer_id='string',
-    instrument_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    customer_id='<value>',
+    instrument_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.token_vault.delete_specific_saved_instrument(req)
@@ -197,10 +197,10 @@ s = pg_latest.PGLatest(
 )
 
 req = operations.DeleteSpecificSavedInstrumentRequest(
-    customer_id='string',
-    instrument_id='string',
-    x_client_id='string',
-    x_client_secret='string',
+    customer_id='<value>',
+    instrument_id='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.token_vault.delete_specific_saved_instrument(req)

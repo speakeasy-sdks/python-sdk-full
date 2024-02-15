@@ -23,8 +23,8 @@ from pg_latest.models import operations, shared
 s = pg_latest.PGLatest()
 
 req = operations.CreateTerminalsRequest(
-    x_client_id='string',
-    x_client_secret='string',
+    x_client_id='<value>',
+    x_client_secret='<value>',
     create_terminal_request=shared.CreateTerminalRequest(
         terminal_name='Jane Doe',
         terminal_phone_no='9876543210',
@@ -68,9 +68,9 @@ from pg_latest.models import operations
 s = pg_latest.PGLatest()
 
 req = operations.GetTerminalByMobileNumberRequest(
-    terminal_phone_no='string',
-    x_client_id='string',
-    x_client_secret='string',
+    terminal_phone_no='<value>',
+    x_client_id='<value>',
+    x_client_secret='<value>',
 )
 
 res = s.soft_pos.get_terminal_by_mobile_number(req)

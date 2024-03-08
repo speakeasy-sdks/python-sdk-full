@@ -30,6 +30,7 @@ res = s.orders.create_order(req)
 if res.orders_entity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.orders.get_order(req)
 if res.orders_entity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.orders.order_pay(req)
 if res.order_pay_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -160,6 +163,7 @@ res = s.orders.preauthorization(req)
 if res.payments_entity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

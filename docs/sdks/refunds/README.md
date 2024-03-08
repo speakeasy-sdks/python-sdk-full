@@ -36,6 +36,7 @@ res = s.refunds.createrefund(req)
 if res.refunds_entity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -78,6 +79,7 @@ res = s.refunds.get_refund(req)
 if res.refunds_entity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -119,6 +121,7 @@ res = s.refunds.getallrefundsfororder(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

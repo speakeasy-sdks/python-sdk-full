@@ -28,6 +28,7 @@ res = s.offers.create_offer(req)
 if res.offer_entity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -69,6 +70,7 @@ res = s.offers.get_offer(req)
 if res.offer_entity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -30,6 +30,7 @@ res = s.authentication.otp_request(req)
 if res.otp_response_entity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

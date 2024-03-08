@@ -17,5 +17,6 @@ res = s.token_vault.delete_specific_saved_instrument(req)
 if res.fetch_all_saved_instruments is not None:
     # handle response
     pass
+
 ```
 <!-- End SDK Example Usage [usage] -->

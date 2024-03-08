@@ -36,6 +36,7 @@ res = s.token_vault.delete_specific_saved_instrument(req)
 if res.fetch_all_saved_instruments is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -78,6 +79,7 @@ res = s.token_vault.fetch_all_saved_instruments(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -120,6 +122,7 @@ res = s.token_vault.fetch_cryptogram(req)
 if res.cryptogram is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -162,6 +165,7 @@ res = s.token_vault.fetch_specific_saved_instrument(req)
 if res.fetch_all_saved_instruments is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

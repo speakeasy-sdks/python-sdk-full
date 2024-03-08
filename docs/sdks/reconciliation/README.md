@@ -38,6 +38,7 @@ res = s.reconciliation.post_recon(req)
 if res.fetch_pg_recon is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -95,6 +96,7 @@ res = s.reconciliation.post_settlement_recon(req)
 if res.fetch_settlement_recon is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

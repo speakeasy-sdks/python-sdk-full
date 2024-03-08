@@ -30,6 +30,7 @@ res = s.payments.get_paymentby_id(req)
 if res.payments_entity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -71,6 +72,7 @@ res = s.payments.get_paymentsfororder(req)
 if res.one_of is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

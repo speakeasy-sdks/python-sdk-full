@@ -37,6 +37,7 @@ res = s.soft_pos.create_terminals(req)
 if res.terminal_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -78,6 +79,7 @@ res = s.soft_pos.get_terminal_by_mobile_number(req)
 if res.terminal_details is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
